@@ -50,8 +50,8 @@ class NativeLatinDataset(Dataset):
 
             """ Function for generating a one-one mapping from characters to index """
             chars = sorted(set("".join(words)))
-            char2idx = {'<pad>':0, '<unk>':1}
-            char2idx.update({char:i+2 for i,char in enumerate(chars)})
+            char2idx = {'<pad>':0, '<unk>':1, '<sos>':3, '<eos>':4}
+            char2idx.update({char:i+4 for i,char in enumerate(chars)})
             return char2idx
 
       def encode(self, word, vocab, max_len=20):
@@ -72,20 +72,6 @@ class NativeLatinDataset(Dataset):
       
       def __getitem__(self, index):
             return self.native_tensors[index], self.latin_tensors[index]
-
-if __name__ == '__main__':
-
-      TRAIN_PATH = "../dakshina_dataset_v1.0/bn/lexicons/bn.translit.sampled.train.tsv"
-      VAL_PATH = "../dakshina_dataset_v1.0/bn/lexicons/bn.translit.sampled.dev.tsv"
-      TEST_PATH = "../dakshina_dataset_v1.0/bn/lexicons/bn.translit.sampled.dev.tsv"
-
-      
-      train_dataset = NativeLatinDataset('bn')
-      dl = DataLoader(train_dataset, batch_size = 10, shuffle = True)
-      x, y = next(iter(dl))
-      for native, latin in zip(x,y):
-            print(native, latin)
-            print(train_dataset.decode(native, train_dataset.native_idx2char), train_dataset.decode(latin, train_dataset.latin_idx2char))
 
 
                   
