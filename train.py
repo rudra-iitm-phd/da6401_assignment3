@@ -1,6 +1,6 @@
 from data import NativeLatinDataset
 from torch.utils.data import DataLoader
-from model import RNN
+from model import RNN, DynamicRNN, DynamicLSTM
 import torch
 import torch.nn as nn
 from tqdm.auto import tqdm
@@ -18,23 +18,27 @@ if __name__ == '__main__':
       x, y = next(iter(dataloader))
       print(x.shape, y.shape)
       print(f"Length of the vocab : {len(train_dataset.native_char2idx)}")
-      model = RNN(len(train_dataset.native_char2idx), len(train_dataset.latin_char2idx)).to(device)
+      # model = RNN(len(train_dataset.native_char2idx), len(train_dataset.latin_char2idx)).to(device)
+      model = DynamicLSTM(len(train_dataset.latin_char2idx), 128, 128, 2, len(train_dataset.native_char2idx), 128, 128, 2, 256, 0).to(device)
 
       criterion = nn.CrossEntropyLoss(ignore_index=0)
-      optimizer = torch.optim.Adam(model.parameters(), lr = 1e-4)
+      optimizer = torch.optim.Adam(model.parameters(), lr = 1e-3)
 
       for epoch in range(10):
             model.train()
             total_loss = 0
-            for src, trg in tqdm(dataloader):
-                  src, trg = src.to(device), trg.to(device)
+            for x,y in tqdm(dataloader):
+                  native = x
+                  latin = y
+                  native, latin = native.to(device), latin.to(device)
                   optimizer.zero_grad()
-                  output = model(src) 
-                  
+                  output = model(latin) 
+                  # print(output.shape)
+                  # break
                   output_dim = output.shape[-1]
                   output = output[:, 1:].reshape(-1, output_dim)  # exclude SOS
-                  trg = trg[:, 1:].reshape(-1)
-                  loss = criterion(output, trg)
+                  native = native[:, 1:].reshape(-1)
+                  loss = criterion(output, native)
                   loss.backward()
                   torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1)  # gradient clipping
                   optimizer.step()
