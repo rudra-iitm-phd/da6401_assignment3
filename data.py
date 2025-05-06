@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import pandas as pd
 from torch.utils.data import Dataset, DataLoader
+import shared
 
 
 
@@ -19,12 +20,25 @@ class NativeLatinDataset(Dataset):
             """ Get the native and latin vocabulary """
             self.native_words, self.latin_words = self.get_word_list(self.path)
 
-            """ Mapping from character to index and index to character for native and latin vocabulary"""
-            self.native_char2idx = self.char2idx(self.native_words)
-            self.native_idx2char = {idx:char for (char,idx) in self.native_char2idx.items()}
+            if data == 'train':
+                  """ Mapping from character to index and index to character for native and latin vocabulary"""
+                  self.native_char2idx = self.char2idx(self.native_words)
+                  self.native_idx2char = {idx:char for (char,idx) in self.native_char2idx.items()}
+                  shared.native_char2idx = self.native_char2idx
+                  shared.native_idx2char = self.native_idx2char
 
-            self.latin_char2idx = self.char2idx(self.latin_words)
-            self.latin_idx2char = {idx:char for (char,idx) in self.latin_char2idx.items()}
+
+                  self.latin_char2idx = self.char2idx(self.latin_words)
+                  self.latin_idx2char = {idx:char for (char,idx) in self.latin_char2idx.items()}
+                  shared.latin_char2idx = self.latin_char2idx
+                  shared.latin_idx2char = self.latin_idx2char
+
+            else:
+                  self.native_char2idx = shared.native_char2idx 
+                  self.native_idx2char = shared.native_idx2char 
+                  self.latin_char2idx = shared.latin_char2idx 
+                  self.latin_idx2char = shared.latin_idx2char 
+
             
             """ Torch tensors to make the data compatible for training """
             self.native_tensors = [torch.tensor(self.encode(native, self.native_char2idx)) for native in self.native_words]
