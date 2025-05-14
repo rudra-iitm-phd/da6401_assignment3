@@ -68,10 +68,10 @@ class NativeLatinDataset(Dataset):
             char2idx.update({char:i+4 for i,char in enumerate(chars)})
             return char2idx
 
-      def encode(self, word, vocab, max_len=20):
+      def encode(self, word, vocab, max_len=10):
 
             """ Function for encoding the words into tokens to make it compatible for torch operations """
-            encoded = [vocab.get(c, vocab['<unk>']) for c in word]
+            encoded = [vocab.get(c, vocab['<unk>']) for c in word] + [vocab['<eos>']]
             encoded = encoded[:max_len] + [vocab['<pad>']]*(max_len - len(encoded))
             return encoded
 

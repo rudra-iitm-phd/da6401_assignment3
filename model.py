@@ -79,12 +79,14 @@ class DynamicRNN(nn.Module):
 
             dec_input = torch.tensor([[3]] * x.size(0), device = 'mps') # start tokens
             outputs = []
-            for _ in range(20):
+            for _ in range(10):
                   dec_embed = self.decoder_embedding(dec_input)
                   dec_output, dec_hidden = self.decoder(dec_embed, dec_hidden)
                   output = self.fc1(dec_output.squeeze(1))
+                  output = self.fc2(output)
                   outputs.append(output)
                   dec_input = output.argmax(-1).unsqueeze(1)
+            
             return torch.stack(outputs, 1)
 
 
@@ -153,10 +155,11 @@ class DynamicLSTM(nn.Module):
             
             dec_input = torch.tensor([[3]] * x.size(0), device = 'mps')
             outputs = []
-            for _ in range(20):
+            for _ in range(10):
                   dec_embed = self.decoder_embedding(dec_input)
                   dec_output, (dec_hidden, dec_cell) = self.decoder(dec_embed, (dec_hidden, dec_cell))
                   output = self.fc1(dec_output.squeeze(1))
+                  output = self.fc2(output)
                   outputs.append(output)
                   dec_input = output.argmax(-1).unsqueeze(1)
             return torch.stack(outputs, 1)
