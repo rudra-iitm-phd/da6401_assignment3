@@ -165,6 +165,67 @@ class DynamicLSTM(nn.Module):
             return torch.stack(outputs, 1)
 
       
+class DynamicGRU(nn.Module):
+      def __init__(self, encoder_embedding_input_dim, encoder_embedding_output_dim, enc_ouput_dim, n_encoders, decoder_embedding_input_dim, decoder_embedding_output_dim, dec_ouput_dim, n_decoders, linear_dim, dropout_rate):
+            super(DynamicGRU, self).__init__()
+
+            self.enc_embedding_vocab_size = encoder_embedding_input_dim
+            self.enc_embedding_dim = encoder_embedding_output_dim
+            self.enc_dim = enc_ouput_dim
+            self.n_encoders = n_encoders
+
+            self.dec_embedding_vocab_size = decoder_embedding_input_dim
+            self.dec_embedding_dim = decoder_embedding_output_dim
+            self.dec_dim = dec_ouput_dim
+            self.n_decoders = n_decoders
+
+            self.linear_dim = linear_dim
+
+            self.encoder_embedding = nn.Embedding(self.enc_embedding_vocab_size, self.enc_embedding_dim)
+            self.encoder = nn.GRU(self.enc_embedding_dim, self.enc_dim, num_layers = self.n_encoders, batch_first = True)
+
+            self.decoder_embedding = nn.Embedding(self.dec_embedding_vocab_size, self.dec_embedding_dim)
+            self.decoder = nn.GRU(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True)
+
+            self.fc1 = nn.Linear(self.dec_dim, self.linear_dim)
+            self.fc2 = nn.Linear(self.linear_dim, self.dec_embedding_vocab_size)
+
+            self.project_encoder_hidden_to_decoder_hidden = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
+            # self.project_encoder_cell_to_decoder_cell = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
+
+      def forward(self, x):
+            x = self.encoder_embedding(x)
+            output, enc_hidden_state = self.encoder(x)
+            # note : hidden_state_dim == cell_state_dim
+            if self.n_decoders == self.n_encoders:
+                  dec_hidden = enc_hidden_state
+            else:
+                  """
+                  Projecting the encoder hidden state to decoder hidden state dimensions 
+                  to ensure size mismatch when n_decoders != n_encoders
+                  
+                  """
+                  enc_hidden_state = enc_hidden_state.transpose(0, 1).contiguous()
+                  enc_hidden_state = enc_hidden_state.view(enc_hidden_state.size(0), -1)
+
+                  enc_hidden_state = self.project_encoder_hidden_to_decoder_hidden(enc_hidden_state)
+
+                  dec_hidden = enc_hidden_state.view(enc_hidden_state.size(0), self.n_decoders, self.dec_dim)
+                  dec_hidden = dec_hidden.transpose(0, 1).contiguous()
+
+                  
+
+            
+            dec_input = torch.tensor([[3]] * x.size(0), device = 'mps')
+            outputs = []
+            for _ in range(10):
+                  dec_embed = self.decoder_embedding(dec_input)
+                  dec_output, dec_hidden = self.decoder(dec_embed, dec_hidden)
+                  output = self.fc1(dec_output.squeeze(1))
+                  output = self.fc2(output)
+                  outputs.append(output)
+                  dec_input = output.argmax(-1).unsqueeze(1)
+            return torch.stack(outputs, 1)
 
       
             
