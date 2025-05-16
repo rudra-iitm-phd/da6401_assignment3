@@ -1,6 +1,6 @@
 import torch 
 import torch.nn as nn
-
+import numpy as np
 class RNN(nn.Module):
       def __init__(self, encoder_input_dim, decoder_input_dim):
             super(RNN, self).__init__()
@@ -29,7 +29,7 @@ class RNN(nn.Module):
 
 
 class DynamicRNN(nn.Module):
-      def __init__(self, encoder_embedding_input_dim, encoder_embedding_output_dim, enc_ouput_dim, n_encoders, decoder_embedding_input_dim, decoder_embedding_output_dim, dec_ouput_dim, n_decoders, linear_dim, dropout_rate):
+      def __init__(self, encoder_embedding_input_dim, encoder_embedding_output_dim, enc_ouput_dim, n_encoders, decoder_embedding_input_dim, decoder_embedding_output_dim, dec_ouput_dim, n_decoders, linear_dim, dropout_rate=0):
             super(DynamicRNN, self).__init__()
 
             self.enc_embedding_vocab_size = encoder_embedding_input_dim
@@ -55,7 +55,7 @@ class DynamicRNN(nn.Module):
 
             self.project_encoder_hidden_to_decoder_hidden = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
 
-      def forward(self, x):
+      def forward(self, x, y=None):
             x = self.encoder_embedding(x)
             enc_output, enc_hidden_state = self.encoder(x) 
             # dim(hidden_state) = [n_encoders, batch_size, enc_output_dim]
@@ -77,14 +77,18 @@ class DynamicRNN(nn.Module):
                   dec_hidden = dec_hidden.transpose(0, 1).contiguous()
 
 
-            dec_input = torch.tensor([[3]] * x.size(0), device = 'mps') # start tokens
+            dec_input = torch.tensor([[2]] * x.size(0), device = 'mps') # start tokens
             outputs = []
-            for _ in range(10):
+            for i in range(10):
                   dec_embed = self.decoder_embedding(dec_input)
                   dec_output, dec_hidden = self.decoder(dec_embed, dec_hidden)
                   output = self.fc1(dec_output.squeeze(1))
                   output = self.fc2(output)
                   outputs.append(output)
+                  if y is not None:
+                        dec_input = y[:,i]
+                  else:
+                        dec_input = output.argmax(-1).unsqueeze(1)
                   dec_input = output.argmax(-1).unsqueeze(1)
             
             return torch.stack(outputs, 1)
@@ -118,7 +122,7 @@ class DynamicLSTM(nn.Module):
             self.project_encoder_hidden_to_decoder_hidden = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
             self.project_encoder_cell_to_decoder_cell = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
 
-      def forward(self, x):
+      def forward(self, x, y=None):
             x = self.encoder_embedding(x)
             output, (enc_hidden_state, enc_cell_state) = self.encoder(x)
             # note : hidden_state_dim == cell_state_dim
@@ -153,15 +157,19 @@ class DynamicLSTM(nn.Module):
                   dec_cell = dec_cell.transpose(0, 1).contiguous()
 
             
-            dec_input = torch.tensor([[3]] * x.size(0), device = 'mps')
+            dec_input = torch.tensor([[2]] * x.size(0), device = 'mps')
+            
             outputs = []
-            for _ in range(10):
+            for i in range(10):
                   dec_embed = self.decoder_embedding(dec_input)
                   dec_output, (dec_hidden, dec_cell) = self.decoder(dec_embed, (dec_hidden, dec_cell))
                   output = self.fc1(dec_output.squeeze(1))
                   output = self.fc2(output)
                   outputs.append(output)
-                  dec_input = output.argmax(-1).unsqueeze(1)
+                  if y is not None:
+                        dec_input = y[:,i].view(-1, 1)
+                  else:
+                        dec_input = output.argmax(-1).unsqueeze(1)
             return torch.stack(outputs, 1)
 
       
@@ -193,7 +201,7 @@ class DynamicGRU(nn.Module):
             self.project_encoder_hidden_to_decoder_hidden = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
             # self.project_encoder_cell_to_decoder_cell = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
 
-      def forward(self, x):
+      def forward(self, x, y=None):
             x = self.encoder_embedding(x)
             output, enc_hidden_state = self.encoder(x)
             # note : hidden_state_dim == cell_state_dim
@@ -212,19 +220,19 @@ class DynamicGRU(nn.Module):
 
                   dec_hidden = enc_hidden_state.view(enc_hidden_state.size(0), self.n_decoders, self.dec_dim)
                   dec_hidden = dec_hidden.transpose(0, 1).contiguous()
-
-                  
-
             
-            dec_input = torch.tensor([[3]] * x.size(0), device = 'mps')
+            dec_input = torch.tensor([[2]] * x.size(0), device = 'mps')
             outputs = []
-            for _ in range(10):
+            for i in range(10):
                   dec_embed = self.decoder_embedding(dec_input)
                   dec_output, dec_hidden = self.decoder(dec_embed, dec_hidden)
                   output = self.fc1(dec_output.squeeze(1))
                   output = self.fc2(output)
                   outputs.append(output)
-                  dec_input = output.argmax(-1).unsqueeze(1)
+                  if y is not None:
+                        dec_input = y[:,i]
+                  else:
+                        dec_input = output.argmax(-1).unsqueeze(1)
             return torch.stack(outputs, 1)
 
       

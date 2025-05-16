@@ -64,7 +64,7 @@ class NativeLatinDataset(Dataset):
 
             """ Function for generating a one-one mapping from characters to index """
             chars = sorted(set("".join(words)))
-            char2idx = {'<pad>':0, '<unk>':1, '<sos>':3, '<eos>':4}
+            char2idx = {'<pad>':0, '<unk>':1, '<sos>':2, '<eos>':3}
             char2idx.update({char:i+4 for i,char in enumerate(chars)})
             return char2idx
 
@@ -78,8 +78,8 @@ class NativeLatinDataset(Dataset):
       def decode(self, token, idx2char):
 
             """ Function for decoding the tokens into words to ensure fidelity of encoding """
-            decoded = [idx2char.get(idx.item()) for idx in token]
-            return ''.join(i for i in decoded if not i in [None, '<pad>', '<unk>'])
+            decoded = [idx2char.get(idx) for idx in token]
+            return ''.join(i for i in decoded if not i in [None, '<pad>', '<unk>', '<sos>', '<eos>'])
 
       def __len__(self):
             return len(self.data)
