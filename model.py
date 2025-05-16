@@ -42,15 +42,19 @@ class DynamicRNN(nn.Module):
             self.dec_dim = dec_ouput_dim
             self.n_decoders = n_decoders
 
+            self.dropout_rate = dropout_rate
+
             self.linear_dim = linear_dim
 
             self.encoder_embedding = nn.Embedding(self.enc_embedding_vocab_size, self.enc_embedding_dim)
-            self.encoder = nn.RNN(self.enc_embedding_dim, self.enc_dim, num_layers = self.n_encoders, batch_first = True)
+            self.encoder = nn.RNN(self.enc_embedding_dim, self.enc_dim, num_layers = self.n_encoders, batch_first = True, dropout = dropout_rate)
 
             self.decoder_embedding = nn.Embedding(self.dec_embedding_vocab_size, self.dec_embedding_dim)
-            self.decoder = nn.RNN(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True)
+            self.decoder = nn.RNN(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True, dropout = dropout_rate)
 
             self.fc1 = nn.Linear(self.dec_dim, self.linear_dim)
+            if dropout_rate > 0 :
+                  self.linear_dropout = nn.Dropout(p = dropout_rate)
             self.fc2 = nn.Linear(self.linear_dim, self.dec_embedding_vocab_size)
 
             self.project_encoder_hidden_to_decoder_hidden = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
@@ -83,6 +87,8 @@ class DynamicRNN(nn.Module):
                   dec_embed = self.decoder_embedding(dec_input)
                   dec_output, dec_hidden = self.decoder(dec_embed, dec_hidden)
                   output = self.fc1(dec_output.squeeze(1))
+                  if self.dropout_rate > 0:
+                        output = self.linear_dropout(output)
                   output = self.fc2(output)
                   outputs.append(output)
                   if y is not None:
@@ -107,16 +113,19 @@ class DynamicLSTM(nn.Module):
             self.dec_embedding_dim = decoder_embedding_output_dim
             self.dec_dim = dec_ouput_dim
             self.n_decoders = n_decoders
+            self.dropout_rate = dropout_rate
 
             self.linear_dim = linear_dim
 
             self.encoder_embedding = nn.Embedding(self.enc_embedding_vocab_size, self.enc_embedding_dim)
-            self.encoder = nn.LSTM(self.enc_embedding_dim, self.enc_dim, num_layers = self.n_encoders, batch_first = True)
+            self.encoder = nn.LSTM(self.enc_embedding_dim, self.enc_dim, num_layers = self.n_encoders, batch_first = True, dropout = dropout_rate)
 
             self.decoder_embedding = nn.Embedding(self.dec_embedding_vocab_size, self.dec_embedding_dim)
-            self.decoder = nn.LSTM(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True)
+            self.decoder = nn.LSTM(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True, dropout = dropout_rate)
 
             self.fc1 = nn.Linear(self.dec_dim, self.linear_dim)
+            if self.dropout_rate > 0:
+                  self.linear_dropout = nn.Dropout(p = self.dropout_rate)
             self.fc2 = nn.Linear(self.linear_dim, self.dec_embedding_vocab_size)
 
             self.project_encoder_hidden_to_decoder_hidden = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
@@ -164,6 +173,8 @@ class DynamicLSTM(nn.Module):
                   dec_embed = self.decoder_embedding(dec_input)
                   dec_output, (dec_hidden, dec_cell) = self.decoder(dec_embed, (dec_hidden, dec_cell))
                   output = self.fc1(dec_output.squeeze(1))
+                  if self.dropout_rate > 0:
+                        output = self.linear_dropout(output)
                   output = self.fc2(output)
                   outputs.append(output)
                   if y is not None:
@@ -187,15 +198,19 @@ class DynamicGRU(nn.Module):
             self.dec_dim = dec_ouput_dim
             self.n_decoders = n_decoders
 
+            self.dropout_rate = dropout_rate
+
             self.linear_dim = linear_dim
 
             self.encoder_embedding = nn.Embedding(self.enc_embedding_vocab_size, self.enc_embedding_dim)
-            self.encoder = nn.GRU(self.enc_embedding_dim, self.enc_dim, num_layers = self.n_encoders, batch_first = True)
+            self.encoder = nn.GRU(self.enc_embedding_dim, self.enc_dim, num_layers = self.n_encoders, batch_first = True, dropout = dropout_rate)
 
             self.decoder_embedding = nn.Embedding(self.dec_embedding_vocab_size, self.dec_embedding_dim)
-            self.decoder = nn.GRU(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True)
+            self.decoder = nn.GRU(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True, dropout = dropout_rate)
 
             self.fc1 = nn.Linear(self.dec_dim, self.linear_dim)
+            if self.dropout_rate > 0:
+                  self.linear_dropout = nn.Dropout(p = self.dropout_rate)
             self.fc2 = nn.Linear(self.linear_dim, self.dec_embedding_vocab_size)
 
             self.project_encoder_hidden_to_decoder_hidden = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
@@ -227,6 +242,8 @@ class DynamicGRU(nn.Module):
                   dec_embed = self.decoder_embedding(dec_input)
                   dec_output, dec_hidden = self.decoder(dec_embed, dec_hidden)
                   output = self.fc1(dec_output.squeeze(1))
+                  if self.dropout_rate > 0:
+                        output = self.linear_dropout(output)
                   output = self.fc2(output)
                   outputs.append(output)
                   if y is not None:

@@ -96,9 +96,6 @@ def evaluate_model(model, val_loader, latinidx2char, nativeidx2char, criterion, 
             input_str = ''.join([latinidx2char.get(idx, '?') for idx in inp if idx not in [0,1, 2, 3]])
             pred_str = ''.join([nativeidx2char.get(idx, '?') for idx in pred if idx not in [0,1, 2, 3]])
             tgt_str = ''.join([nativeidx2char.get(idx, '?') for idx in tgt if idx not in [0,1, 2, 3]])
-            # input_str = test_dataset.decode(inp, latinidx2char)
-            # pred_str = test_dataset.decode(inp, nativeidx2char)
-            # tgt_str = test_dataset.decode(inp, nativeidx2char)
             print(f"[{i+1}] Input: {input_str}\n    Pred : {pred_str}\n    Truth: {tgt_str}\n")
 
 
@@ -128,10 +125,6 @@ if __name__ == '__main__':
       train_dataset, val_dataset, test_dataset = configuration.get_datasets()
 
       train_dl, val_dl, test_dl = configuration.get_dataloders()
-
-      # x, y = next(iter(test_dl))
-      # for i in range(5):
-      #       print(test_dataset.decode(x[i], test_dataset.native_idx2char), test_dataset.decode(y[i], test_dataset.latin_idx2char))
 
       model = configuration.get_model().to(device)
 

@@ -24,7 +24,7 @@ parser.add_argument('-ed', '--enc_dim',
                   help = 'Encoder dim')
 
 parser.add_argument('-ne', '--n_encoders', 
-                  type = int, default = 3, 
+                  type = int, default = 2, 
                   help = 'Number of Encoders')
 
 parser.add_argument('-ded', '--dec_embedding_dim', 
@@ -36,7 +36,7 @@ parser.add_argument('-dd', '--dec_dim',
                   help = 'Decoder dim')
 
 parser.add_argument('-nd', '--n_decoders', 
-                  type = int, default = 3, 
+                  type = int, default = 2, 
                   help = 'Number of Decoders')
 
 parser.add_argument('-ld', '--linear_dim', 
@@ -46,3 +46,7 @@ parser.add_argument('-ld', '--linear_dim',
 parser.add_argument('-do', '--dropout_rate', 
                   type = float, default = 0, 
                   help = 'Dropout rate')
+
+parser.add_argument('-e', '--epochs', 
+                  type = int, default = 20, 
+                  help = 'Number of Epochs')
