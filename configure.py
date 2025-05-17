@@ -1,7 +1,7 @@
 from model import *
 from data import *
 from torch.utils.data import DataLoader
-
+from model import DynamicSeq2Seq
 class Configure:
       def __init__(self, script):
             self.script = script
@@ -20,13 +20,13 @@ class Configure:
             self.latin_char2idx = self.train_dataset.latin_char2idx
             self.native_char2idx = self.train_dataset.native_char2idx
 
-            self.model_mapping = {
-                  "rnn":DynamicRNN,
-                  "lstm":DynamicLSTM,
-                  "gru":DynamicGRU
-            }
+            # self.model_mapping = {
+            #       "rnn":DynamicRNN,
+            #       "lstm":DynamicLSTM,
+            #       "gru":DynamicGRU
+            # }
 
-            self.model = self.model_mapping[self.script["model"].lower()]
+            self.model_type = self.script["model"].lower()
 
             self.encoder_embedding_input_dim = len(self.latin_char2idx)
             self.encoder_embedding_output_dim = self.script['enc_embedding_dim']
@@ -50,7 +50,8 @@ class Configure:
             return self.train_dl, self.val_dl, self.test_dl
 
       def get_model(self):
-            model = self.model(
+            model = DynamicSeq2Seq(
+                  self.model_type,
                   self.encoder_embedding_input_dim, 
                   self.encoder_embedding_output_dim, 
                   self.enc_ouput_dim, 

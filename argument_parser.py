@@ -50,3 +50,7 @@ parser.add_argument('-do', '--dropout_rate',
 parser.add_argument('-e', '--epochs', 
                   type = int, default = 20, 
                   help = 'Number of Epochs')
+
+parser.add_argument('-k', '--beam_size', 
+                  type = int, default = 1, 
+                  help = 'K for Beam search')

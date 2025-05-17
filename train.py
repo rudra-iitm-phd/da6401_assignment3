@@ -1,6 +1,6 @@
 from data import NativeLatinDataset
 from torch.utils.data import DataLoader
-from model import RNN, DynamicRNN, DynamicLSTM, DynamicGRU
+# from model import DynamicSeq2Seq
 import torch
 import torch.nn as nn
 from tqdm.auto import tqdm
@@ -8,7 +8,7 @@ from configure import Configure
 from argument_parser import parser
 import numpy as np
 
-def train_model(model, epochs, train_loader, criterion, optimizer, device):
+def train_model(model, epochs, train_loader, criterion, optimizer, device, beam_size=1):
 
       teacher_forcing = 0.7
       t = 1
@@ -37,10 +37,10 @@ def train_model(model, epochs, train_loader, criterion, optimizer, device):
                   optimizer.step()
                   total_loss += loss.item()
             print(f"Epoch {epoch+1}, Loss: {total_loss/len(train_loader)}")
-            evaluate_model(model, val_loader=val_dl, latinidx2char = train_dataset.latin_idx2char,nativeidx2char = train_dataset.native_idx2char, criterion = criterion, device = device)
+            evaluate_model(model, val_loader=val_dl, latinidx2char = train_dataset.latin_idx2char,nativeidx2char = train_dataset.native_idx2char, criterion = criterion, device = device, beam_size = beam_size)
       return model
 
-def evaluate_model(model, val_loader, latinidx2char, nativeidx2char, criterion, device='cpu', test=False):
+def evaluate_model(model, val_loader, latinidx2char, nativeidx2char, criterion, device='cpu', test=False, beam_size = 1):
     model.eval()
     total_loss = 0
     total = 0
@@ -58,7 +58,6 @@ def evaluate_model(model, val_loader, latinidx2char, nativeidx2char, criterion, 
 
             target = native
 
-
             output = model(latin)  # shape: (batch, max_len, vocab_size)
             pred = output.argmax(-1)
 
@@ -68,14 +67,36 @@ def evaluate_model(model, val_loader, latinidx2char, nativeidx2char, criterion, 
             loss = criterion(output, native)
             total_loss += loss.item()
 
-            """ Char level accuracy """
-            preds = output.argmax(-1) # (batch, max_len)
-            pred_mask = preds.ne(3) & preds.ne(1) & preds.ne(2) & preds.ne(0)
-            native_mask = native.ne(3) & native.ne(1) & native.ne(2) & native.ne(0)
-            mask = pred_mask & native_mask
-            char_matches += (preds[mask] == native[mask]).sum().item()
-            char_total += mask.sum().item()
-            
+            if beam_size == 1:
+
+                  """ Char level accuracy """
+                  preds = output.argmax(-1) # (batch, max_len)
+                  pred_mask = preds.ne(3) & preds.ne(1) & preds.ne(2) & preds.ne(0)
+                  native_mask = native.ne(3) & native.ne(1) & native.ne(2) & native.ne(0)
+                  mask = pred_mask & native_mask
+                  char_matches += (preds[mask] == native[mask]).sum().item()
+                  char_total += mask.sum().item()
+                  
+                  # """ Word level accuracy """
+                  # pred[pred == 3] = 0 # masking out the padding and eos tags
+                  # target[target == 3] = 0
+
+                  # matches = (pred == target).all(-1)
+                  # correct += matches.sum().item()
+                  # total += pred.size(0)
+
+            elif beam_size > 1:
+                  """ Char level accuracy """
+                  pred = model.beam(latin, k = beam_size)
+                  preds = pred.reshape(-1)
+                  native = native.reshape(-1)
+
+                  pred_mask = preds.ne(3) & preds.ne(1) & preds.ne(2) & preds.ne(0)
+                  native_mask = native.ne(3) & native.ne(1) & native.ne(2) & native.ne(0)
+                  mask = pred_mask & native_mask
+                  char_matches += (preds[mask] == native[mask]).sum().item()
+                  char_total += mask.sum().item()
+
             """ Word level accuracy """
             pred[pred == 3] = 0 # masking out the padding and eos tags
             target[target == 3] = 0
@@ -83,6 +104,7 @@ def evaluate_model(model, val_loader, latinidx2char, nativeidx2char, criterion, 
             matches = (pred == target).all(-1)
             correct += matches.sum().item()
             total += pred.size(0)
+      
 
       if len(samples) < 5:
             for i in range(min(5 - len(samples), latin.size(0))):
@@ -132,7 +154,7 @@ if __name__ == '__main__':
       optimizer = torch.optim.Adam(model.parameters(), lr = 1e-3)
    
 
-      trained_model = train_model(model, 2,train_dl, criterion, optimizer, device)
+      trained_model = train_model(model, 10,train_dl, criterion, optimizer, device, beam_size = config['beam_size'])
       evaluate_model(trained_model, test_dl, train_dataset.latin_idx2char, train_dataset.native_idx2char, criterion, device, test=True)
 
       

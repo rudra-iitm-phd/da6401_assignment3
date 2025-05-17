@@ -1,108 +1,12 @@
 import torch 
 import torch.nn as nn
 import numpy as np
-class RNN(nn.Module):
-      def __init__(self, encoder_input_dim, decoder_input_dim):
-            super(RNN, self).__init__()
-            self.enc_embedding = nn.Embedding(encoder_input_dim, 64)
-            self.encoder = nn.RNN(64, 128, batch_first = True)
-
-            self.dec_embedding = nn.Embedding(decoder_input_dim, 64)
-            self.decoder = nn.RNN(64, 128, batch_first = True)
-
-            self.fc = nn.Linear(128, decoder_input_dim)
-            
-      def forward(self, x):
-            x = self.enc_embedding(x)
-            output, hidden_state = self.encoder(x)
-            dec_hidden = hidden_state
-            decoder_input = torch.tensor([[3]] * x.size(0), device = 'mps') 
-            outputs = []
-            for t in range(20):
-                  embed = self.dec_embedding(decoder_input)
-                  dec_op, dec_hidden = self.decoder(embed, dec_hidden)
-                  output = self.fc(dec_op.squeeze(1))
-                  outputs.append(output)
-                  decoder_input = output.argmax(-1).unsqueeze(1)
-
-            return torch.stack(outputs, 1)
+import torch.nn.functional as F
 
 
-class DynamicRNN(nn.Module):
-      def __init__(self, encoder_embedding_input_dim, encoder_embedding_output_dim, enc_ouput_dim, n_encoders, decoder_embedding_input_dim, decoder_embedding_output_dim, dec_ouput_dim, n_decoders, linear_dim, dropout_rate=0):
-            super(DynamicRNN, self).__init__()
-
-            self.enc_embedding_vocab_size = encoder_embedding_input_dim
-            self.enc_embedding_dim = encoder_embedding_output_dim
-            self.enc_dim = enc_ouput_dim
-            self.n_encoders = n_encoders
-
-            self.dec_embedding_vocab_size = decoder_embedding_input_dim
-            self.dec_embedding_dim = decoder_embedding_output_dim
-            self.dec_dim = dec_ouput_dim
-            self.n_decoders = n_decoders
-
-            self.dropout_rate = dropout_rate
-
-            self.linear_dim = linear_dim
-
-            self.encoder_embedding = nn.Embedding(self.enc_embedding_vocab_size, self.enc_embedding_dim)
-            self.encoder = nn.RNN(self.enc_embedding_dim, self.enc_dim, num_layers = self.n_encoders, batch_first = True, dropout = dropout_rate)
-
-            self.decoder_embedding = nn.Embedding(self.dec_embedding_vocab_size, self.dec_embedding_dim)
-            self.decoder = nn.RNN(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True, dropout = dropout_rate)
-
-            self.fc1 = nn.Linear(self.dec_dim, self.linear_dim)
-            if dropout_rate > 0 :
-                  self.linear_dropout = nn.Dropout(p = dropout_rate)
-            self.fc2 = nn.Linear(self.linear_dim, self.dec_embedding_vocab_size)
-
-            self.project_encoder_hidden_to_decoder_hidden = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
-
-      def forward(self, x, y=None):
-            x = self.encoder_embedding(x)
-            enc_output, enc_hidden_state = self.encoder(x) 
-            # dim(hidden_state) = [n_encoders, batch_size, enc_output_dim]
-            # dim(output) = [batch_size, max_len_tokens, enc_output_dim]
-            if self.n_decoders == self.n_encoders:
-                  dec_hidden = enc_hidden_state # This dimension match applies if and only if n_encoders == n_decoders
-            else:
-                  """
-                  Projecting the encoder hidden state to decoder hidden state dimensions 
-                  to ensure size mismatch when n_decoders != n_encoders
-
-                  """
-                  enc_hidden_state = enc_hidden_state.transpose(0, 1).contiguous()
-                  enc_hidden_state = enc_hidden_state.view(enc_hidden_state.size(0), -1)
-
-                  enc_hidden_state = self.project_encoder_hidden_to_decoder_hidden(enc_hidden_state)
-
-                  dec_hidden = enc_hidden_state.view(enc_hidden_state.size(0), self.n_decoders, self.dec_dim)
-                  dec_hidden = dec_hidden.transpose(0, 1).contiguous()
-
-
-            dec_input = torch.tensor([[2]] * x.size(0), device = 'mps') # start tokens
-            outputs = []
-            for i in range(10):
-                  dec_embed = self.decoder_embedding(dec_input)
-                  dec_output, dec_hidden = self.decoder(dec_embed, dec_hidden)
-                  output = self.fc1(dec_output.squeeze(1))
-                  if self.dropout_rate > 0:
-                        output = self.linear_dropout(output)
-                  output = self.fc2(output)
-                  outputs.append(output)
-                  if y is not None:
-                        dec_input = y[:,i]
-                  else:
-                        dec_input = output.argmax(-1).unsqueeze(1)
-                  dec_input = output.argmax(-1).unsqueeze(1)
-            
-            return torch.stack(outputs, 1)
-
-
-class DynamicLSTM(nn.Module):
-      def __init__(self, encoder_embedding_input_dim, encoder_embedding_output_dim, enc_ouput_dim, n_encoders, decoder_embedding_input_dim, decoder_embedding_output_dim, dec_ouput_dim, n_decoders, linear_dim, dropout_rate):
-            super(DynamicLSTM, self).__init__()
+class DynamicSeq2Seq(nn.Module):
+      def __init__(self, model_type, encoder_embedding_input_dim, encoder_embedding_output_dim, enc_ouput_dim, n_encoders, decoder_embedding_input_dim, decoder_embedding_output_dim, dec_ouput_dim, n_decoders, linear_dim, dropout_rate):
+            super(DynamicSeq2Seq, self).__init__()
 
             self.enc_embedding_vocab_size = encoder_embedding_input_dim
             self.enc_embedding_dim = encoder_embedding_output_dim
@@ -117,11 +21,20 @@ class DynamicLSTM(nn.Module):
 
             self.linear_dim = linear_dim
 
+            self.model_map = {
+                  "rnn":nn.RNN,
+                  "lstm":nn.LSTM,
+                  "gru":nn.GRU
+            }
+
+            self.model_type = model_type.lower()
+            self.model = self.model_map[self.model_type]
+
             self.encoder_embedding = nn.Embedding(self.enc_embedding_vocab_size, self.enc_embedding_dim)
-            self.encoder = nn.LSTM(self.enc_embedding_dim, self.enc_dim, num_layers = self.n_encoders, batch_first = True, dropout = dropout_rate)
+            self.encoder = self.model(self.enc_embedding_dim, self.enc_dim, num_layers = self.n_encoders, batch_first = True, dropout = dropout_rate)
 
             self.decoder_embedding = nn.Embedding(self.dec_embedding_vocab_size, self.dec_embedding_dim)
-            self.decoder = nn.LSTM(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True, dropout = dropout_rate)
+            self.decoder = self.model(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True, dropout = dropout_rate)
 
             self.fc1 = nn.Linear(self.dec_dim, self.linear_dim)
             if self.dropout_rate > 0:
@@ -132,12 +45,19 @@ class DynamicLSTM(nn.Module):
             self.project_encoder_cell_to_decoder_cell = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
 
       def forward(self, x, y=None):
+            device = x.device
             x = self.encoder_embedding(x)
-            output, (enc_hidden_state, enc_cell_state) = self.encoder(x)
+
+            if self.model_type == 'lstm':
+                  output, (enc_hidden_state, enc_cell_state) = self.encoder(x)
+            else:
+                  output, enc_hidden_state = self.encoder(x)
             # note : hidden_state_dim == cell_state_dim
             if self.n_decoders == self.n_encoders:
                   dec_hidden = enc_hidden_state
-                  dec_cell = enc_cell_state
+
+                  if self.model_type == 'lstm':
+                        dec_cell = enc_cell_state
             else:
                   """
                   Projecting the encoder hidden state to decoder hidden state dimensions 
@@ -152,18 +72,19 @@ class DynamicLSTM(nn.Module):
                   dec_hidden = enc_hidden_state.view(enc_hidden_state.size(0), self.n_decoders, self.dec_dim)
                   dec_hidden = dec_hidden.transpose(0, 1).contiguous()
 
-                  """
-                  Projecting the encoder cell state to decoder cell state dimensions 
-                  to ensure size mismatch when n_decoders != n_encoders
-                  
-                  """
-                  enc_cell_state = enc_cell_state.transpose(0, 1).contiguous()
-                  enc_cell_state = enc_cell_state.view(enc_cell_state.size(0), -1)
+                  if self.model_type == 'lstm':
+                        """
+                        Projecting the encoder cell state to decoder cell state dimensions 
+                        to ensure size mismatch when n_decoders != n_encoders
+                        
+                        """
+                        enc_cell_state = enc_cell_state.transpose(0, 1).contiguous()
+                        enc_cell_state = enc_cell_state.view(enc_cell_state.size(0), -1)
 
-                  enc_cell_state = self.project_encoder_cell_to_decoder_cell(enc_cell_state)
+                        enc_cell_state = self.project_encoder_cell_to_decoder_cell(enc_cell_state)
 
-                  dec_cell = enc_cell_state.view(enc_cell_state.size(0), self.n_decoders, self.dec_dim)
-                  dec_cell = dec_cell.transpose(0, 1).contiguous()
+                        dec_cell = enc_cell_state.view(enc_cell_state.size(0), self.n_decoders, self.dec_dim)
+                        dec_cell = dec_cell.transpose(0, 1).contiguous()
 
             
             dec_input = torch.tensor([[2]] * x.size(0), device = 'mps')
@@ -171,7 +92,10 @@ class DynamicLSTM(nn.Module):
             outputs = []
             for i in range(10):
                   dec_embed = self.decoder_embedding(dec_input)
-                  dec_output, (dec_hidden, dec_cell) = self.decoder(dec_embed, (dec_hidden, dec_cell))
+                  if self.model_type == 'lstm':
+                        dec_output, (dec_hidden, dec_cell) = self.decoder(dec_embed, (dec_hidden, dec_cell))
+                  else:
+                        dec_output, dec_hidden = self.decoder(dec_embed, dec_hidden)
                   output = self.fc1(dec_output.squeeze(1))
                   if self.dropout_rate > 0:
                         output = self.linear_dropout(output)
@@ -183,74 +107,80 @@ class DynamicLSTM(nn.Module):
                         dec_input = output.argmax(-1).unsqueeze(1)
             return torch.stack(outputs, 1)
 
-      
-class DynamicGRU(nn.Module):
-      def __init__(self, encoder_embedding_input_dim, encoder_embedding_output_dim, enc_ouput_dim, n_encoders, decoder_embedding_input_dim, decoder_embedding_output_dim, dec_ouput_dim, n_decoders, linear_dim, dropout_rate):
-            super(DynamicGRU, self).__init__()
+      def beam(self, x, k: int = 2, max_length: int = 10):
+            batch_size = x.size(0)
+            device = x.device
 
-            self.enc_embedding_vocab_size = encoder_embedding_input_dim
-            self.enc_embedding_dim = encoder_embedding_output_dim
-            self.enc_dim = enc_ouput_dim
-            self.n_encoders = n_encoders
-
-            self.dec_embedding_vocab_size = decoder_embedding_input_dim
-            self.dec_embedding_dim = decoder_embedding_output_dim
-            self.dec_dim = dec_ouput_dim
-            self.n_decoders = n_decoders
-
-            self.dropout_rate = dropout_rate
-
-            self.linear_dim = linear_dim
-
-            self.encoder_embedding = nn.Embedding(self.enc_embedding_vocab_size, self.enc_embedding_dim)
-            self.encoder = nn.GRU(self.enc_embedding_dim, self.enc_dim, num_layers = self.n_encoders, batch_first = True, dropout = dropout_rate)
-
-            self.decoder_embedding = nn.Embedding(self.dec_embedding_vocab_size, self.dec_embedding_dim)
-            self.decoder = nn.GRU(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True, dropout = dropout_rate)
-
-            self.fc1 = nn.Linear(self.dec_dim, self.linear_dim)
-            if self.dropout_rate > 0:
-                  self.linear_dropout = nn.Dropout(p = self.dropout_rate)
-            self.fc2 = nn.Linear(self.linear_dim, self.dec_embedding_vocab_size)
-
-            self.project_encoder_hidden_to_decoder_hidden = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
-            # self.project_encoder_cell_to_decoder_cell = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
-
-      def forward(self, x, y=None):
             x = self.encoder_embedding(x)
-            output, enc_hidden_state = self.encoder(x)
-            # note : hidden_state_dim == cell_state_dim
-            if self.n_decoders == self.n_encoders:
-                  dec_hidden = enc_hidden_state
+            if self.model_type == 'lstm':
+                  _, (enc_h, enc_c) = self.encoder(x)
             else:
-                  """
-                  Projecting the encoder hidden state to decoder hidden state dimensions 
-                  to ensure size mismatch when n_decoders != n_encoders
-                  
-                  """
-                  enc_hidden_state = enc_hidden_state.transpose(0, 1).contiguous()
-                  enc_hidden_state = enc_hidden_state.view(enc_hidden_state.size(0), -1)
+                  _, enc_h = self.encoder(x)
 
-                  enc_hidden_state = self.project_encoder_hidden_to_decoder_hidden(enc_hidden_state)
-
-                  dec_hidden = enc_hidden_state.view(enc_hidden_state.size(0), self.n_decoders, self.dec_dim)
-                  dec_hidden = dec_hidden.transpose(0, 1).contiguous()
-            
-            dec_input = torch.tensor([[2]] * x.size(0), device = 'mps')
-            outputs = []
-            for i in range(10):
-                  dec_embed = self.decoder_embedding(dec_input)
-                  dec_output, dec_hidden = self.decoder(dec_embed, dec_hidden)
-                  output = self.fc1(dec_output.squeeze(1))
-                  if self.dropout_rate > 0:
-                        output = self.linear_dropout(output)
-                  output = self.fc2(output)
-                  outputs.append(output)
-                  if y is not None:
-                        dec_input = y[:,i]
+            if self.n_decoders == self.n_encoders:
+                  if self.model_type == 'lstm':
+                        dec_h, dec_c = enc_h, enc_c
                   else:
-                        dec_input = output.argmax(-1).unsqueeze(1)
-            return torch.stack(outputs, 1)
+                        dec_h = enc_h
+
+            else:
+                  # project encoder → decoder dims
+                  enc_h = enc_h.transpose(0, 1).reshape(batch_size, -1)
+                  dec_h = self.project_encoder_hidden_to_decoder_hidden(enc_h)\
+                              .view(batch_size, self.n_decoders, self.dec_dim)\
+                              .transpose(0, 1).contiguous()
+
+                  if self.model_type == 'lstm':
+                        enc_c = enc_c.transpose(0, 1).reshape(batch_size, -1)
+                        dec_c = self.project_encoder_cell_to_decoder_cell(enc_c)\
+                                    .view(batch_size, self.n_decoders, self.dec_dim)\
+                                    .transpose(0, 1).contiguous()
+
+            start_tok = 2
+            seqs   = torch.full((batch_size, k, 1), start_tok, dtype=torch.long, device=device)  # [B,k,1]
+            scores = torch.zeros(batch_size, k, device=device)                                   # [B,k]
+
+            dec_h = dec_h.repeat_interleave(k, dim=1)  # [n_layers, B*k, dim]
+            dec_c = dec_c.repeat_interleave(k, dim=1) if self.model_type == 'lstm' else None
+
+            vocab = self.dec_embedding_vocab_size
+            for t in range(max_length):
+                  last_tok = seqs[:, :, -1].reshape(batch_size * k, 1)
+                  if self.model_type == 'lstm':
+                        dec_out, (dec_h, dec_c) = self.decoder(
+                              self.decoder_embedding(last_tok), (dec_h, dec_c)
+                        )
+                  else:
+                        dec_out, dec_h = self.decoder(self.decoder_embedding(last_tok), dec_h)
+
+                  logits = self.linear_dropout(self.fc1(dec_out.squeeze(1))) if self.dropout_rate > 0 else self.fc1(dec_out.squeeze(1))
+                  logits = self.fc2(logits)
+                  logp   = F.log_softmax(logits, dim=-1).view(batch_size, k, vocab)  # [B,k,V]
+
+                  # top-k per beam (returns [B,k,k] for both)
+                  tk_logp, tk_tok = logp.topk(k, dim=-1)
+
+                  # Flatten the (beam,token) grid → (beam*token) and add old scores
+                  new_scores = (scores.unsqueeze(2) + tk_logp).view(batch_size, -1)  # [B,k*k]
+                  top_scores, flat_idx = new_scores.topk(k, dim=-1)                  # best k overall
+
+                  # Convert flat index back to (beam_row, token_col) without gather
+                  beam_row = flat_idx.div(k, rounding_mode='floor')   # integer division
+                  tok_col  = flat_idx.remainder(k)
+
+                  # Get next tokens via advanced indexing (no gather)
+                  next_tok = tk_tok[torch.arange(batch_size).unsqueeze(1),
+                                    beam_row, tok_col]                # [B,k]
+
+                  # Update sequences with pure indexing
+                  seqs = seqs[torch.arange(batch_size).unsqueeze(1), beam_row]       # choose beams
+                  seqs = torch.cat([seqs, next_tok.unsqueeze(-1)], dim=-1)           # append step
+
+                  scores = top_scores                                                # update scores
+
+            best = scores.argmax(dim=1)
+            best_seq = seqs[torch.arange(batch_size), best]  # [B, max_length+1]
+            return best_seq[:, 1:max_length+1]
 
       
             
