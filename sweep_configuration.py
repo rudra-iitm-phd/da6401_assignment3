@@ -1,6 +1,6 @@
 sweep_config = {
             "method": "bayes",  # Use Bayesian optimization for hyperparameter tuning
-            "metric": {"name": "Accuracy", "goal": "maximize"},
+            "metric": {"name": "Accuracy(char)", "goal": "maximize"},
             "parameters": {
                   # List of activation functions 
                   "activation": {"values": ['relu','gelu','tanh']},
