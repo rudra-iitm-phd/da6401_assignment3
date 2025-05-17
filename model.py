@@ -100,7 +100,7 @@ class DynamicSeq2Seq(nn.Module):
                         dec_cell = dec_cell.transpose(0, 1).contiguous()
 
             
-            dec_input = torch.tensor([[2]] * x.size(0), device = 'mps')
+            dec_input = torch.tensor([[2]] * x.size(0), device = device)
             
             outputs = []
             for i in range(10):
