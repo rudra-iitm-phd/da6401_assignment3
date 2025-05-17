@@ -1,0 +1,85 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:16<00:00, 10.37it/s]
+Total correct:0 Total samples : 44204
+
+Train Loss: 3.1469
+Train Accuracy (exact match [Word Based]): 0.00%
+
+Train Accuracy (exact match [char Based]): 23.78%
+
+Sample Predictions:
+[1] Input: lenin
+    Pred : रेानन््
+    Truth: लेनिन
+
+[2] Input: morakkan
+    Pred : रररकक्
+    Truth: मोरक्कन
+
+[3] Input: weds
+    Pred : वेेा््
+    Truth: वेड्स
+
+[4] Input: punar
+    Pred : ररना्््
+    Truth: पुनर
+
+[5] Input: harad
+    Pred : रराााा
+    Truth: हरदा
+
+Total correct:0 Total samples : 4358
+
+Validation Loss: 3.1786
+Validation Accuracy (exact match [Word Based]): 0.00%
+
+Validation Accuracy (exact match [char Based]): 23.82%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:09<00:00, 17.72it/s]
+
+Total correct:3 Total samples : 44204
+
+Train Loss: 3.0156
+Train Accuracy (exact match [Word Based]): 0.01%
+
+Train Accuracy (exact match [char Based]): 30.86%
+
+Sample Predictions:
+[1] Input: cvc
+    Pred : कााी्
+    Truth: सीवीसी
+
+[2] Input: adbi
+    Pred : अराी््
+    Truth: अदबी
+
+[3] Input: jaher
+    Pred : जारर््
+    Truth: जहर
+
+[4] Input: chetak
+    Pred : रेका््
+    Truth: चेटक
+
+[5] Input: aaykar
+    Pred : आााक््
+    Truth: आयकर
+
+Total correct:0 Total samples : 4358
+
+Validation Loss: 3.0915
+Validation Accuracy (exact match [Word Based]): 0.00%
+
+Validation Accuracy (exact match [char Based]): 30.80%
+ 21%|█████████████████████████████▏                                                                                                              | 36/173 [00:02<00:08, 16.90it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 272, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 247, in train_core
+    trained_model = train_model(model, 10, train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 49, in train_model
+    loss.backward()
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/autograd/__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

@@ -1,0 +1,16 @@
+{"time":"2025-05-18T01:01:12.210362+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/wandb/run-20250518_010111-td7oa798/logs/debug-core.log"}
+{"time":"2025-05-18T01:01:12.488838+05:30","level":"INFO","msg":"created new stream","id":"td7oa798"}
+{"time":"2025-05-18T01:01:12.488893+05:30","level":"INFO","msg":"stream: started","id":"td7oa798"}
+{"time":"2025-05-18T01:01:12.488926+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"td7oa798"}
+{"time":"2025-05-18T01:01:12.488941+05:30","level":"INFO","msg":"handler: started","stream_id":"td7oa798"}
+{"time":"2025-05-18T01:01:12.489024+05:30","level":"INFO","msg":"sender: started","stream_id":"td7oa798"}
+{"time":"2025-05-18T01:01:13.049429+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-18T01:02:44.255537+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-18T01:02:44.260824+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-18T01:02:45.261768+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact run-td7oa798-confusion_matrix_table","runtime_seconds":3.84236725},{"desc":"uploading config.yaml","runtime_seconds":0.260392375,"progress":"2.5KB/2.5KB"}],"total_operations":2}}
+{"time":"2025-05-18T01:02:46.982532+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-18T01:02:48.533158+05:30","level":"INFO","msg":"stream: closing","id":"td7oa798"}
+{"time":"2025-05-18T01:02:48.533196+05:30","level":"INFO","msg":"handler: closed","stream_id":"td7oa798"}
+{"time":"2025-05-18T01:02:48.534029+05:30","level":"INFO","msg":"sender: closed","stream_id":"td7oa798"}
+{"time":"2025-05-18T01:02:48.533759+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"td7oa798"}
+{"time":"2025-05-18T01:02:48.534515+05:30","level":"INFO","msg":"stream: closed","id":"td7oa798"}

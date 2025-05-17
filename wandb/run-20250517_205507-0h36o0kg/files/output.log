@@ -1,0 +1,199 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:11<00:00, 14.42it/s]
+Total correct:0 Total samples : 44204
+
+Train Loss: 3.2676
+Train Accuracy (exact match [Word Based]): 0.00%
+
+Train Accuracy (exact match [char Based]): 28.99%
+
+Sample Predictions:
+[1] Input: jurmane
+    Pred : जरर्नन
+    Truth: जुर्माने
+
+[2] Input: rezer
+    Pred : रररर्ा
+    Truth: रेजर
+
+[3] Input: jaharon
+    Pred : अराो्ा
+    Truth: जहरों
+
+[4] Input: jadav
+    Pred : जादव्ाा
+    Truth: जादव
+
+[5] Input: talaashana
+    Pred : ताााा्ा
+    Truth: तलाशना
+
+Total correct:0 Total samples : 4358
+
+Validation Loss: 3.3030
+Validation Accuracy (exact match [Word Based]): 0.00%
+
+Validation Accuracy (exact match [char Based]): 28.60%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:09<00:00, 17.71it/s]
+
+Total correct:28 Total samples : 44204
+
+Train Loss: 2.6835
+Train Accuracy (exact match [Word Based]): 0.06%
+
+Train Accuracy (exact match [char Based]): 36.28%
+
+Sample Predictions:
+[1] Input: bheetari
+    Pred : तीरररी
+    Truth: भीतरी
+
+[2] Input: samaadhano
+    Pred : साााहों
+    Truth: समाधानों
+
+[3] Input: sweety
+    Pred : सववृ्
+    Truth: स्वीटी
+
+[4] Input: sanskarita
+    Pred : संं्ककाीी्
+    Truth: संस्कारित
+
+[5] Input: dilvaaye
+    Pred : सिवााय
+    Truth: दिलवाए
+
+Total correct:5 Total samples : 4358
+
+Validation Loss: 2.7647
+Validation Accuracy (exact match [Word Based]): 0.11%
+
+Validation Accuracy (exact match [char Based]): 35.14%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:09<00:00, 17.49it/s]
+
+Total correct:39 Total samples : 44204
+
+Train Loss: 2.5012
+Train Accuracy (exact match [Word Based]): 0.09%
+
+Train Accuracy (exact match [char Based]): 41.35%
+
+Sample Predictions:
+[1] Input: dhaani
+    Pred : रानी्ाा
+    Truth: ढाणी
+
+[2] Input: janopayogi
+    Pred : जनोोोापी
+    Truth: जनोपयोगी
+
+[3] Input: pine
+    Pred : पिन्ाा
+    Truth: पीने
+
+[4] Input: chhipate
+    Pred : तिपा्
+    Truth: छिपते
+
+[5] Input: haldighati
+    Pred : अतिदाहीी
+    Truth: हल्दीघाटी
+
+Total correct:1 Total samples : 4358
+
+Validation Loss: 2.6867
+Validation Accuracy (exact match [Word Based]): 0.02%
+
+Validation Accuracy (exact match [char Based]): 40.52%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:09<00:00, 17.55it/s]
+
+Total correct:53 Total samples : 44204
+
+Train Loss: 2.1642
+Train Accuracy (exact match [Word Based]): 0.12%
+
+Train Accuracy (exact match [char Based]): 45.57%
+
+Sample Predictions:
+[1] Input: consumer
+    Pred : संकुर
+    Truth: कंज्यूमर
+
+[2] Input: kadakadadu
+    Pred : तककददद़
+    Truth: कड़कड़डूमा
+
+[3] Input: havas
+    Pred : ता््््ा
+    Truth: हवास
+
+[4] Input: daudane
+    Pred : राड़न््
+    Truth: दौड़ाने
+
+[5] Input: bhuri
+    Pred : रारी््ा
+    Truth: भूरी
+
+Total correct:4 Total samples : 4358
+
+Validation Loss: 2.3693
+Validation Accuracy (exact match [Word Based]): 0.09%
+
+Validation Accuracy (exact match [char Based]): 43.83%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:10<00:00, 17.03it/s]
+
+Total correct:240 Total samples : 44204
+
+Train Loss: 2.0697
+Train Accuracy (exact match [Word Based]): 0.54%
+
+Train Accuracy (exact match [char Based]): 48.98%
+
+Sample Predictions:
+[1] Input: masalon
+    Pred : मसलोो््
+    Truth: मसालों
+
+[2] Input: sabhyataon
+    Pred : संभ्ाओओं
+    Truth: सभ्यताओं
+
+[3] Input: baihar
+    Pred : बािर्ा
+    Truth: बैहर
+
+[4] Input: atkav
+    Pred : अत्कव्
+    Truth: अटकाव
+
+[5] Input: anubhavhin
+    Pred : अनुभवही
+    Truth: अनुभवहीन
+
+Total correct:21 Total samples : 4358
+
+Validation Loss: 2.2084
+Validation Accuracy (exact match [Word Based]): 0.48%
+
+Validation Accuracy (exact match [char Based]): 46.66%
+ 14%|███████████████████▍                                                                                                                        | 24/173 [00:01<00:08, 16.89it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 272, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 247, in train_core
+    trained_model = train_model(model, 10, train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 39, in train_model
+    output = model(latin)
+            ^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/model.py", line 104, in forward
+    dec_input = torch.tensor([[2]] * x.size(0), device = 'mps')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

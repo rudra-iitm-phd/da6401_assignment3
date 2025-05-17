@@ -1,0 +1,124 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:09<00:00, 17.68it/s]
+Total correct:56 Total samples : 44204
+
+Train Loss: 2.4449
+Train Accuracy (exact match [Word Based]): 0.13%
+
+Train Accuracy (exact match [char Based]): 28.09%
+
+Sample Predictions:
+[1] Input: rates
+    Pred : रररर
+    Truth: रेट्स
+
+[2] Input: caroline
+    Pred : ररलललल
+    Truth: कैरोलिन
+
+[3] Input: neet
+    Pred : इेस
+    Truth: नीत
+
+[4] Input: janab
+    Pred : जााा
+    Truth: जनाब
+
+[5] Input: agar
+    Pred : अमर
+    Truth: अगर
+
+Total correct:6 Total samples : 4358
+
+Validation Loss: 2.4181
+Validation Accuracy (exact match [Word Based]): 0.14%
+
+Validation Accuracy (exact match [char Based]): 28.05%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:09<00:00, 19.21it/s]
+
+Total correct:2742 Total samples : 44204
+
+Train Loss: 1.5081
+Train Accuracy (exact match [Word Based]): 6.20%
+
+Train Accuracy (exact match [char Based]): 52.25%
+
+Sample Predictions:
+[1] Input: jaagane
+    Pred : जजाने
+    Truth: जागने
+
+[2] Input: bajaanaa
+    Pred : बजााा
+    Truth: बजाना
+
+[3] Input: dariyapur
+    Pred : दारिपपरर
+    Truth: दरियापुर
+
+[4] Input: chithhiyon
+    Pred : चिहियोों
+    Truth: चिठ्ठियों
+
+[5] Input: lauch
+    Pred : लौच
+    Truth: लॉच
+
+Total correct:233 Total samples : 4358
+
+Validation Loss: 1.5206
+Validation Accuracy (exact match [Word Based]): 5.35%
+
+Validation Accuracy (exact match [char Based]): 52.16%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:11<00:00, 15.65it/s]
+
+Total correct:5727 Total samples : 44204
+
+Train Loss: 1.1994
+Train Accuracy (exact match [Word Based]): 12.96%
+
+Train Accuracy (exact match [char Based]): 61.90%
+
+Sample Predictions:
+[1] Input: sanjida
+    Pred : संजिदा
+    Truth: संजीदा
+
+[2] Input: chhupi
+    Pred : छुपी
+    Truth: छुपी
+
+[3] Input: timing
+    Pred : टिमिंगग
+    Truth: टाइमिंग
+
+[4] Input: najariye
+    Pred : नजारीय
+    Truth: नजरिये
+
+[5] Input: costar
+    Pred : कसस््र
+    Truth: कोस्टार
+
+Total correct:494 Total samples : 4358
+
+Validation Loss: 1.2520
+Validation Accuracy (exact match [Word Based]): 11.34%
+
+Validation Accuracy (exact match [char Based]): 60.34%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:14<00:00, 12.08it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 266, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 241, in train_core
+    trained_model = train_model(model, 10, train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 84, in train_model
+    _, train_char_acc, train_word_acc = evaluate_model(model, data_loader=train_loader, latinidx2char = shared.latin_idx2char,nativeidx2char = shared.native_idx2char, criterion = criterion, device = device, beam_size = 1, data = 'train')
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 162, in evaluate_model
+    cm = compute_confusion_matrix(all_preds, all_targets, num_classes=len(nativeidx2char))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 101, in compute_confusion_matrix
+    cm[t][p] += 1
+    ~~~~~^^^
+KeyboardInterrupt

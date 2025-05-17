@@ -1,0 +1,30 @@
+wandb_version: 1
+
+activation:
+  value: tanh
+batch_size:
+  value: 512
+beam_size:
+  value: 2
+dec_dim:
+  value: 512
+dec_embedding_dim:
+  value: 512
+dropout_rate:
+  value: 0
+enc_dim:
+  value: 128
+enc_embedding_dim:
+  value: 512
+learning_rate:
+  value: 0.0006162381574397739
+linear_dim:
+  value: 2048
+momentum:
+  value: 0.832478543359818
+n_decoders:
+  value: 2
+n_encoders:
+  value: 2
+optimizer:
+  value: adamw

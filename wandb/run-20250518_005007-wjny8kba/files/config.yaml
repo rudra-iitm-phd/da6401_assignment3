@@ -1,0 +1,72 @@
+_wandb:
+    value:
+        cli_version: 0.19.7
+        m: []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 1
+                - 55
+            "2":
+                - 1
+                - 11
+                - 49
+                - 55
+            "3":
+                - 2
+                - 14
+                - 16
+                - 17
+                - 23
+                - 55
+            "4": 3.12.3
+            "5": 0.19.7
+            "8":
+                - 2
+                - 5
+            "12": 0.19.7
+            "13": darwin-x86_64
+activation:
+    value: tanh
+batch_size:
+    value: 512
+beam_size:
+    value: 2
+dec_dim:
+    value: 512
+dec_embedding_dim:
+    value: 512
+dropout_rate:
+    value: 0
+enc_dim:
+    value: 128
+enc_embedding_dim:
+    value: 512
+epochs:
+    value: 20
+learning_rate:
+    value: 0.0006162381574397739
+linear_dim:
+    value: 2048
+model:
+    value: lstm
+momentum:
+    value: 0.832478543359818
+n_decoders:
+    value: 2
+n_encoders:
+    value: 2
+native:
+    value: hi
+optimizer:
+    value: adamw
+sweep_id:
+    value: null
+wandb:
+    value: false
+wandb_entity:
+    value: da24d008-iit-madras
+wandb_project:
+    value: da6401-assignment3
+wandb_sweep:
+    value: true

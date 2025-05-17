@@ -5,7 +5,7 @@ import torch.nn.functional as F
 
 
 class DynamicSeq2Seq(nn.Module):
-      def __init__(self, model_type, encoder_embedding_input_dim, encoder_embedding_output_dim, enc_ouput_dim, n_encoders, decoder_embedding_input_dim, decoder_embedding_output_dim, dec_ouput_dim, n_decoders, linear_dim, dropout_rate):
+      def __init__(self, model_type, activation, encoder_embedding_input_dim, encoder_embedding_output_dim, enc_ouput_dim, n_encoders, decoder_embedding_input_dim, decoder_embedding_output_dim, dec_ouput_dim, n_decoders, linear_dim, dropout_rate):
             super(DynamicSeq2Seq, self).__init__()
 
             self.enc_embedding_vocab_size = encoder_embedding_input_dim
@@ -27,16 +27,29 @@ class DynamicSeq2Seq(nn.Module):
                   "gru":nn.GRU
             }
 
+            self.activation_map = {
+                  "relu":nn.ReLU,
+                  "tanh":nn.Tanh,
+                  "gelu":nn.GELU
+            }
+
+            self.activation = activation
+            
             self.model_type = model_type.lower()
             self.model = self.model_map[self.model_type]
 
             self.encoder_embedding = nn.Embedding(self.enc_embedding_vocab_size, self.enc_embedding_dim)
             self.encoder = self.model(self.enc_embedding_dim, self.enc_dim, num_layers = self.n_encoders, batch_first = True, dropout = dropout_rate)
+            
 
             self.decoder_embedding = nn.Embedding(self.dec_embedding_vocab_size, self.dec_embedding_dim)
             self.decoder = self.model(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True, dropout = dropout_rate)
+            
+            
 
             self.fc1 = nn.Linear(self.dec_dim, self.linear_dim)
+            self.activation = self.activation_map[activation.lower()]()
+            
             if self.dropout_rate > 0:
                   self.linear_dropout = nn.Dropout(p = self.dropout_rate)
             self.fc2 = nn.Linear(self.linear_dim, self.dec_embedding_vocab_size)
@@ -53,7 +66,7 @@ class DynamicSeq2Seq(nn.Module):
             else:
                   output, enc_hidden_state = self.encoder(x)
             # note : hidden_state_dim == cell_state_dim
-            if self.n_decoders == self.n_encoders:
+            if self.n_decoders == self.n_encoders and self.enc_dim == self.dec_dim:
                   dec_hidden = enc_hidden_state
 
                   if self.model_type == 'lstm':
@@ -97,6 +110,7 @@ class DynamicSeq2Seq(nn.Module):
                   else:
                         dec_output, dec_hidden = self.decoder(dec_embed, dec_hidden)
                   output = self.fc1(dec_output.squeeze(1))
+                  output = self.activation(output)
                   if self.dropout_rate > 0:
                         output = self.linear_dropout(output)
                   output = self.fc2(output)
@@ -117,7 +131,7 @@ class DynamicSeq2Seq(nn.Module):
             else:
                   _, enc_h = self.encoder(x)
 
-            if self.n_decoders == self.n_encoders:
+            if self.n_decoders == self.n_encoders and self.enc_dim == self.dec_dim:
                   if self.model_type == 'lstm':
                         dec_h, dec_c = enc_h, enc_c
                   else:
@@ -152,8 +166,10 @@ class DynamicSeq2Seq(nn.Module):
                         )
                   else:
                         dec_out, dec_h = self.decoder(self.decoder_embedding(last_tok), dec_h)
-
-                  logits = self.linear_dropout(self.fc1(dec_out.squeeze(1))) if self.dropout_rate > 0 else self.fc1(dec_out.squeeze(1))
+                  
+                  logits = self.fc1(dec_out.squeeze(1))
+                  logits = self.activation(logits)
+                  logits = self.linear_dropout(logits) if self.dropout_rate > 0 else logits
                   logits = self.fc2(logits)
                   logp   = F.log_softmax(logits, dim=-1).view(batch_size, k, vocab)  # [B,k,V]
 

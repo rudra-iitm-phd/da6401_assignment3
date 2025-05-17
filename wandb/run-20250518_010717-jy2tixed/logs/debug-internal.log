@@ -1,0 +1,16 @@
+{"time":"2025-05-18T01:07:18.104183+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/wandb/run-20250518_010717-jy2tixed/logs/debug-core.log"}
+{"time":"2025-05-18T01:07:18.246148+05:30","level":"INFO","msg":"created new stream","id":"jy2tixed"}
+{"time":"2025-05-18T01:07:18.24638+05:30","level":"INFO","msg":"stream: started","id":"jy2tixed"}
+{"time":"2025-05-18T01:07:18.246405+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"jy2tixed"}
+{"time":"2025-05-18T01:07:18.246448+05:30","level":"INFO","msg":"handler: started","stream_id":"jy2tixed"}
+{"time":"2025-05-18T01:07:18.246515+05:30","level":"INFO","msg":"sender: started","stream_id":"jy2tixed"}
+{"time":"2025-05-18T01:07:19.572273+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-18T01:07:50.707276+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-18T01:07:50.716564+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-18T01:07:51.621122+05:30","level":"INFO","msg":"stream: closing","id":"jy2tixed"}
+{"time":"2025-05-18T01:07:51.621128+05:30","level":"WARN","msg":"sender: received Exit record more than once, ignoring"}
+{"time":"2025-05-18T01:07:52.495819+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-18T01:07:52.975353+05:30","level":"INFO","msg":"handler: closed","stream_id":"jy2tixed"}
+{"time":"2025-05-18T01:07:52.975533+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"jy2tixed"}
+{"time":"2025-05-18T01:07:52.976181+05:30","level":"INFO","msg":"sender: closed","stream_id":"jy2tixed"}
+{"time":"2025-05-18T01:07:52.976239+05:30","level":"INFO","msg":"stream: closed","id":"jy2tixed"}

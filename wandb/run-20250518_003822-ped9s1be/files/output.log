@@ -1,0 +1,274 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:10<00:00, 17.30it/s]
+Sample Predictions:
+[1] Input: razing
+    Pred : मिाा
+    Truth: रेजिंग
+
+[2] Input: barkali
+    Pred : माााा
+    Truth: बर्कली
+
+[3] Input: chaupalon
+    Pred : मिाााा
+    Truth: चौपालों
+
+[4] Input: lagakar
+    Pred : माााा
+    Truth: लगाकर
+
+[5] Input: arthaniti
+    Pred : सि्ााा
+    Truth: अर्थनीति
+
+Total correct:0 Total samples : 4358
+
+Validation Loss: 2.8889
+Validation Accuracy (exact match [Word Based]): 0.00%
+
+Validation Accuracy (exact match [char Based]): 14.74%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:09<00:00, 18.97it/s]
+
+Sample Predictions:
+[1] Input: ulati
+    Pred : उलेल
+    Truth: उलटी
+
+[2] Input: upbhoktava
+    Pred : उश्र््ााा
+    Truth: उपभोक्तावा
+
+[3] Input: charger
+    Pred : चारर
+    Truth: चार्जर
+
+[4] Input: kaloniyan
+    Pred : काललानन
+    Truth: कालोनियां
+
+[5] Input: bhugatana
+    Pred : भुलााा
+    Truth: भुगतना
+
+Total correct:7 Total samples : 4358
+
+Validation Loss: 2.2602
+Validation Accuracy (exact match [Word Based]): 0.16%
+
+Validation Accuracy (exact match [char Based]): 31.80%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:08<00:00, 19.46it/s]
+
+Sample Predictions:
+[1] Input: parsaad
+    Pred : परररा
+    Truth: परसाद
+
+[2] Input: bds
+    Pred : बीसस
+    Truth: बीडीएस
+
+[3] Input: agnivesh
+    Pred : अनिवव््
+    Truth: अग्निवेश
+
+[4] Input: fefade
+    Pred : फेले
+    Truth: फेफड़े
+
+[5] Input: khaira
+    Pred : खााा
+    Truth: खैरा
+
+Total correct:46 Total samples : 4358
+
+Validation Loss: 1.9779
+Validation Accuracy (exact match [Word Based]): 1.06%
+
+Validation Accuracy (exact match [char Based]): 39.83%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:09<00:00, 18.33it/s]
+
+Sample Predictions:
+[1] Input: arjun
+    Pred : अर्गग
+    Truth: अर्जुन
+
+[2] Input: ankush
+    Pred : अंुषो
+    Truth: अकुंश
+
+[3] Input: vanshvadi
+    Pred : वार्वविी
+    Truth: वंशवादी
+
+[4] Input: goroun
+    Pred : गोरोंो
+    Truth: गोरों
+
+[5] Input: jateltaon
+    Pred : जाकतानो
+    Truth: जटिलताओं
+
+Total correct:104 Total samples : 4358
+
+Validation Loss: 1.8139
+Validation Accuracy (exact match [Word Based]): 2.39%
+
+Validation Accuracy (exact match [char Based]): 44.26%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:08<00:00, 19.58it/s]
+
+Sample Predictions:
+[1] Input: do
+    Pred : डो
+    Truth: डु
+
+[2] Input: jajapur
+    Pred : जममरुर
+    Truth: जाजपुर
+
+[3] Input: saving
+    Pred : सवविग
+    Truth: सेविंग
+
+[4] Input: praptakart
+    Pred : प्र्पपत्र
+    Truth: प्राप्तकर्
+
+[5] Input: bds
+    Pred : बेक्
+    Truth: बीडीएस
+
+Total correct:134 Total samples : 4358
+
+Validation Loss: 1.7017
+Validation Accuracy (exact match [Word Based]): 3.07%
+
+Validation Accuracy (exact match [char Based]): 47.06%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:08<00:00, 19.72it/s]
+
+Sample Predictions:
+[1] Input: sarvabhaum
+    Pred : सर््मभमम
+    Truth: सार्वभौमिक
+
+[2] Input: mulmantra
+    Pred : मूल्््ररा
+    Truth: मूलमंत्र
+
+[3] Input: kandmul
+    Pred : कंं््ल
+    Truth: कंदमूल
+
+[4] Input: anuvadit
+    Pred : अन्दिितत
+    Truth: अनुवादित
+
+[5] Input: goethe
+    Pred : गोटे
+    Truth: गोएथे
+
+Total correct:149 Total samples : 4358
+
+Validation Loss: 1.6839
+Validation Accuracy (exact match [Word Based]): 3.42%
+
+Validation Accuracy (exact match [char Based]): 47.94%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:08<00:00, 19.70it/s]
+
+Sample Predictions:
+[1] Input: dhabbe
+    Pred : धबबब
+    Truth: धब्बे
+
+[2] Input: koshkiy
+    Pred : कोक्की
+    Truth: कोशिकीय
+
+[3] Input: qawwal
+    Pred : रवववलल
+    Truth: कव्वाल
+
+[4] Input: likhane
+    Pred : लिखाने
+    Truth: लिखने
+
+[5] Input: avyavharik
+    Pred : अववववािकक
+    Truth: अव्यावहारि
+
+Total correct:175 Total samples : 4358
+
+Validation Loss: 1.6445
+Validation Accuracy (exact match [Word Based]): 4.02%
+
+Validation Accuracy (exact match [char Based]): 49.08%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:08<00:00, 19.62it/s]
+
+Sample Predictions:
+[1] Input: tenesi
+    Pred : फेनेस
+    Truth: टेनेसी
+
+[2] Input: machhuara
+    Pred : महुहरा
+    Truth: मछुआरा
+
+[3] Input: tabssum
+    Pred : ता्््मम
+    Truth: तबस्सुम
+
+[4] Input: maulik
+    Pred : मालिक
+    Truth: मौलिक
+
+[5] Input: jeevnon
+    Pred : जेवेनंं
+    Truth: जीवनों
+
+Total correct:172 Total samples : 4358
+
+Validation Loss: 1.6203
+Validation Accuracy (exact match [Word Based]): 3.95%
+
+Validation Accuracy (exact match [char Based]): 49.34%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:09<00:00, 18.50it/s]
+
+Sample Predictions:
+[1] Input: arastu
+    Pred : अर्््
+    Truth: अरस्तू
+
+[2] Input: warwick
+    Pred : वाविकिकक
+    Truth: वारविक
+
+[3] Input: eli
+    Pred : इली
+    Truth: ऐली
+
+[4] Input: katas
+    Pred : का्स
+    Truth: कटास
+
+[5] Input: caroline
+    Pred : कररेनन
+    Truth: कैरोलिन
+
+Total correct:206 Total samples : 4358
+
+Validation Loss: 1.6042
+Validation Accuracy (exact match [Word Based]): 4.73%
+
+Validation Accuracy (exact match [char Based]): 50.42%
+ 24%|█████████████████████████████████▏                                                                                                          | 41/173 [00:02<00:06, 19.22it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 270, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 248, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 50, in train_model
+    loss.backward()
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/autograd/__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

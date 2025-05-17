@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 270, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 235, in train_core
+    configuration = Configure(config)
+                    ^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/configure.py", line 50, in __init__
+    self.weight_decay = self.script['weight_decay']
+                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^
+KeyError: 'weight_decay'

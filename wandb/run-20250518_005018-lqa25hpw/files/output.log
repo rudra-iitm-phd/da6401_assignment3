@@ -1,0 +1,29 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:16<00:00, 10.60it/s]
+Sample Predictions:
+[1] Input: paasing
+    Pred : साा
+    Truth: पासंग
+
+[2] Input: updeshakon
+    Pred : पाा
+    Truth: उपदेशकों
+
+[3] Input: gidgidane
+    Pred : पााा
+    Truth: गिड़गिड़ान
+
+[4] Input: cadre
+    Pred : साा
+    Truth: केडर
+
+[5] Input: samadhanon
+    Pred : पााा
+    Truth: समाधानों
+
+Total correct:0 Total samples : 4358
+
+Validation Loss: 3.2349
+Validation Accuracy (exact match [Word Based]): 0.00%
+
+Validation Accuracy (exact match [char Based]): 9.54%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:17<00:00,  9.79it/s]

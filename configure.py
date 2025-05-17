@@ -2,6 +2,7 @@ from model import *
 from data import *
 from torch.utils.data import DataLoader
 from model import DynamicSeq2Seq
+import torch.nn as nn
 class Configure:
       def __init__(self, script):
             self.script = script
@@ -20,11 +21,7 @@ class Configure:
             self.latin_char2idx = self.train_dataset.latin_char2idx
             self.native_char2idx = self.train_dataset.native_char2idx
 
-            # self.model_mapping = {
-            #       "rnn":DynamicRNN,
-            #       "lstm":DynamicLSTM,
-            #       "gru":DynamicGRU
-            # }
+            self.activation = self.script['activation'].lower()
 
             self.model_type = self.script["model"].lower()
 
@@ -40,8 +37,20 @@ class Configure:
 
             self.linear_dim = self.script['linear_dim']
             self.dropout_rate = self.script['dropout_rate']
-
             
+            self.optimizer_mappings = {
+                  'adam':torch.optim.Adam,
+                  'adamax':torch.optim.Adamax,
+                  'rmsprop':torch.optim.RMSprop,
+                  'adamw':torch.optim.AdamW
+            }
+
+            self.optim = self.script['optimizer'].lower()
+            self.learning_rate = self.script['learning_rate']
+            # self.weight_decay = self.script['weight_decay']
+            self.momentum = self.script['momentum']
+
+            self.model = None
 
       def get_datasets(self):
             return self.train_dataset, self.val_dataset, self.test_dataset
@@ -52,6 +61,7 @@ class Configure:
       def get_model(self):
             model = DynamicSeq2Seq(
                   self.model_type,
+                  self.activation,
                   self.encoder_embedding_input_dim, 
                   self.encoder_embedding_output_dim, 
                   self.enc_ouput_dim, 
@@ -64,6 +74,18 @@ class Configure:
                   self.dropout_rate
                   )
 
+            self.model = model
+
             return model
+
+      def get_optimzer(self):
+            if self.optim != 'rmsprop':
+                  return self.optimizer_mappings[self.optim](self.model.parameters(),
+                                                            lr = self.learning_rate, 
+                                                            betas = (self.momentum, 0.999))
+            else:
+                  return self.optimizer_mappings[self.optim](self.model.parameters(),
+                                                            lr = self.learning_rate, 
+                                                            momentum = self.momentum)
 
 

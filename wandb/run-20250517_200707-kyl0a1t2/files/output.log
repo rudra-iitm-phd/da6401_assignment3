@@ -1,0 +1,11 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:10<00:00, 17.22it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 265, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 240, in train_core
+    trained_model = train_model(model, 10, train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 83, in train_model
+    _, train_char_acc, train_word_acc = evaluate_model(model, data_loader=train_loader, latinidx2char = train_dataset.latin_idx2char,nativeidx2char = train_dataset.native_idx2char, criterion = criterion, device = device, beam_size = 1, data = 'train')
+                                                                                                        ^^^^^^^^^^^^^
+NameError: name 'train_dataset' is not defined

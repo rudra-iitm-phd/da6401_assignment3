@@ -1,0 +1,88 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:10<00:00, 16.91it/s]
+Total correct:83 Total samples : 44204
+
+Train Loss: 2.4681
+Train Accuracy (exact match [Word Based]): 0.19%
+
+Train Accuracy (exact match [char Based]): 29.96%
+
+Sample Predictions:
+[1] Input: akhtar
+    Pred : अं्रर
+    Truth: अख़्तर
+
+[2] Input: uplabdh
+    Pred : अं्ं्ा
+    Truth: उपलव्ध
+
+[3] Input: costar
+    Pred : क्र्रर
+    Truth: कोस्टार
+
+[4] Input: chithrkaro
+    Pred : चिर्र्र्
+    Truth: चित्रकारों
+
+[5] Input: laatey
+    Pred : लारे
+    Truth: लाते
+
+Total correct:7 Total samples : 4358
+
+Validation Loss: 2.4494
+Validation Accuracy (exact match [Word Based]): 0.16%
+
+Validation Accuracy (exact match [char Based]): 29.31%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:09<00:00, 18.93it/s]
+
+Total correct:2581 Total samples : 44204
+
+Train Loss: 1.5321
+Train Accuracy (exact match [Word Based]): 5.84%
+
+Train Accuracy (exact match [char Based]): 51.99%
+
+Sample Predictions:
+[1] Input: jagkar
+    Pred : जजककर
+    Truth: जागकर
+
+[2] Input: pad
+    Pred : पाड
+    Truth: पद
+
+[3] Input: manjili
+    Pred : मानललीी
+    Truth: मंजिली
+
+[4] Input: ellan
+    Pred : इलललन
+    Truth: ऐलन
+
+[5] Input: tyun
+    Pred : त्यन
+    Truth: ट्यून
+
+Total correct:225 Total samples : 4358
+
+Validation Loss: 1.5370
+Validation Accuracy (exact match [Word Based]): 5.16%
+
+Validation Accuracy (exact match [char Based]): 51.43%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:08<00:00, 19.50it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 271, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 249, in train_core
+    trained_model = train_model(model, 10, train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 85, in train_model
+    # _, train_char_acc, train_word_acc = evaluate_model(model, data_loader=train_loader, latinidx2char = shared.latin_idx2char,nativeidx2char = shared.native_idx2char, criterion = criterion, device = device, beam_size = 1, data = 'train')
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 163, in evaluate_model
+    cm = compute_confusion_matrix(all_preds, all_targets, num_classes=len(nativeidx2char))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 102, in compute_confusion_matrix
+    cm[t][p] += 1
+    ~~~~~^^^
+KeyboardInterrupt

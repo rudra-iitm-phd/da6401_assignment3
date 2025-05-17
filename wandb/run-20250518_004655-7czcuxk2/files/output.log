@@ -1,0 +1,129 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:10<00:00, 16.91it/s]
+Sample Predictions:
+[1] Input: chardiwari
+    Pred : श्र्््््
+    Truth: चारदिवारी
+
+[2] Input: laingik
+    Pred : बालननन
+    Truth: लैंगिक
+
+[3] Input: samaadhano
+    Pred : साााााा
+    Truth: समाधानों
+
+[4] Input: jokhimon
+    Pred : मिलििो
+    Truth: जोखिमों
+
+[5] Input: jaagkar
+    Pred : आाााा
+    Truth: जागकर
+
+Total correct:0 Total samples : 4358
+
+Validation Loss: 2.5880
+Validation Accuracy (exact match [Word Based]): 0.00%
+
+Validation Accuracy (exact match [char Based]): 22.51%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:08<00:00, 20.04it/s]
+
+Sample Predictions:
+[1] Input: bhanak
+    Pred : भाकक
+    Truth: भनक
+
+[2] Input: nilaambar
+    Pred : निमाबार
+    Truth: नीलांबर
+
+[3] Input: cucunur
+    Pred : कुजूरर
+    Truth: कुकुनूर
+
+[4] Input: balat
+    Pred : बललत
+    Truth: बलात
+
+[5] Input: taqdir
+    Pred : ता्ीरर
+    Truth: तकदीर
+
+Total correct:215 Total samples : 4358
+
+Validation Loss: 1.5220
+Validation Accuracy (exact match [Word Based]): 4.93%
+
+Validation Accuracy (exact match [char Based]): 51.46%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:08<00:00, 19.86it/s]
+
+Sample Predictions:
+[1] Input: angithi
+    Pred : अंगििी
+    Truth: अंगीठी
+
+[2] Input: kadamtaal
+    Pred : कड़ााा
+    Truth: कदमताल
+
+[3] Input: eat
+    Pred : एट
+    Truth: इट
+
+[4] Input: lambai
+    Pred : लामबाई
+    Truth: लंबाई
+
+[5] Input: jaankaariy
+    Pred : जााकररयय
+    Truth: जानकारियां
+
+Total correct:517 Total samples : 4358
+
+Validation Loss: 1.2591
+Validation Accuracy (exact match [Word Based]): 11.86%
+
+Validation Accuracy (exact match [char Based]): 59.92%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:08<00:00, 20.19it/s]
+
+Sample Predictions:
+[1] Input: mool
+    Pred : मूल
+    Truth: मूलं
+
+[2] Input: vanshvaadi
+    Pred : वंश्वादीी
+    Truth: वंशवादी
+
+[3] Input: modate
+    Pred : मोड़ते
+    Truth: मोड़ते
+
+[4] Input: coram
+    Pred : कोरमम
+    Truth: कोरम
+
+[5] Input: yahi
+    Pred : यहीी
+    Truth: यही
+
+Total correct:661 Total samples : 4358
+
+Validation Loss: 1.1323
+Validation Accuracy (exact match [Word Based]): 15.17%
+
+Validation Accuracy (exact match [char Based]): 64.15%
+ 17%|████████████████████████▎                                                                                                                   | 30/173 [00:01<00:07, 19.33it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 270, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 248, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 50, in train_model
+    loss.backward()
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/autograd/__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
