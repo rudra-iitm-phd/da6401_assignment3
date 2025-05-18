@@ -1,0 +1,603 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:56<00:00,  3.05it/s]
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2360 (\N{DEVANAGARI LETTER SA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2369 (\N{DEVANAGARI VOWEL SIGN U}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2343 (\N{DEVANAGARI LETTER DHA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2325 (\N{DEVANAGARI LETTER KA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2352 (\N{DEVANAGARI LETTER RA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2350 (\N{DEVANAGARI LETTER MA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2354 (\N{DEVANAGARI LETTER LA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2368 (\N{DEVANAGARI VOWEL SIGN II}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2358 (\N{DEVANAGARI LETTER SHA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2369 (\N{DEVANAGARI VOWEL SIGN U}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2343 (\N{DEVANAGARI LETTER DHA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2381 (\N{DEVANAGARI SIGN VIRAMA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2350 (\N{DEVANAGARI LETTER MA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2367 (\N{DEVANAGARI VOWEL SIGN I}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2352 (\N{DEVANAGARI LETTER RA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2348 (\N{DEVANAGARI LETTER BA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2367 (\N{DEVANAGARI VOWEL SIGN I}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2352 (\N{DEVANAGARI LETTER RA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2340 (\N{DEVANAGARI LETTER TA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2346 (\N{DEVANAGARI LETTER PA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2344 (\N{DEVANAGARI LETTER NA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2350 (\N{DEVANAGARI LETTER MA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2350 (\N{DEVANAGARI LETTER MA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2344 (\N{DEVANAGARI LETTER NA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2348 (\N{DEVANAGARI LETTER BA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2369 (\N{DEVANAGARI VOWEL SIGN U}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2342 (\N{DEVANAGARI LETTER DA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2350 (\N{DEVANAGARI LETTER MA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2381 (\N{DEVANAGARI SIGN VIRAMA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2325 (\N{DEVANAGARI LETTER KA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2344 (\N{DEVANAGARI LETTER NA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2309 (\N{DEVANAGARI LETTER A}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2360 (\N{DEVANAGARI LETTER SA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2381 (\N{DEVANAGARI SIGN VIRAMA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2367 (\N{DEVANAGARI VOWEL SIGN I}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2354 (\N{DEVANAGARI LETTER LA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2325 (\N{DEVANAGARI LETTER KA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2340 (\N{DEVANAGARI LETTER TA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2368 (\N{DEVANAGARI VOWEL SIGN II}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2346 (\N{DEVANAGARI LETTER PA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2350 (\N{DEVANAGARI LETTER MA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2367 (\N{DEVANAGARI VOWEL SIGN I}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2325 (\N{DEVANAGARI LETTER KA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2309 (\N{DEVANAGARI LETTER A}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Matplotlib currently does not support Devanagari natively.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2352 (\N{DEVANAGARI LETTER RA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:113: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  plt.tight_layout()
+findfont: Font family 'Devanagari New' not found.
+Sample Predictions:
+[1] Input: avran
+    Pred : अररा
+    Truth: अवर्ण
+
+[2] Input: jhadne
+    Pred : बानन
+    Truth: झडने
+
+[3] Input: palla
+    Pred : पालल
+    Truth: पल्ला
+
+[4] Input: vyakhyakar
+    Pred : विराराााा
+    Truth: व्याख्याका
+
+[5] Input: dhuun
+    Pred : बुधा
+    Truth: धून
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2309 (\N{DEVANAGARI LETTER A}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Matplotlib currently does not support Devanagari natively.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2352 (\N{DEVANAGARI LETTER RA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+
+Total correct:3 Total samples : 4358
+
+Validation Loss: 2.3660
+Validation Accuracy (exact match [Word Based]): 0.07%
+
+Validation Accuracy (exact match [char Based]): 28.54%
+ 95%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌      | 165/173 [01:13<00:03,  2.23it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 298, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 276, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 67, in train_model
+    optimizer.step()
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/optimizer.py", line 385, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/adam.py", line 166, in step
+    adam(
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/adam.py", line 316, in adam
+    func(params,
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/adam.py", line 391, in _single_tensor_adam
+    exp_avg.lerp_(grad, 1 - beta1)
+KeyboardInterrupt

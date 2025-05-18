@@ -11,8 +11,31 @@ import torch.nn.init as init
 import wandb
 import shared
 import sweep_configuration
+import matplotlib.pyplot as plt
+import seaborn as sns
+import matplotlib.font_manager as fm
+import os
+import matplotlib as mpl
+import io, requests
+from matplotlib import font_manager as fm, pyplot as plt
+import tempfile
 
-# Generate a readable name for the W&B run
+
+url = (
+    "https://github.com/googlefonts/noto-fonts/"
+    "raw/main/hinted/ttf/NotoSansDevanagari/"
+    "NotoSansDevanagari-Regular.ttf"
+)
+r = requests.get(url); r.raise_for_status()
+
+tmpdir = tempfile.gettempdir()
+font_path = os.path.join(tmpdir, "NotoSansDevanagari-Regular.ttf")
+with open(font_path, "wb") as f:
+    f.write(r.content)
+
+fm.fontManager.addfont(font_path)
+hindi_prop = fm.FontProperties(fname=font_path)
+
 def create_name(configuration:dict):
       l = [f'{k}-{v}' for k,v in configuration.items() if k not in ['wandb_entity', 'wandb_project', 'wandb_sweep', 'sweep_id', 'wandb']]
       return '_'.join(l)
@@ -33,11 +56,17 @@ def train_model(model, epochs, train_loader, val_loader, criterion, optimizer, d
                   native, latin = native.to(device), latin.to(device)
                   optimizer.zero_grad()
                   if np.random.rand() <= teacher_forcing:
-                        output = model(latin, native)
+                        if config['use_attn']:
+                              output, _ = model(latin, native)
+                        else:
+                              output = model(latin, native)
                         teacher_forcing = teacher_forcing / max(0.8 * t, 0.1)
                         t = t + 1
                   else:
-                        output = model(latin) 
+                        if config['use_attn']:
+                              output, attn_weights = model(latin) 
+                        else:
+                              output = model(latin)
 
                   # pred = output.argmax(-1)
                   # target = native
@@ -74,6 +103,30 @@ def compute_confusion_matrix(preds, targets, num_classes):
             cm[t][p] += 1
       return cm
 
+def plot_attention(attn_matrix, input_tokens, output_tokens):
+      fig, ax = plt.subplots(figsize=(8,6))
+
+      heat = sns.heatmap(attn_matrix.cpu().detach().numpy(),
+                  xticklabels=True,
+                  yticklabels=True,
+                  cmap='viridis', cbar=True, ax=ax)
+      cbar = heat.collections[0].colorbar
+      cbar.set_label("Attention weight", fontdict={'size':12})
+      # set ticks
+      ax.set_xticks(range(len(input_tokens)))
+      ax.set_yticks(range(len(output_tokens)))
+      # English x-axis: default font
+      ax.set_xticklabels(input_tokens, rotation=90)
+
+      # Hindi y-axis: force Devanagari font
+      ax.set_yticklabels(output_tokens,
+                        rotation=0,
+                        fontproperties=hindi_prop)
+      ax.set_xlabel('Input tokens')
+      ax.set_ylabel('Output tokens')
+      # plt.tight_layout()
+      return fig
+
 def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion, device='cpu', data='val', beam_size = 1, log = False):
       model.eval()
       total_loss = 0
@@ -88,13 +141,16 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
 
       with torch.no_grad():
             for native, latin in data_loader:
+
                   # native, latin = batch
                   native = native.to(device)
                   latin = latin.to(device)
 
                   target = native
-
-                  output = model(latin)  # shape: (batch, max_len, vocab_size)
+                  if config['use_attn']:
+                        output, attn_weights = model(latin)  # shape: (batch, max_len, vocab_size)
+                  else:
+                        output = model(latin)
                   pred = output.argmax(-1)
 
                   output_dim = output.shape[-1]
@@ -112,7 +168,16 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                         mask = pred_mask & native_mask
                         char_matches += (preds[mask] == native[mask]).sum().item()
                         char_total += mask.sum().item()
+                        inp_tok, pred_tok = [], []
                         
+                        inp_token = [latinidx2char.get(idx.item(), '?') for idx in latin[0] ]
+                        inp_tok.append(inp_token)
+                        pred_token = [nativeidx2char.get(idx.item(), '?') for idx in pred[0]]
+                        pred_tok.append(pred_token)
+
+                        attn_sample = attn_weights[0]
+                        
+                              
 
                   elif beam_size > 1:
                         """ Char level accuracy """
@@ -158,19 +223,11 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                         pred_str = ''.join([nativeidx2char.get(idx, '?') for idx in pred if idx not in [0,1, 2, 3]])
                         tgt_str = ''.join([nativeidx2char.get(idx, '?') for idx in tgt if idx not in [0,1, 2, 3]])
                         sample_table.append([input_str, pred_str, tgt_str])
+
+
                         print(f"[{i+1}] Input: {input_str}\n    Pred : {pred_str}\n    Truth: {tgt_str}\n")
 
-            if log:
-                  wandb.log({
-                        "confusion_matrix": wandb.plot.confusion_matrix(
-                              probs=None,
-                              y_true=all_targets,
-                              preds=all_preds,
-                              class_names=[nativeidx2char[i] for i in range(len(nativeidx2char))]
-                        ), 
-                        "sample predictions":wandb.Table(columns=["Input", "Prediction", "Target"], data = sample_table)
-                        })
-
+            
 
       acc = correct / total * 100
       char_acc = char_matches / char_total * 100
@@ -186,6 +243,26 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
             print(f"\nTrain Loss: {total_loss/len(data_loader):.4f}")
             print(f"Train Accuracy (exact match [Word Based]): {acc:.2f}%\n")
             print(f"Train Accuracy (exact match [char Based]): {char_acc:.2f}%\n")
+
+      if log:
+                  wandb.log({
+                        "confusion_matrix": wandb.plot.confusion_matrix(
+                              probs=None,
+                              y_true=all_targets,
+                              preds=all_preds,
+                              class_names=[nativeidx2char[i] for i in range(len(nativeidx2char))]
+                        ), 
+                        "sample predictions":wandb.Table(columns=["Input", "Prediction", "Target"], data = sample_table)
+                        })
+                  if char_acc > 65.0 :
+                        fig = plot_attention(attn_sample, inp_tok[0], pred_tok[0])
+                              
+                        plt.close(fig)
+
+                        wandb.log(
+                                    {'attention_heatmap': wandb.Image(fig)}
+                              )
+
 
       return total_loss/len(data_loader), char_acc, acc
 
@@ -227,13 +304,16 @@ if __name__ == '__main__':
 
       config = args.__dict__
       if args.wandb_sweep:
-            sweep_config = sweep_configuration.sweep_config
+            if args.use_attn :
+                  sweep_config = sweep_configuration.sweep_config_with_attn
+            else:
+                  sweep_config = sweep_configuration.sweep_config
             if not args.sweep_id:
                   sweep_id = wandb.sweep(sweep_config, project=config['wandb_project'], entity=config['wandb_entity'])
             else:
                   sweep_id = args.sweep_id
 
-            wandb.agent(sweep_id, function=train_core, count=300)
+            wandb.agent(sweep_id, function=train_core, count=200)
             wandb.finish()
       if args.wandb:
             train_core(log=True, sweep=False)

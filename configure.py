@@ -25,6 +25,8 @@ class Configure:
 
             self.model_type = self.script["model"].lower()
 
+            self.use_attn = self.script['use_attn']
+
             self.encoder_embedding_input_dim = len(self.latin_char2idx)
             self.encoder_embedding_output_dim = self.script['enc_embedding_dim']
             self.enc_ouput_dim = self.script['enc_dim']
@@ -71,7 +73,8 @@ class Configure:
                   self.dec_ouput_dim,
                   self.n_decoders,
                   self.linear_dim,
-                  self.dropout_rate
+                  self.dropout_rate,
+                  self.use_attn
                   )
 
             self.model = model

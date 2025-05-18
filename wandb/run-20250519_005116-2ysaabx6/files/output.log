@@ -1,0 +1,219 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:39<00:00,  4.33it/s]
+Sample Predictions:
+[1] Input: crocker
+    Pred : ट्र्र्र
+    Truth: क्रोकर
+
+[2] Input: industrial
+    Pred : मिर््््ररर
+    Truth: इंडस्ट्रीय
+
+[3] Input: bheetar
+    Pred : हेरर
+    Truth: भीतर
+
+[4] Input: dan
+    Pred : नान
+    Truth: दन
+
+[5] Input: pao
+    Pred : पा
+    Truth: पाओ
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:5 Total samples : 4358
+
+Validation Loss: 2.3969
+Validation Accuracy (exact match [Word Based]): 0.11%
+
+Validation Accuracy (exact match [char Based]): 27.25%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:39<00:00,  4.41it/s]
+
+Sample Predictions:
+[1] Input: tashtrasan
+    Pred : तत्््््ाा
+    Truth: राष्ट्रसंत
+
+[2] Input: buxar
+    Pred : बु्रर
+    Truth: बक्सर
+
+[3] Input: dhanarthi
+    Pred : धहहरति
+    Truth: धनार्थी
+
+[4] Input: bhaar
+    Pred : भार
+    Truth: भार
+
+[5] Input: khanche
+    Pred : खंचेे
+    Truth: खांचे
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:227 Total samples : 4358
+
+Validation Loss: 1.5305
+Validation Accuracy (exact match [Word Based]): 5.21%
+
+Validation Accuracy (exact match [char Based]): 51.15%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:39<00:00,  4.41it/s]
+
+Sample Predictions:
+[1] Input: futbal
+    Pred : फुटलल
+    Truth: फुटबल
+
+[2] Input: jagdeeshpu
+    Pred : जगिपपपप
+    Truth: जगदीशपुर
+
+[3] Input: sani
+    Pred : सानी
+    Truth: सनी
+
+[4] Input: panchangon
+    Pred : पंचंगोंं
+    Truth: पंचांगों
+
+[5] Input: badhani
+    Pred : बढ़नी
+    Truth: बढ़ानी
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:532 Total samples : 4358
+
+Validation Loss: 1.1960
+Validation Accuracy (exact match [Word Based]): 12.21%
+
+Validation Accuracy (exact match [char Based]): 61.50%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:39<00:00,  4.42it/s]
+
+Sample Predictions:
+[1] Input: jnjiraa
+    Pred : जेजीराा
+    Truth: जंजीरा
+
+[2] Input: aagarkar
+    Pred : आगारकरर
+    Truth: आगरकर
+
+[3] Input: thitholi
+    Pred : थिथौली
+    Truth: ठिठोली
+
+[4] Input: maaf
+    Pred : माफ
+    Truth: माफ
+
+[5] Input: shinaakhta
+    Pred : शिनाखता
+    Truth: शिनाख्त
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:753 Total samples : 4358
+
+Validation Loss: 1.0598
+Validation Accuracy (exact match [Word Based]): 17.28%
+
+Validation Accuracy (exact match [char Based]): 66.19%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:38<00:00,  4.52it/s]
+
+Sample Predictions:
+[1] Input: parikshan
+    Pred : परिक्षण
+    Truth: परीक्षण
+
+[2] Input: bhavishyav
+    Pred : भविष्यवा
+    Truth: भविष्यवाणि
+
+[3] Input: chhaye
+    Pred : छाय
+    Truth: छाए
+
+[4] Input: upnyaskar
+    Pred : उपन्यसा्क
+    Truth: उपन्यासकार
+
+[5] Input: birjiya
+    Pred : बिरजिया
+    Truth: बिरजिया
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:850 Total samples : 4358
+
+Validation Loss: 0.9882
+Validation Accuracy (exact match [Word Based]): 19.50%
+
+Validation Accuracy (exact match [char Based]): 68.67%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:38<00:00,  4.45it/s]
+
+Sample Predictions:
+[1] Input: suraji
+    Pred : सुरजी
+    Truth: सुराजी
+
+[2] Input: aabhari
+    Pred : आभरीी
+    Truth: आभारी
+
+[3] Input: royas
+    Pred : रोयस
+    Truth: रॉयस
+
+[4] Input: pichhdaa
+    Pred : पिछ़़ा
+    Truth: पिछड़ा
+
+[5] Input: kaagzi
+    Pred : कागगीी
+    Truth: कागज़ी
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1003 Total samples : 4358
+
+Validation Loss: 0.9357
+Validation Accuracy (exact match [Word Based]): 23.02%
+
+Validation Accuracy (exact match [char Based]): 70.25%
+ 34%|██████████████████████████████████████████████▉                                                                                             | 58/173 [00:13<00:26,  4.30it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 344, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 300, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 86, in train_model
+    optimizer.step()
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/optimizer.py", line 385, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/adam.py", line 166, in step
+    adam(
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/adam.py", line 316, in adam
+    func(params,
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/adam.py", line 392, in _single_tensor_adam
+    exp_avg_sq.mul_(beta2).addcmul_(grad, grad.conj(), value=1 - beta2)
+KeyboardInterrupt

@@ -1,0 +1,540 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:39<00:00,  4.36it/s]
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2348 (\N{DEVANAGARI LETTER BA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2367 (\N{DEVANAGARI VOWEL SIGN I}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2354 (\N{DEVANAGARI LETTER LA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2360 (\N{DEVANAGARI LETTER SA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2357 (\N{DEVANAGARI LETTER VA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2342 (\N{DEVANAGARI LETTER DA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2352 (\N{DEVANAGARI LETTER RA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2381 (\N{DEVANAGARI SIGN VIRAMA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2360 (\N{DEVANAGARI LETTER SA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2381 (\N{DEVANAGARI SIGN VIRAMA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2367 (\N{DEVANAGARI VOWEL SIGN I}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2344 (\N{DEVANAGARI LETTER NA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2369 (\N{DEVANAGARI VOWEL SIGN U}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2357 (\N{DEVANAGARI LETTER VA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2346 (\N{DEVANAGARI LETTER PA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2367 (\N{DEVANAGARI VOWEL SIGN I}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2325 (\N{DEVANAGARI LETTER KA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2379 (\N{DEVANAGARI VOWEL SIGN O}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2344 (\N{DEVANAGARI LETTER NA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2346 (\N{DEVANAGARI LETTER PA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2379 (\N{DEVANAGARI VOWEL SIGN O}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2352 (\N{DEVANAGARI LETTER RA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2325 (\N{DEVANAGARI LETTER KA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2352 (\N{DEVANAGARI LETTER RA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2309 (\N{DEVANAGARI LETTER A}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2344 (\N{DEVANAGARI LETTER NA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2352 (\N{DEVANAGARI LETTER RA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2348 (\N{DEVANAGARI LETTER BA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2379 (\N{DEVANAGARI VOWEL SIGN O}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2360 (\N{DEVANAGARI LETTER SA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2344 (\N{DEVANAGARI LETTER NA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2367 (\N{DEVANAGARI VOWEL SIGN I}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2352 (\N{DEVANAGARI LETTER RA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2360 (\N{DEVANAGARI LETTER SA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2306 (\N{DEVANAGARI SIGN ANUSVARA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2357 (\N{DEVANAGARI LETTER VA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2344 (\N{DEVANAGARI LETTER NA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2346 (\N{DEVANAGARI LETTER PA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2367 (\N{DEVANAGARI VOWEL SIGN I}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2344 (\N{DEVANAGARI LETTER NA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2346 (\N{DEVANAGARI LETTER PA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2357 (\N{DEVANAGARI LETTER VA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2348 (\N{DEVANAGARI LETTER BA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2367 (\N{DEVANAGARI VOWEL SIGN I}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2354 (\N{DEVANAGARI LETTER LA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2325 (\N{DEVANAGARI LETTER KA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2375 (\N{DEVANAGARI VOWEL SIGN E}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2354 (\N{DEVANAGARI LETTER LA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:92: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_xticklabels(input_tokens, fontproperties=prop)
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:93: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax.set_yticklabels(output_tokens, fontproperties=prop)
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2342 (\N{DEVANAGARI LETTER DA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2367 (\N{DEVANAGARI VOWEL SIGN I}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2357 (\N{DEVANAGARI LETTER VA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  fig.canvas.draw()
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+findfont: Font family 'Devanagari New' not found.
+Sample Predictions:
+[1] Input: odisa
+    Pred : दिवा
+    Truth: उड़िसा
+
+[2] Input: ialkon
+    Pred : लोलोन
+    Truth: इलाकों
+
+[3] Input: zaveri
+    Pred : बररर
+    Truth: जवेरी
+
+[4] Input: kutumbakka
+    Pred : किकििििााा
+    Truth: कुटुंबकम्
+
+[5] Input: karai
+    Pred : कार
+    Truth: करै
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 293, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 271, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 69, in train_model
+    val_loss, val_char_acc, val_word_acc = evaluate_model(model, data_loader=val_loader, latinidx2char = shared.latin_idx2char,nativeidx2char = shared.native_idx2char, criterion = criterion, device = device, beam_size = beam_size, data = 'val', log = True if log else False)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 215, in evaluate_model
+    "confusion_matrix": wandb.plot.confusion_matrix(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/plot/confusion_matrix.py", line 169, in confusion_matrix
+    data_table=wandb.Table(
+               ^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/table.py", line 251, in __init__
+    self._init_from_list(data, columns, optional, dtype)
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/table.py", line 276, in _init_from_list
+    self.add_data(*row)
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/table.py", line 446, in add_data
+    result_type = self._get_updated_result_type(data)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/table.py", line 468, in _get_updated_result_type
+    result_type = current_type.assign(incoming_row_dict)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/_dtypes.py", line 845, in assign
+    type_map[key] = self.params["type_map"][key].assign(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/_dtypes.py", line 554, in assign
+    return self.__class__(resolved_types)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/_dtypes.py", line 532, in __init__
+    def __init__(
+
+KeyboardInterrupt

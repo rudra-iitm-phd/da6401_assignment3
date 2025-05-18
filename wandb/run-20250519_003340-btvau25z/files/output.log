@@ -1,0 +1,113 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:41<00:00,  4.18it/s]
+Sample Predictions:
+[1] Input: ronald
+    Pred : सिलललल
+    Truth: रोनाल्ड
+
+[2] Input: jagrat
+    Pred : जा््
+    Truth: जागृत
+
+[3] Input: shahriyon
+    Pred : सा्ोोो
+    Truth: शहरियों
+
+[4] Input: thukrakar
+    Pred : चुररररर
+    Truth: ठुकराकर
+
+[5] Input: saptarshi
+    Pred : सर्््््
+    Truth: सप्तर्षि
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2360 (\N{DEVANAGARI LETTER SA}) missing from font(s) DejaVu Sans.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Matplotlib currently does not support Devanagari natively.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2367 (\N{DEVANAGARI VOWEL SIGN I}) missing from font(s) DejaVu Sans.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2354 (\N{DEVANAGARI LETTER LA}) missing from font(s) DejaVu Sans.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:10 Total samples : 4358
+
+Validation Loss: 2.4228
+Validation Accuracy (exact match [Word Based]): 0.23%
+
+Validation Accuracy (exact match [char Based]): 27.98%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:44<00:00,  3.88it/s]
+
+Sample Predictions:
+[1] Input: bajaanaa
+    Pred : बजाना
+    Truth: बजाना
+
+[2] Input: mx
+    Pred : आीएीी
+    Truth: एमएक्स
+
+[3] Input: sanjida
+    Pred : संजददा
+    Truth: संजीदा
+
+[4] Input: dafanai
+    Pred : दाना
+    Truth: दफनाई
+
+[5] Input: anukulit
+    Pred : अनुकुलित
+    Truth: अनुकूलित
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2348 (\N{DEVANAGARI LETTER BA}) missing from font(s) DejaVu Sans.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Matplotlib currently does not support Devanagari natively.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2332 (\N{DEVANAGARI LETTER JA}) missing from font(s) DejaVu Sans.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2344 (\N{DEVANAGARI LETTER NA}) missing from font(s) DejaVu Sans.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:335 Total samples : 4358
+
+Validation Loss: 1.4049
+Validation Accuracy (exact match [Word Based]): 7.69%
+
+Validation Accuracy (exact match [char Based]): 56.73%
+ 46%|███████████████████████████████████████████████████████████████▉                                                                            | 79/173 [00:22<00:26,  3.59it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 310, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 279, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 54, in train_model
+    output, attn_weights = model(latin)
+                          ^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/model.py", line 155, in forward
+    context, attn_weights = self.attention(dec_hidden[-1], enc_output)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/model.py", line 18, in forward
+    Uhj = self.W_dec(dec_hidden) # o/p --> batch x hidden
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,97 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:39<00:00,  4.34it/s]
+Sample Predictions:
+[1] Input: raakh
+    Pred : रार
+    Truth: राख
+
+[2] Input: hopes
+    Pred : होर्
+    Truth: हॉप्स
+
+[3] Input: misale
+    Pred : मिलेी
+    Truth: मिसालें
+
+[4] Input: banvae
+    Pred : बााा
+    Truth: बनवाए
+
+[5] Input: dukha
+    Pred : दुखा
+    Truth: दुख
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2352 (\N{DEVANAGARI LETTER RA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Matplotlib currently does not support Devanagari natively.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:11 Total samples : 4358
+
+Validation Loss: 2.2804
+Validation Accuracy (exact match [Word Based]): 0.25%
+
+Validation Accuracy (exact match [char Based]): 31.54%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:40<00:00,  4.28it/s]
+
+Sample Predictions:
+[1] Input: mhabharat
+    Pred : महभातत
+    Truth: महाभारत
+
+[2] Input: shooker
+    Pred : शोररर
+    Truth: शूकर
+
+[3] Input: ohayo
+    Pred : गायो
+    Truth: ओहायो
+
+[4] Input: westor
+    Pred : वेस्टर
+    Truth: वेस्टर
+
+[5] Input: ghumakkad
+    Pred : घुकककका
+    Truth: घुमक्कड़
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2350 (\N{DEVANAGARI LETTER MA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Matplotlib currently does not support Devanagari natively.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2361 (\N{DEVANAGARI LETTER HA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2349 (\N{DEVANAGARI LETTER BHA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2340 (\N{DEVANAGARI LETTER TA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:337 Total samples : 4358
+
+Validation Loss: 1.4093
+Validation Accuracy (exact match [Word Based]): 7.73%
+
+Validation Accuracy (exact match [char Based]): 56.34%
+ 42%|██████████████████████████████████████████████████████████▎                                                                                 | 72/173 [00:16<00:23,  4.33it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 310, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 279, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 68, in train_model
+    optimizer.step()
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/optimizer.py", line 385, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/adam.py", line 166, in step
+    adam(
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/adam.py", line 316, in adam
+    func(params,
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/adam.py", line 391, in _single_tensor_adam
+    exp_avg.lerp_(grad, 1 - beta1)
+KeyboardInterrupt

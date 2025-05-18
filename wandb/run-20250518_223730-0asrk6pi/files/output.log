@@ -1,0 +1,20 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:41<00:00,  4.20it/s]
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2332 (\N{DEVANAGARI LETTER JA}) missing from font(s) DejaVu Sans.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Matplotlib currently does not support Devanagari natively.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) DejaVu Sans.
+  fig.canvas.draw()
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 278, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 256, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 67, in train_model
+    val_loss, val_char_acc, val_word_acc = evaluate_model(model, data_loader=val_loader, latinidx2char = shared.latin_idx2char,nativeidx2char = shared.native_idx2char, criterion = criterion, device = device, beam_size = beam_size, data = 'val', log = True if log else False)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 162, in evaluate_model
+    y_pred = preds[mask].detach().tolist()
+             ~~~~~^^^^^^
+TypeError: only integer tensors of a single element can be converted to an index

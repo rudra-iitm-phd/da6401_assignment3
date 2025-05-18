@@ -1,0 +1,137 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:40<00:00,  4.25it/s]
+Sample Predictions:
+[1] Input: kamataul
+    Pred : काललल
+    Truth: कमतौल
+
+[2] Input: bradley
+    Pred : बेर्््
+    Truth: ब्रैडली
+
+[3] Input: udelte
+    Pred : बेल्ल
+    Truth: उड़ेलते
+
+[4] Input: tendu
+    Pred : स्र्ल
+    Truth: तेंदू
+
+[5] Input: arthtantr
+    Pred : अरतततततत
+    Truth: अर्थतंत्र
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2325 (\N{DEVANAGARI LETTER KA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Matplotlib currently does not support Devanagari natively.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2354 (\N{DEVANAGARI LETTER LA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:12 Total samples : 4358
+
+Validation Loss: 2.3993
+Validation Accuracy (exact match [Word Based]): 0.28%
+
+Validation Accuracy (exact match [char Based]): 28.74%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:40<00:00,  4.30it/s]
+
+Sample Predictions:
+[1] Input: abhinatri
+    Pred : आभिनातरर
+    Truth: अभिनत्री
+
+[2] Input: nairashy
+    Pred : नार्शी
+    Truth: नैराश्य
+
+[3] Input: coloniyan
+    Pred : कोलननययं
+    Truth: कालोनियां
+
+[4] Input: falna
+    Pred : फलना
+    Truth: फालना
+
+[5] Input: bhayatur
+    Pred : भायारर
+    Truth: भयातुर
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2310 (\N{DEVANAGARI LETTER AA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Matplotlib currently does not support Devanagari natively.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2349 (\N{DEVANAGARI LETTER BHA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2367 (\N{DEVANAGARI VOWEL SIGN I}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2344 (\N{DEVANAGARI LETTER NA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2366 (\N{DEVANAGARI VOWEL SIGN AA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2340 (\N{DEVANAGARI LETTER TA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2352 (\N{DEVANAGARI LETTER RA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:301 Total samples : 4358
+
+Validation Loss: 1.3960
+Validation Accuracy (exact match [Word Based]): 6.91%
+
+Validation Accuracy (exact match [char Based]): 55.82%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:39<00:00,  4.42it/s]
+
+Sample Predictions:
+[1] Input: chadrein
+    Pred : चड्रेीं
+    Truth: चादरें
+
+[2] Input: stotra
+    Pred : स्टोटररा
+    Truth: स्त्रोत्र
+
+[3] Input: strotra
+    Pred : स्ट्रोटरर
+    Truth: स्त्रोत्र
+
+[4] Input: thailiyaan
+    Pred : थैलियां
+    Truth: थैलियां
+
+[5] Input: pahlavi
+    Pred : पहललवी
+    Truth: पहलवी
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2330 (\N{DEVANAGARI LETTER CA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Matplotlib currently does not support Devanagari natively.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2337 (\N{DEVANAGARI LETTER DDA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2381 (\N{DEVANAGARI SIGN VIRAMA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2352 (\N{DEVANAGARI LETTER RA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2375 (\N{DEVANAGARI VOWEL SIGN E}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2368 (\N{DEVANAGARI VOWEL SIGN II}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 2306 (\N{DEVANAGARI SIGN ANUSVARA}) missing from font(s) Devanagari New.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:612 Total samples : 4358
+
+Validation Loss: 1.1346
+Validation Accuracy (exact match [Word Based]): 14.04%
+
+Validation Accuracy (exact match [char Based]): 65.52%
+ 93%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎         | 161/173 [00:36<00:02,  4.42it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 318, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 278, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 69, in train_model
+    total_loss += loss.item()
+                  ^^^^^^^^^^^
+KeyboardInterrupt

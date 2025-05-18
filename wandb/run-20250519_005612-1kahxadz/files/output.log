@@ -1,0 +1,751 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:42<00:00,  4.08it/s]
+Sample Predictions:
+[1] Input: kanta
+    Pred : कााा
+    Truth: कांटा
+
+[2] Input: waters
+    Pred : क्र्रर
+    Truth: वाटर्स
+
+[3] Input: anyatra
+    Pred : अन्््त
+    Truth: अन्यत्र
+
+[4] Input: bagi
+    Pred : बाल
+    Truth: बागी
+
+[5] Input: mulwasiyon
+    Pred : मि्््ििंं
+    Truth: मूलवासियों
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:2 Total samples : 4358
+
+Validation Loss: 2.4114
+Validation Accuracy (exact match [Word Based]): 0.05%
+
+Validation Accuracy (exact match [char Based]): 28.39%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:39<00:00,  4.34it/s]
+
+Sample Predictions:
+[1] Input: yahi
+    Pred : यहही
+    Truth: यही
+
+[2] Input: sanghthan
+    Pred : संहहां
+    Truth: संघठन
+
+[3] Input: ramsay
+    Pred : रमसस
+    Truth: रामसे
+
+[4] Input: sanstuti
+    Pred : संस््तत
+    Truth: संस्तुति
+
+[5] Input: parvan
+    Pred : परववन
+    Truth: परवान
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:198 Total samples : 4358
+
+Validation Loss: 1.5432
+Validation Accuracy (exact match [Word Based]): 4.54%
+
+Validation Accuracy (exact match [char Based]): 51.67%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:46<00:00,  3.69it/s]
+
+Sample Predictions:
+[1] Input: manoj
+    Pred : मांज
+    Truth: मनोज
+
+[2] Input: akhatar
+    Pred : अखात
+    Truth: अख़्तर
+
+[3] Input: akhtar
+    Pred : अख्त
+    Truth: अख़्तर
+
+[4] Input: yohan
+    Pred : योहा
+    Truth: योहान
+
+[5] Input: lakhnawi
+    Pred : लानावी
+    Truth: लखनवी
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:578 Total samples : 4358
+
+Validation Loss: 1.2129
+Validation Accuracy (exact match [Word Based]): 13.26%
+
+Validation Accuracy (exact match [char Based]): 63.09%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:46<00:00,  3.71it/s]
+
+Sample Predictions:
+[1] Input: urwarkata
+    Pred : उर्वरककत
+    Truth: उर्वरकता
+
+[2] Input: laigik
+    Pred : लैगिक
+    Truth: लैंगिक
+
+[3] Input: balaen
+    Pred : बलाएं
+    Truth: बालाएं
+
+[4] Input: leti
+    Pred : लेटी
+    Truth: लेती
+
+[5] Input: pratispard
+    Pred : प्रतिस्पद
+    Truth: प्रतिस्पर्
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:725 Total samples : 4358
+
+Validation Loss: 1.0622
+Validation Accuracy (exact match [Word Based]): 16.64%
+
+Validation Accuracy (exact match [char Based]): 67.63%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:47<00:00,  3.67it/s]
+
+Sample Predictions:
+[1] Input: pahunchaat
+    Pred : पहुंचा
+    Truth: पहुंचाती
+
+[2] Input: gadkari
+    Pred : गदडकरी
+    Truth: गडकरी
+
+[3] Input: shahjahani
+    Pred : शहजहहनी
+    Truth: शाहजहानी
+
+[4] Input: abadhith
+    Pred : अभाधित
+    Truth: अबाधित
+
+[5] Input: avadh
+    Pred : अवाध
+    Truth: अवध
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:849 Total samples : 4358
+
+Validation Loss: 0.9967
+Validation Accuracy (exact match [Word Based]): 19.48%
+
+Validation Accuracy (exact match [char Based]): 69.68%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:44<00:00,  3.87it/s]
+
+Sample Predictions:
+[1] Input: teliy
+    Pred : तेली
+    Truth: तेलीय
+
+[2] Input: childhood
+    Pred : चिलदधोड
+    Truth: चाइल्डहुड
+
+[3] Input: peace
+    Pred : पीके
+    Truth: पीस
+
+[4] Input: sidan
+    Pred : सिदान
+    Truth: सीडान
+
+[5] Input: hathve
+    Pred : हावेव
+    Truth: हाथवे
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:947 Total samples : 4358
+
+Validation Loss: 1.0367
+Validation Accuracy (exact match [Word Based]): 21.73%
+
+Validation Accuracy (exact match [char Based]): 70.15%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:45<00:00,  3.84it/s]
+
+Sample Predictions:
+[1] Input: darshaee
+    Pred : दर्शाई
+    Truth: दर्शाई
+
+[2] Input: ladakon
+    Pred : लडककोंं
+    Truth: लड़ाकों
+
+[3] Input: nibhaakar
+    Pred : निभाकार
+    Truth: निभाकर
+
+[4] Input: tiktaa
+    Pred : टिकता
+    Truth: टिकता
+
+[5] Input: bhukhe
+    Pred : भूखे
+    Truth: भूखे
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1047 Total samples : 4358
+
+Validation Loss: 0.9259
+Validation Accuracy (exact match [Word Based]): 24.02%
+
+Validation Accuracy (exact match [char Based]): 71.18%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:43<00:00,  3.97it/s]
+
+Sample Predictions:
+[1] Input: jaaneman
+    Pred : जानेमनन
+    Truth: जानेमन
+
+[2] Input: swayanvar
+    Pred : स्वयन्वरर
+    Truth: स्वयंवर
+
+[3] Input: suits
+    Pred : समट्स
+    Truth: सुइट्स
+
+[4] Input: sweeper
+    Pred : स्वीपर
+    Truth: स्वीपर
+
+[5] Input: najar
+    Pred : नजरर
+    Truth: नजर
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1028 Total samples : 4358
+
+Validation Loss: 0.9444
+Validation Accuracy (exact match [Word Based]): 23.59%
+
+Validation Accuracy (exact match [char Based]): 71.94%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:44<00:00,  3.92it/s]
+
+Sample Predictions:
+[1] Input: stallone
+    Pred : स्टललोन
+    Truth: स्टैलोन
+
+[2] Input: banvae
+    Pred : बनवाई
+    Truth: बनवाए
+
+[3] Input: shariri
+    Pred : शरीरी
+    Truth: शरीरी
+
+[4] Input: peace
+    Pred : पीएस
+    Truth: पीस
+
+[5] Input: mudraen
+    Pred : मुद्राएं
+    Truth: मुद्राएं
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1137 Total samples : 4358
+
+Validation Loss: 0.9264
+Validation Accuracy (exact match [Word Based]): 26.09%
+
+Validation Accuracy (exact match [char Based]): 72.37%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:45<00:00,  3.81it/s]
+
+Sample Predictions:
+[1] Input: aviv
+    Pred : आविव
+    Truth: अवीव
+
+[2] Input: sauhard
+    Pred : सौहर््द
+    Truth: सौहार्द
+
+[3] Input: shinaakhta
+    Pred : शीनाखकता
+    Truth: शिनाख्त
+
+[4] Input: raima
+    Pred : रैमा
+    Truth: राइमा
+
+[5] Input: relationsh
+    Pred : रेलेशिशन
+    Truth: रिलेशनशिप
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1135 Total samples : 4358
+
+Validation Loss: 0.9510
+Validation Accuracy (exact match [Word Based]): 26.04%
+
+Validation Accuracy (exact match [char Based]): 72.75%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:44<00:00,  3.90it/s]
+
+Sample Predictions:
+[1] Input: kaloniyan
+    Pred : कलोनियां
+    Truth: कालोनियां
+
+[2] Input: daivagy
+    Pred : डैवागञञ
+    Truth: दैवज्ञ
+
+[3] Input: madal
+    Pred : मदलल
+    Truth: माडल
+
+[4] Input: manjire
+    Pred : मंजीरे
+    Truth: मंजीरे
+
+[5] Input: nirakshara
+    Pred : निराक्रा
+    Truth: निरक्षरता
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1199 Total samples : 4358
+
+Validation Loss: 0.9907
+Validation Accuracy (exact match [Word Based]): 27.51%
+
+Validation Accuracy (exact match [char Based]): 73.09%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:44<00:00,  3.89it/s]
+
+Sample Predictions:
+[1] Input: kshmashil
+    Pred : क्षमाशील
+    Truth: क्षमाशील
+
+[2] Input: signalon
+    Pred : सिगनालों
+    Truth: सिगनलों
+
+[3] Input: pakshatya
+    Pred : पाक्षात्य
+    Truth: पाश्चात्य
+
+[4] Input: water
+    Pred : वेटर
+    Truth: वॉटर
+
+[5] Input: dhakana
+    Pred : चकाना
+    Truth: ढकना
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1165 Total samples : 4358
+
+Validation Loss: 0.9936
+Validation Accuracy (exact match [Word Based]): 26.73%
+
+Validation Accuracy (exact match [char Based]): 72.87%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:45<00:00,  3.81it/s]
+
+Sample Predictions:
+[1] Input: bechain
+    Pred : बेचें
+    Truth: बैचेन
+
+[2] Input: moonh
+    Pred : मूंह
+    Truth: मुंह
+
+[3] Input: chunauti
+    Pred : चुनौती
+    Truth: चुनौति
+
+[4] Input: haashmi
+    Pred : हासमी
+    Truth: हाश्मी
+
+[5] Input: ambarnath
+    Pred : अमंररनाथ
+    Truth: अंबरनाथ
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1189 Total samples : 4358
+
+Validation Loss: 1.0203
+Validation Accuracy (exact match [Word Based]): 27.28%
+
+Validation Accuracy (exact match [char Based]): 72.96%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:44<00:00,  3.86it/s]
+
+Sample Predictions:
+[1] Input: bhagya
+    Pred : भग्यय
+    Truth: भाग्य
+
+[2] Input: jaideep
+    Pred : जयदीप
+    Truth: जयदीप
+
+[3] Input: dukanen
+    Pred : दुकानें
+    Truth: दुकानें
+
+[4] Input: newaa
+    Pred : न्वा
+    Truth: नेवा
+
+[5] Input: amul
+    Pred : अमूल
+    Truth: अमूल
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1217 Total samples : 4358
+
+Validation Loss: 1.0110
+Validation Accuracy (exact match [Word Based]): 27.93%
+
+Validation Accuracy (exact match [char Based]): 73.12%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:44<00:00,  3.85it/s]
+
+Sample Predictions:
+[1] Input: asankhya
+    Pred : असंख्य
+    Truth: असंख्य
+
+[2] Input: dalee
+    Pred : दली
+    Truth: दाली
+
+[3] Input: dala
+    Pred : दलल
+    Truth: डाला
+
+[4] Input: zen
+    Pred : जेन
+    Truth: जेन
+
+[5] Input: yahi
+    Pred : यहह
+    Truth: यही
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1221 Total samples : 4358
+
+Validation Loss: 1.0659
+Validation Accuracy (exact match [Word Based]): 28.02%
+
+Validation Accuracy (exact match [char Based]): 73.14%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:45<00:00,  3.77it/s]
+
+Sample Predictions:
+[1] Input: ilajon
+    Pred : इलाज़ो
+    Truth: इलाजों
+
+[2] Input: dubkar
+    Pred : दुबकर
+    Truth: डूबकर
+
+[3] Input: vyavdhanon
+    Pred : व्यवधानों
+    Truth: व्यवधानों
+
+[4] Input: sahabon
+    Pred : साहबों
+    Truth: साहबों
+
+[5] Input: jhadapon
+    Pred : झड़पों
+    Truth: झड़पों
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1229 Total samples : 4358
+
+Validation Loss: 1.0692
+Validation Accuracy (exact match [Word Based]): 28.20%
+
+Validation Accuracy (exact match [char Based]): 73.02%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:47<00:00,  3.63it/s]
+
+Sample Predictions:
+[1] Input: lokrang
+    Pred : लोकरंग
+    Truth: लोकरंग
+
+[2] Input: kshmasheel
+    Pred : क्षमशशलला
+    Truth: क्षमाशील
+
+[3] Input: kiranon
+    Pred : किरनों
+    Truth: किरणों
+
+[4] Input: rendear
+    Pred : रेंडीर
+    Truth: रेनडियर
+
+[5] Input: os
+    Pred : ओएस
+    Truth: ओस
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1160 Total samples : 4358
+
+Validation Loss: 1.1309
+Validation Accuracy (exact match [Word Based]): 26.62%
+
+Validation Accuracy (exact match [char Based]): 72.69%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:44<00:00,  3.90it/s]
+
+Sample Predictions:
+[1] Input: sesanaa
+    Pred : सेसना
+    Truth: सेसना
+
+[2] Input: mahashmash
+    Pred : महाशमाषाव
+    Truth: महाश्मशान
+
+[3] Input: sudharane
+    Pred : सुधारने
+    Truth: सुधरने
+
+[4] Input: mahashmsha
+    Pred : महाशमश्य्त
+    Truth: महाश्मशान
+
+[5] Input: akhatar
+    Pred : अखततर
+    Truth: अख़्तर
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1212 Total samples : 4358
+
+Validation Loss: 1.1970
+Validation Accuracy (exact match [Word Based]): 27.81%
+
+Validation Accuracy (exact match [char Based]): 73.32%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:44<00:00,  3.93it/s]
+
+Sample Predictions:
+[1] Input: tarkvadi
+    Pred : तर्कवादी
+    Truth: तर्कवादी
+
+[2] Input: pardarshi
+    Pred : पाददरशी
+    Truth: पारदर्शी
+
+[3] Input: shamoon
+    Pred : शमून
+    Truth: शमून
+
+[4] Input: langarakar
+    Pred : लंगारकरं
+    Truth: लंगड़ाकर
+
+[5] Input: tong
+    Pred : टोंग
+    Truth: टोंग
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:1179 Total samples : 4358
+
+Validation Loss: 1.1843
+Validation Accuracy (exact match [Word Based]): 27.05%
+
+Validation Accuracy (exact match [char Based]): 72.99%
+ 50%|█████████████████████████████████████████████████████████████████████▌                                                                      | 86/173 [00:22<00:22,  3.88it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 344, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 300, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 87, in train_model
+    total_loss += loss.item()
+                  ^^^^^^^^^^^
+KeyboardInterrupt

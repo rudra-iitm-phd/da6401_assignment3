@@ -1,0 +1,10 @@
+{"time":"2025-05-18T23:12:23.237506+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/wandb/run-20250518_231223-m7sqnoao/logs/debug-core.log"}
+{"time":"2025-05-18T23:12:23.369162+05:30","level":"INFO","msg":"created new stream","id":"m7sqnoao"}
+{"time":"2025-05-18T23:12:23.369302+05:30","level":"INFO","msg":"sender: started","stream_id":"m7sqnoao"}
+{"time":"2025-05-18T23:12:23.369398+05:30","level":"INFO","msg":"stream: started","id":"m7sqnoao"}
+{"time":"2025-05-18T23:12:23.369402+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"m7sqnoao"}
+{"time":"2025-05-18T23:12:23.369441+05:30","level":"INFO","msg":"handler: started","stream_id":"m7sqnoao"}
+{"time":"2025-05-18T23:12:23.863573+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-18T23:16:17.273963+05:30","level":"INFO","msg":"stream: closing","id":"m7sqnoao"}
+{"time":"2025-05-18T23:16:17.274131+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-18T23:16:17.277299+05:30","level":"INFO","msg":"Stopped system monitor"}

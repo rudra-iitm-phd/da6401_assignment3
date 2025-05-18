@@ -3,9 +3,37 @@ import torch.nn as nn
 import numpy as np
 import torch.nn.functional as F
 
+class EncoderDecoderAttention(nn.Module):
+      def __init__(self, dec_dim):
+            super(EncoderDecoderAttention, self).__init__()
+
+            self.dec_dim = dec_dim 
+            self.W_enc = nn.Linear(self.dec_dim, self.dec_dim)
+            self.W_dec = nn.Linear(self.dec_dim, self.dec_dim)
+            self.v = nn.Parameter(torch.rand(self.dec_dim))
+            self.tanh = nn.Tanh()
+
+      def forward(self, dec_hidden, enc_output, mask=None):
+            batch_size, seq_len, _ = enc_output.size() # batch x seq_len x enc_dim
+            Uhj = self.W_dec(dec_hidden) # o/p --> batch x hidden
+            Uhj = Uhj.unsqueeze(1) # o/p --> batch x 1 x hidden
+            Ws = self.W_enc(enc_output) # o/p --> batch x seq_len x hidden 
+            energy = self.tanh(Uhj+Ws) # batch x seq_len x hidden
+            v = self.v.unsqueeze(0).unsqueeze(2) # 1 x hidden x 1
+            v = v.repeat(batch_size, 1, 1)
+            scores = torch.bmm(energy, v).squeeze(-1) # batch x seq_len
+            if mask is not None:
+                  scores = scores.masked_fill(mask==0, -1e9)
+            attn_weights = F.softmax(scores, dim = 1) # batch x seq_len
+            attn_weights = attn_weights.unsqueeze(1) # batch x 1 x seq_len
+            context = torch.bmm(attn_weights, enc_output) # batch x 1 x enc_dim
+            # context = context.squeeze(1) # batch x enc_dim
+            return context, attn_weights
+            
+
 
 class DynamicSeq2Seq(nn.Module):
-      def __init__(self, model_type, activation, encoder_embedding_input_dim, encoder_embedding_output_dim, enc_ouput_dim, n_encoders, decoder_embedding_input_dim, decoder_embedding_output_dim, dec_ouput_dim, n_decoders, linear_dim, dropout_rate):
+      def __init__(self, model_type, activation, encoder_embedding_input_dim, encoder_embedding_output_dim, enc_ouput_dim, n_encoders, decoder_embedding_input_dim, decoder_embedding_output_dim, dec_ouput_dim, n_decoders, linear_dim, dropout_rate, use_attn):
             super(DynamicSeq2Seq, self).__init__()
 
             self.enc_embedding_vocab_size = encoder_embedding_input_dim
@@ -18,6 +46,8 @@ class DynamicSeq2Seq(nn.Module):
             self.dec_dim = dec_ouput_dim
             self.n_decoders = n_decoders
             self.dropout_rate = dropout_rate
+
+            self.use_attention = use_attn
 
             self.linear_dim = linear_dim
 
@@ -43,7 +73,10 @@ class DynamicSeq2Seq(nn.Module):
             
 
             self.decoder_embedding = nn.Embedding(self.dec_embedding_vocab_size, self.dec_embedding_dim)
-            self.decoder = self.model(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True, dropout = dropout_rate)
+            if self.use_attention :
+                  self.decoder = self.model(self.dec_embedding_dim + self.dec_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True, dropout = dropout_rate)
+            else :
+                  self.decoder = self.model(self.dec_embedding_dim, self.dec_dim, num_layers = self.n_decoders, batch_first = True, dropout = dropout_rate)
             
             
 
@@ -57,14 +90,20 @@ class DynamicSeq2Seq(nn.Module):
             self.project_encoder_hidden_to_decoder_hidden = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
             self.project_encoder_cell_to_decoder_cell = nn.Linear(self.n_encoders * self.enc_dim, self.n_decoders * self.dec_dim)
 
+            if use_attn:
+                  self.attention = EncoderDecoderAttention(self.dec_dim)
+                  self.project_attention_to_dec_hidden = nn.Linear(2*self.dec_dim , self.dec_dim)
+                  if self.enc_dim != self.dec_dim:
+                        self.project_encoder_output_decoder_hidden = nn.Linear(self.enc_dim, self.dec_dim)
+
       def forward(self, x, y=None):
             device = x.device
             x = self.encoder_embedding(x)
 
             if self.model_type == 'lstm':
-                  output, (enc_hidden_state, enc_cell_state) = self.encoder(x)
+                  enc_output, (enc_hidden_state, enc_cell_state) = self.encoder(x)
             else:
-                  output, enc_hidden_state = self.encoder(x)
+                  enc_output, enc_hidden_state = self.encoder(x)
             # note : hidden_state_dim == cell_state_dim
             if self.n_decoders == self.n_encoders and self.enc_dim == self.dec_dim:
                   dec_hidden = enc_hidden_state
@@ -101,11 +140,30 @@ class DynamicSeq2Seq(nn.Module):
 
             
             dec_input = torch.tensor([[2]] * x.size(0), device = device)
+
+            if self.use_attention:
+                        attention_weights = torch.zeros(x.size(0), x.size(1), x.size(1))
+                        if self.enc_dim != self.dec_dim:
+                              enc_output = enc_output.reshape(-1, self.enc_dim)
+                              enc_output = self.project_encoder_output_decoder_hidden(enc_output)
+                              enc_output = enc_output.reshape(x.size(0), x.size(1), -1)
             
             outputs = []
             for i in range(10):
                   dec_embed = self.decoder_embedding(dec_input)
+                  if self.use_attention:
+                        context, attn_weights = self.attention(dec_hidden[-1], enc_output)
+                        attention_weights[:,i,:] = attn_weights.squeeze(1)
+                        dec_embed = torch.cat([dec_embed, context], dim = -1)
+                        context = context.squeeze(1).repeat(self.n_decoders, 1, 1)
+                        # dec_hidden = nn.Tanh()(self.project_attention_to_dec_hidden(torch.cat([dec_hidden, context], dim = -1)))
+                        # dec_hidden = self.project_attention_to_dec_hidden(torch.cat([dec_hidden, context], dim = -1))
+                        dec_hidden = context
+                        
                   if self.model_type == 'lstm':
+                        # dec_hidden = context if self.use_attention else dec_hidden
+                        # hidden_cell, attn_weights = self.attention(dec_cell[-1], enc_output)
+                        # dec_cell = hidden_cell.repeat(self.n_decoders, 1, 1) if self.use_attention else dec_hidden
                         dec_output, (dec_hidden, dec_cell) = self.decoder(dec_embed, (dec_hidden, dec_cell))
                   else:
                         dec_output, dec_hidden = self.decoder(dec_embed, dec_hidden)
@@ -119,7 +177,7 @@ class DynamicSeq2Seq(nn.Module):
                         dec_input = y[:,i].view(-1, 1)
                   else:
                         dec_input = output.argmax(-1).unsqueeze(1)
-            return torch.stack(outputs, 1)
+            return torch.stack(outputs, 1), attention_weights
 
       def beam(self, x, k: int = 2, max_length: int = 10):
             batch_size = x.size(0)

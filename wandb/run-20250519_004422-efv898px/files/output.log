@@ -1,0 +1,301 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:39<00:00,  4.33it/s]
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+Sample Predictions:
+[1] Input: shraddheya
+    Pred : श्र्रााा
+    Truth: श्रद्धेय
+
+[2] Input: bhugatta
+    Pred : भिततत
+    Truth: भुगतता
+
+[3] Input: bds
+    Pred : बेरी
+    Truth: बीडीएस
+
+[4] Input: seminary
+    Pred : स्र्रा
+    Truth: सेमिनरी
+
+[5] Input: geeta
+    Pred : लेले
+    Truth: गीता
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 104 (h) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 114 (r) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 97 (a) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 100 (d) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 121 (y) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 73 (I) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 110 (n) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 117 (u) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 116 (t) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 107 (k) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 79 (O) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 65 (A) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 105 (i) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 119 (w) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 103 (g) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:10 Total samples : 4358
+
+Validation Loss: 2.3418
+Validation Accuracy (exact match [Word Based]): 0.23%
+
+Validation Accuracy (exact match [char Based]): 29.45%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:39<00:00,  4.36it/s]
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/seaborn/utils.py:61: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  fig.canvas.draw()
+
+Sample Predictions:
+[1] Input: somaiya
+    Pred : सुजयया
+    Truth: सोमैया
+
+[2] Input: vaishno
+    Pred : वाशोो
+    Truth: वैष्णो
+
+[3] Input: intra
+    Pred : इंटतर
+    Truth: इंट्रा
+
+[4] Input: hiran
+    Pred : हिरन
+    Truth: हिरण
+
+[5] Input: chitthiyon
+    Pred : चितियोंं
+    Truth: चिठ्ठियों
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 109 (m) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 97 (a) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 105 (i) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 121 (y) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 73 (I) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 110 (n) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 117 (u) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 116 (t) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 107 (k) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 79 (O) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 65 (A) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 119 (w) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 103 (g) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 104 (h) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+
+Total correct:266 Total samples : 4358
+
+Validation Loss: 1.4177
+Validation Accuracy (exact match [Word Based]): 6.10%
+
+Validation Accuracy (exact match [char Based]): 54.97%
+ 95%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▊       | 164/173 [00:37<00:02,  4.34it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 326, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 282, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 71, in train_model
+    optimizer.step()
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/optimizer.py", line 385, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/adam.py", line 166, in step
+    adam(
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/adam.py", line 316, in adam
+    func(params,
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/optim/adam.py", line 391, in _single_tensor_adam
+    exp_avg.lerp_(grad, 1 - beta1)
+KeyboardInterrupt

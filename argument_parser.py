@@ -51,9 +51,10 @@ parser.add_argument('-e', '--epochs',
                   type = int, default = 20, 
                   help = 'Number of Epochs')
 
-# parser.add_argument('-w_d', '--weight_decay', 
-#                   type = float, default = 0.001,
-#                   help = 'Value for weight decay or L2 Regularization')
+parser.add_argument('-ua', '--use_attn', 
+                  type = bool, default = False, 
+                  help = 'Set True to use attention')
+
 
 parser.add_argument('-mom', '--momentum', 
                   type = float, default = 0.9,
