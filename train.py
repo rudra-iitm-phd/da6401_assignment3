@@ -143,7 +143,7 @@ def train_model(model, epochs, train_loader, val_loader, criterion, optimizer, d
             train_loss = total_loss/len(train_loader)
             # _, train_char_acc, train_word_acc = evaluate_model(model, data_loader=train_loader, latinidx2char = shared.latin_idx2char,nativeidx2char = shared.native_idx2char, criterion = criterion, device = device, beam_size = 1, data = 'train')
 
-            val_loss, val_char_acc, val_word_acc = evaluate_model(model, data_loader=val_loader, latinidx2char = shared.latin_idx2char,nativeidx2char = shared.native_idx2char, criterion = criterion, device = device, beam_size = beam_size, data = 'val', log = True if log else False)
+            val_loss, val_char_acc, val_word_acc = evaluate_model(model, data_loader=val_loader, latinidx2char = shared.latin_idx2char,nativeidx2char = shared.native_idx2char, criterion = criterion, device = device, beam_size = beam_size, data = 'val', log = True if log else False, log_connectivity = config['log_connectivity'])
             if log:
                   wandb.log({
                         "Accuracy(char)":val_char_acc,
@@ -185,7 +185,7 @@ def plot_attention(attn_matrix, input_tokens, output_tokens):
       # plt.tight_layout()
       return fig
 
-def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion, device='cpu', data='val', beam_size = 1, log = False):
+def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion, device='cpu', data='val', beam_size = 1, log = False, log_connectivity = False):
       model.eval()
       total_loss = 0
       total = 0
@@ -321,14 +321,15 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                                     {'attention_heatmap': wandb.Image(fig)}
                                     
                               )
-                        log_connectivity_visualization_to_wandb(
-                                                                  model, 
-                                                                  latin[0], 
-                                                                  native[0], 
-                                                                  latinidx2char, 
-                                                                  nativeidx2char, 
-                                                                  device
-                                                                  )
+                        if log_connectivity:
+                              log_connectivity_visualization_to_wandb(
+                                                                        model, 
+                                                                        latin[0], 
+                                                                        native[0], 
+                                                                        latinidx2char, 
+                                                                        nativeidx2char, 
+                                                                        device
+                                                                        )
                         
 
 

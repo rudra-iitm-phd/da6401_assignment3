@@ -56,6 +56,11 @@ parser.add_argument('-ua', '--use_attn',
                   help = 'Set True to use attention')
 
 
+parser.add_argument('-lc', '--log_connectivity', 
+                  type = bool, default = False, 
+                  help = 'Set True to log the connectivity diagram')
+
+
 parser.add_argument('-mom', '--momentum', 
                   type = float, default = 0.9359397750924344,
                   help = 'Momentum to be used by the optimizer')
