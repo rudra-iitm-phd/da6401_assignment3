@@ -92,7 +92,7 @@ class DynamicSeq2Seq(nn.Module):
 
             if use_attn:
                   self.attention = EncoderDecoderAttention(self.dec_dim)
-                  self.project_attention_to_dec_hidden = nn.Linear(2*self.dec_dim , self.dec_dim)
+                  # self.project_attention_to_dec_hidden = nn.Linear(2*self.dec_dim , self.dec_dim)
                   if self.enc_dim != self.dec_dim:
                         self.project_encoder_output_decoder_hidden = nn.Linear(self.enc_dim, self.dec_dim)
 
@@ -156,14 +156,9 @@ class DynamicSeq2Seq(nn.Module):
                         attention_weights[:,i,:] = attn_weights.squeeze(1)
                         dec_embed = torch.cat([dec_embed, context], dim = -1)
                         context = context.squeeze(1).repeat(self.n_decoders, 1, 1)
-                        # dec_hidden = nn.Tanh()(self.project_attention_to_dec_hidden(torch.cat([dec_hidden, context], dim = -1)))
-                        # dec_hidden = self.project_attention_to_dec_hidden(torch.cat([dec_hidden, context], dim = -1))
-                        dec_hidden = context
+                        dec_hidden = context + dec_hidden
                         
                   if self.model_type == 'lstm':
-                        # dec_hidden = context if self.use_attention else dec_hidden
-                        # hidden_cell, attn_weights = self.attention(dec_cell[-1], enc_output)
-                        # dec_cell = hidden_cell.repeat(self.n_decoders, 1, 1) if self.use_attention else dec_hidden
                         dec_output, (dec_hidden, dec_cell) = self.decoder(dec_embed, (dec_hidden, dec_cell))
                   else:
                         dec_output, dec_hidden = self.decoder(dec_embed, dec_hidden)

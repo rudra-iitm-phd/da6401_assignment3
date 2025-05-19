@@ -1,0 +1,100 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:38<00:00,  4.53it/s]
+Sample Predictions:
+[1] Input: tevron
+    Pred : त्ररनन
+    Truth: तेवरों
+
+[2] Input: hitake
+    Pred : हितत
+    Truth: हाईटेक
+
+[3] Input: sapt
+    Pred : प््त
+    Truth: सप्त
+
+[4] Input: humdum
+    Pred : अमममर
+    Truth: हमदम
+
+[5] Input: buliyan
+    Pred : बलललाय
+    Truth: बुलियन
+
+Total correct:9 Total samples : 4358
+
+Validation Loss: 2.2097
+Validation Accuracy (exact match [Word Based]): 0.21%
+
+Validation Accuracy (exact match [char Based]): 32.46%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:36<00:00,  4.71it/s]
+
+Sample Predictions:
+[1] Input: patniyan
+    Pred : पत्नियय
+    Truth: पत्नियां
+
+[2] Input: jansuchnaa
+    Pred : जनसुचचाा
+    Truth: जनसूचना
+
+[3] Input: tibby
+    Pred : टिबबब
+    Truth: टिब्बी
+
+[4] Input: sikuda
+    Pred : सिकुदद
+    Truth: सिकुड़ा
+
+[5] Input: fault
+    Pred : फालक
+    Truth: फॉल्ट
+
+Total correct:411 Total samples : 4358
+
+Validation Loss: 1.2806
+Validation Accuracy (exact match [Word Based]): 9.43%
+
+Validation Accuracy (exact match [char Based]): 60.16%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:37<00:00,  4.65it/s]
+
+Sample Predictions:
+[1] Input: vyavshthap
+    Pred : व्यवश्थपप
+    Truth: व्यवस्थापक
+
+[2] Input: utsuk
+    Pred : उत्सुक
+    Truth: उत्सुक
+
+[3] Input: saarvabhau
+    Pred : सारवाभा
+    Truth: सार्वभौमिक
+
+[4] Input: awastvik
+    Pred : अवस्त्विकक
+    Truth: अवास्तविक
+
+[5] Input: dumra
+    Pred : दुम्र
+    Truth: डुमरा
+
+Total correct:798 Total samples : 4358
+
+Validation Loss: 1.0591
+Validation Accuracy (exact match [Word Based]): 18.31%
+
+Validation Accuracy (exact match [char Based]): 67.57%
+ 45%|██████████████████████████████████████████████████████████████▎                                                                             | 77/173 [00:17<00:21,  4.45it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 387, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 362, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 137, in train_model
+    loss.backward()
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/autograd/__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

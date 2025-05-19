@@ -1,0 +1,16 @@
+{"time":"2025-05-19T15:45:40.765382+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/wandb/run-20250519_154540-vwfwhv9n/logs/debug-core.log"}
+{"time":"2025-05-19T15:45:41.028145+05:30","level":"INFO","msg":"created new stream","id":"vwfwhv9n"}
+{"time":"2025-05-19T15:45:41.028227+05:30","level":"INFO","msg":"stream: started","id":"vwfwhv9n"}
+{"time":"2025-05-19T15:45:41.028245+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"vwfwhv9n"}
+{"time":"2025-05-19T15:45:41.028262+05:30","level":"INFO","msg":"handler: started","stream_id":"vwfwhv9n"}
+{"time":"2025-05-19T15:45:41.028324+05:30","level":"INFO","msg":"sender: started","stream_id":"vwfwhv9n"}
+{"time":"2025-05-19T15:45:41.452164+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-19T15:48:57.512411+05:30","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/da24d008-iit-madras/da6401-assignment3/vwfwhv9n/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}
+{"time":"2025-05-19T15:50:23.389616+05:30","level":"INFO","msg":"stream: closing","id":"vwfwhv9n"}
+{"time":"2025-05-19T15:50:23.389839+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-19T15:50:23.394789+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-19T15:50:24.350041+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-19T15:50:24.69636+05:30","level":"INFO","msg":"handler: closed","stream_id":"vwfwhv9n"}
+{"time":"2025-05-19T15:50:24.69653+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"vwfwhv9n"}
+{"time":"2025-05-19T15:50:24.697034+05:30","level":"INFO","msg":"sender: closed","stream_id":"vwfwhv9n"}
+{"time":"2025-05-19T15:50:24.697129+05:30","level":"INFO","msg":"stream: closed","id":"vwfwhv9n"}

@@ -1,0 +1,202 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:38<00:00,  4.54it/s]
+Sample Predictions:
+[1] Input: bachaen
+    Pred : भानेे
+    Truth: बचाएं
+
+[2] Input: creative
+    Pred : त्रलाा
+    Truth: क्रिएटिव
+
+[3] Input: gyarah
+    Pred : दिररार
+    Truth: ग्यारह
+
+[4] Input: letate
+    Pred : लेटटट
+    Truth: लेटते
+
+[5] Input: lekhon
+    Pred : लोलो
+    Truth: लेखों
+
+Total correct:16 Total samples : 4358
+
+Validation Loss: 2.2230
+Validation Accuracy (exact match [Word Based]): 0.37%
+
+Validation Accuracy (exact match [char Based]): 32.51%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:36<00:00,  4.74it/s]
+
+Sample Predictions:
+[1] Input: kanton
+    Pred : कनतोंं
+    Truth: कांटों
+
+[2] Input: kamjoriyan
+    Pred : कममजरियय
+    Truth: कमज़ोरियां
+
+[3] Input: satyansh
+    Pred : सत्यनश
+    Truth: सत्यांश
+
+[4] Input: prospectus
+    Pred : प्रोस्सस्ट
+    Truth: प्रोस्पेक्
+
+[5] Input: rushabh
+    Pred : रुषभभ
+    Truth: ऋषभ
+
+Total correct:475 Total samples : 4358
+
+Validation Loss: 1.2342
+Validation Accuracy (exact match [Word Based]): 10.90%
+
+Validation Accuracy (exact match [char Based]): 62.07%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:37<00:00,  4.57it/s]
+
+Sample Predictions:
+[1] Input: tejaab
+    Pred : तेजबब
+    Truth: तेजाब
+
+[2] Input: mantle
+    Pred : मंटलल
+    Truth: मैंटल
+
+[3] Input: kanmul
+    Pred : का्मुल
+    Truth: कंदमूल
+
+[4] Input: pathari
+    Pred : पथरीी
+    Truth: पथरी
+
+[5] Input: nor
+    Pred : नोर
+    Truth: नॉर
+
+Total correct:676 Total samples : 4358
+
+Validation Loss: 1.0529
+Validation Accuracy (exact match [Word Based]): 15.51%
+
+Validation Accuracy (exact match [char Based]): 66.76%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:37<00:00,  4.61it/s]
+
+Sample Predictions:
+[1] Input: rasaayan
+    Pred : रसायं
+    Truth: रसायन
+
+[2] Input: jtane
+    Pred : जतने
+    Truth: जताने
+
+[3] Input: sajjit
+    Pred : सजजीत
+    Truth: सज्जित
+
+[4] Input: selina
+    Pred : सेलिना
+    Truth: सेलीना
+
+[5] Input: bathem
+    Pred : बथेम
+    Truth: बॉथम
+
+Total correct:1013 Total samples : 4358
+
+Validation Loss: 1.0086
+Validation Accuracy (exact match [Word Based]): 23.24%
+
+Validation Accuracy (exact match [char Based]): 68.43%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:36<00:00,  4.71it/s]
+
+Sample Predictions:
+[1] Input: selina
+    Pred : सेलिना
+    Truth: सेलीना
+
+[2] Input: mola
+    Pred : मोला
+    Truth: मोला
+
+[3] Input: filmana
+    Pred : फिल्माना
+    Truth: फिल्माना
+
+[4] Input: dheeth
+    Pred : धीठ
+    Truth: ढीठ
+
+[5] Input: vidhigya
+    Pred : विधिग्ञा
+    Truth: विधिज्ञ
+
+Total correct:1066 Total samples : 4358
+
+Validation Loss: 0.9181
+Validation Accuracy (exact match [Word Based]): 24.46%
+
+Validation Accuracy (exact match [char Based]): 70.99%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:36<00:00,  4.69it/s]
+
+Sample Predictions:
+[1] Input: rannitik
+    Pred : रणनितिक
+    Truth: रणनीतिक
+
+[2] Input: julian
+    Pred : जुलिया
+    Truth: जूलियन
+
+[3] Input: dainya
+    Pred : दैन्य
+    Truth: दैन्य
+
+[4] Input: shakt
+    Pred : शक्त
+    Truth: शक्त
+
+[5] Input: roster
+    Pred : रोस्टर
+    Truth: रोस्टर
+
+Total correct:1171 Total samples : 4358
+
+Validation Loss: 0.8951
+Validation Accuracy (exact match [Word Based]): 26.87%
+
+Validation Accuracy (exact match [char Based]): 71.88%
+ 92%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌          | 160/173 [00:34<00:02,  4.65it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 856, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 831, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 594, in train_model
+    output, attn_weights = model(latin)
+                          ^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/model.py", line 167, in forward
+    dec_output, (dec_hidden, dec_cell) = self.decoder(dec_embed, (dec_hidden, dec_cell))
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/rnn.py", line 878, in forward
+    result = _VF.lstm(input, hx, self._flat_weights, self.bias, self.num_layers,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
