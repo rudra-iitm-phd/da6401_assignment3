@@ -1,0 +1,11 @@
+{"time":"2025-05-19T20:37:08.278749+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/wandb/run-20250519_203707-tqc8c9qq/logs/debug-core.log"}
+{"time":"2025-05-19T20:37:08.414143+05:30","level":"INFO","msg":"created new stream","id":"tqc8c9qq"}
+{"time":"2025-05-19T20:37:08.414235+05:30","level":"INFO","msg":"handler: started","stream_id":"tqc8c9qq"}
+{"time":"2025-05-19T20:37:08.414242+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"tqc8c9qq"}
+{"time":"2025-05-19T20:37:08.414419+05:30","level":"INFO","msg":"stream: started","id":"tqc8c9qq"}
+{"time":"2025-05-19T20:37:08.414504+05:30","level":"INFO","msg":"sender: started","stream_id":"tqc8c9qq"}
+{"time":"2025-05-19T20:37:08.874785+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-19T20:41:54.643912+05:30","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/da24d008-iit-madras/da6401-assignment3/tqc8c9qq/file_stream\": dial tcp: lookup api.wandb.ai: no such host"}
+{"time":"2025-05-19T20:51:07.239587+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-19T20:51:07.239874+05:30","level":"INFO","msg":"stream: closing","id":"tqc8c9qq"}
+{"time":"2025-05-19T20:51:07.246429+05:30","level":"INFO","msg":"Stopped system monitor"}

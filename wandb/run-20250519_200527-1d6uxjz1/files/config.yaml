@@ -1,0 +1,107 @@
+_wandb:
+    value:
+        cli_version: 0.19.7
+        m: []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 1
+                - 55
+            "2":
+                - 1
+                - 11
+                - 49
+                - 55
+            "3":
+                - 16
+                - 17
+                - 23
+                - 55
+            "4": 3.12.3
+            "5": 0.19.7
+            "8":
+                - 2
+                - 5
+            "12": 0.19.7
+            "13": darwin-x86_64
+        visualize:
+            confusion_matrix:
+                panel_config:
+                    fieldSettings:
+                        Actual: Actual
+                        Predicted: Predicted
+                        nPredictions: nPredictions
+                    panelDefId: wandb/confusion_matrix/v1
+                    stringSettings:
+                        title: Confusion Matrix Curve
+                    transform:
+                        name: tableWithLeafColNames
+                    userQuery:
+                        queryFields:
+                            - args:
+                                - name: runSets
+                                  value: ${runSets}
+                              fields:
+                                - fields: []
+                                  name: id
+                                - fields: []
+                                  name: name
+                                - fields: []
+                                  name: _defaultColorIndex
+                                - args:
+                                    - name: tableKey
+                                      value: confusion_matrix_table
+                                  fields: []
+                                  name: summaryTable
+                              name: runSets
+                panel_type: Vega2
+activation:
+    value: relu
+batch_size:
+    value: 256
+beam_size:
+    value: 2
+dec_dim:
+    value: 512
+dec_embedding_dim:
+    value: 512
+dropout_rate:
+    value: 0.4
+enc_dim:
+    value: 512
+enc_embedding_dim:
+    value: 256
+epochs:
+    value: 20
+learning_rate:
+    value: 0.0007070499381526606
+linear_dim:
+    value: 1024
+log_connectivity:
+    value: true
+model:
+    value: lstm
+momentum:
+    value: 0.9203285394653522
+n_decoders:
+    value: 3
+n_encoders:
+    value: 3
+native:
+    value: hi
+optimizer:
+    value: adamw
+sweep_id:
+    value: null
+use_attn:
+    value: true
+use_test:
+    value: false
+wandb:
+    value: true
+wandb_entity:
+    value: da24d008-iit-madras
+wandb_project:
+    value: da6401-assignment3
+wandb_sweep:
+    value: false

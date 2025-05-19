@@ -1,0 +1,581 @@
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/rnn.py:83: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:15<00:00,  5.79it/s]
+Sample Predictions:
+[1] Input: hitake
+    Pred : साा
+    Truth: हाईटेक
+
+[2] Input: thaila
+    Pred : साा
+    Truth: थैला
+
+[3] Input: chak
+    Pred : सा
+    Truth: चाक
+
+[4] Input: rope
+    Pred : सा
+    Truth: रोप
+
+[5] Input: lachila
+    Pred : साा
+    Truth: लचीली
+
+Total correct:0 Total samples : 4358
+
+Validation Loss: 3.1236
+Validation Accuracy (exact match [Word Based]): 0.00%
+
+Validation Accuracy (exact match [char Based]): 12.44%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:12<00:00,  6.74it/s]
+
+Sample Predictions:
+[1] Input: lallu
+    Pred : सिल
+    Truth: लल्लू
+
+[2] Input: sikudi
+    Pred : सिस
+    Truth: सिकुड़ी
+
+[3] Input: shmun
+    Pred : सि
+    Truth: शमून
+
+[4] Input: avyavahaar
+    Pred : साााा
+    Truth: अव्यावहारि
+
+[5] Input: nabaligon
+    Pred : सि््
+    Truth: नाबालिगों
+
+Total correct:0 Total samples : 4358
+
+Validation Loss: 2.9652
+Validation Accuracy (exact match [Word Based]): 0.00%
+
+Validation Accuracy (exact match [char Based]): 16.09%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:12<00:00,  6.94it/s]
+
+Sample Predictions:
+[1] Input: vidaya
+    Pred : बााा
+    Truth: विद्या
+
+[2] Input: aja
+    Pred : बा
+    Truth: अजा
+
+[3] Input: jade
+    Pred : बे
+    Truth: जाड़े
+
+[4] Input: uplabhiyan
+    Pred : सिकिल
+    Truth: उपलब्धियां
+
+[5] Input: nagesh
+    Pred : स्स
+    Truth: नागेश
+
+Total correct:0 Total samples : 4358
+
+Validation Loss: 2.8072
+Validation Accuracy (exact match [Word Based]): 0.00%
+
+Validation Accuracy (exact match [char Based]): 19.78%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:12<00:00,  6.92it/s]
+
+Sample Predictions:
+[1] Input: upabhoktaw
+    Pred : प््््
+    Truth: उपभोक्तावा
+
+[2] Input: elexis
+    Pred : सिस
+    Truth: एलेक्सिस
+
+[3] Input: bacchan
+    Pred : सोल
+    Truth: बच्चन
+
+[4] Input: adambaron
+    Pred : सुको
+    Truth: आडंबरों
+
+[5] Input: revoluatio
+    Pred : प्््ल
+    Truth: रेवोल्यूशन
+
+Total correct:3 Total samples : 4358
+
+Validation Loss: 2.6630
+Validation Accuracy (exact match [Word Based]): 0.07%
+
+Validation Accuracy (exact match [char Based]): 22.95%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:12<00:00,  6.89it/s]
+
+Sample Predictions:
+[1] Input: chunauti
+    Pred : सुटी
+    Truth: चुनौति
+
+[2] Input: nets
+    Pred : सोस
+    Truth: नेट्स
+
+[3] Input: lachili
+    Pred : बिलल
+    Truth: लचीली
+
+[4] Input: moresis
+    Pred : स्सस
+    Truth: माॅरिशस
+
+[5] Input: shasakiya
+    Pred : सिक्क
+    Truth: शासकीय
+
+Total correct:4 Total samples : 4358
+
+Validation Loss: 2.5057
+Validation Accuracy (exact match [Word Based]): 0.09%
+
+Validation Accuracy (exact match [char Based]): 28.04%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:12<00:00,  6.83it/s]
+
+Sample Predictions:
+[1] Input: hiss
+    Pred : ससस
+    Truth: हिस्स
+
+[2] Input: sceney
+    Pred : सेल
+    Truth: सीने
+
+[3] Input: bagaraa
+    Pred : बुब
+    Truth: बागरा
+
+[4] Input: delivery
+    Pred : बिल्
+    Truth: डेलिवरी
+
+[5] Input: nakum
+    Pred : मुक
+    Truth: नकुम
+
+Total correct:11 Total samples : 4358
+
+Validation Loss: 2.3578
+Validation Accuracy (exact match [Word Based]): 0.25%
+
+Validation Accuracy (exact match [char Based]): 31.55%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:13<00:00,  6.28it/s]
+
+Sample Predictions:
+[1] Input: pratishodh
+    Pred : पोक्ों
+    Truth: प्रतिशोध
+
+[2] Input: jhadol
+    Pred : बोल
+    Truth: झाड़ोल
+
+[3] Input: restart
+    Pred : स्क्र
+    Truth: रीस्टार्ट
+
+[4] Input: kankaron
+    Pred : कोकक
+    Truth: कंकड़ों
+
+[5] Input: ugana
+    Pred : अो
+    Truth: उगाना
+
+Total correct:32 Total samples : 4358
+
+Validation Loss: 2.2273
+Validation Accuracy (exact match [Word Based]): 0.73%
+
+Validation Accuracy (exact match [char Based]): 35.01%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:17<00:00,  4.88it/s]
+
+Sample Predictions:
+[1] Input: kavval
+    Pred : सालल
+    Truth: कव्वाल
+
+[2] Input: devdar
+    Pred : बेवा
+    Truth: देवदार
+
+[3] Input: answer
+    Pred : सेसस
+    Truth: आंसर
+
+[4] Input: pratigyaon
+    Pred : प्््ोो
+    Truth: प्रतिज्ञाओ
+
+[5] Input: seton
+    Pred : सोस
+    Truth: सेटों
+
+Total correct:41 Total samples : 4358
+
+Validation Loss: 2.1228
+Validation Accuracy (exact match [Word Based]): 0.94%
+
+Validation Accuracy (exact match [char Based]): 37.38%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:19<00:00,  4.57it/s]
+
+Sample Predictions:
+[1] Input: bhayaanak
+    Pred : अाकक
+    Truth: भयानक
+
+[2] Input: kleg
+    Pred : केल
+    Truth: क्लेग
+
+[3] Input: nirakshart
+    Pred : जिक्र्
+    Truth: निरक्षरता
+
+[4] Input: riders
+    Pred : जेर्
+    Truth: राइडर्स
+
+[5] Input: shrawan
+    Pred : स्ा
+    Truth: श्रावण
+
+Total correct:47 Total samples : 4358
+
+Validation Loss: 2.0383
+Validation Accuracy (exact match [Word Based]): 1.08%
+
+Validation Accuracy (exact match [char Based]): 40.22%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:19<00:00,  4.39it/s]
+
+Sample Predictions:
+[1] Input: pichhadi
+    Pred : उुडी
+    Truth: पिछड़ी
+
+[2] Input: shyaamdaas
+    Pred : अ््ााा
+    Truth: श्यामदास
+
+[3] Input: najariye
+    Pred : जलली
+    Truth: नजरिये
+
+[4] Input: karnaphool
+    Pred : अोकोो
+    Truth: कर्णफूल
+
+[5] Input: shyamdas
+    Pred : अ्््ा
+    Truth: श्यामदास
+
+Total correct:84 Total samples : 4358
+
+Validation Loss: 1.9562
+Validation Accuracy (exact match [Word Based]): 1.93%
+
+Validation Accuracy (exact match [char Based]): 43.11%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:20<00:00,  4.15it/s]
+
+Sample Predictions:
+[1] Input: tejasvi
+    Pred : अससवी
+    Truth: तेजस्वी
+
+[2] Input: goethe
+    Pred : अेट
+    Truth: गोएथे
+
+[3] Input: pardes
+    Pred : पेसस
+    Truth: परदेस
+
+[4] Input: up
+    Pred : आ
+    Truth: यूपी
+
+[5] Input: phate
+    Pred : अटे
+    Truth: फटे
+
+Total correct:127 Total samples : 4358
+
+Validation Loss: 1.8615
+Validation Accuracy (exact match [Word Based]): 2.91%
+
+Validation Accuracy (exact match [char Based]): 45.56%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:20<00:00,  4.34it/s]
+
+Sample Predictions:
+[1] Input: mantle
+    Pred : अंले
+    Truth: मैंटल
+
+[2] Input: baksar
+    Pred : अककस
+    Truth: बक्सर
+
+[3] Input: poochhanaa
+    Pred : उचाा
+    Truth: पूछना
+
+[4] Input: raghav
+    Pred : गाा
+    Truth: राघव
+
+[5] Input: masum
+    Pred : असम
+    Truth: मासूम
+
+Total correct:141 Total samples : 4358
+
+Validation Loss: 1.8124
+Validation Accuracy (exact match [Word Based]): 3.24%
+
+Validation Accuracy (exact match [char Based]): 46.63%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:19<00:00,  4.47it/s]
+
+Sample Predictions:
+[1] Input: bailon
+    Pred : अललो
+    Truth: बैलों
+
+[2] Input: rukawat
+    Pred : पाकत
+    Truth: रूकावट
+
+[3] Input: dusre
+    Pred : उससे
+    Truth: दुसरे
+
+[4] Input: garnet
+    Pred : फेटे
+    Truth: गार्नेट
+
+[5] Input: acidate
+    Pred : अकबते
+    Truth: एसिटेट
+
+Total correct:167 Total samples : 4358
+
+Validation Loss: 1.7458
+Validation Accuracy (exact match [Word Based]): 3.83%
+
+Validation Accuracy (exact match [char Based]): 48.44%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:22<00:00,  3.80it/s]
+
+Sample Predictions:
+[1] Input: vimen
+    Pred : अमे
+    Truth: विमेन
+
+[2] Input: sivana
+    Pred : असवा
+    Truth: सिवाना
+
+[3] Input: sindhughos
+    Pred : सोफों
+    Truth: सिंधुघोष
+
+[4] Input: mansikta
+    Pred : अंससता
+    Truth: मानसिकता
+
+[5] Input: ekatthi
+    Pred : अकतत
+    Truth: इकट्ठी
+
+Total correct:203 Total samples : 4358
+
+Validation Loss: 1.6984
+Validation Accuracy (exact match [Word Based]): 4.66%
+
+Validation Accuracy (exact match [char Based]): 49.87%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:19<00:00,  4.55it/s]
+
+Sample Predictions:
+[1] Input: bhuri
+    Pred : उू
+    Truth: भूरी
+
+[2] Input: jalaajali
+    Pred : अजललल
+    Truth: जलांजलि
+
+[3] Input: naraj
+    Pred : अाज
+    Truth: नाराज
+
+[4] Input: muchlaka
+    Pred : उफकल
+    Truth: मुचलका
+
+[5] Input: sanrachna
+    Pred : असंका
+    Truth: सरंचना
+
+Total correct:223 Total samples : 4358
+
+Validation Loss: 1.6712
+Validation Accuracy (exact match [Word Based]): 5.12%
+
+Validation Accuracy (exact match [char Based]): 50.54%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:26<00:00,  3.31it/s]
+
+Sample Predictions:
+[1] Input: sudharney
+    Pred : अोस्े
+    Truth: सुधरने
+
+[2] Input: jivanon
+    Pred : अन्ो
+    Truth: जीवनों
+
+[3] Input: bhaiyadooj
+    Pred : अोदियो
+    Truth: भैयादूज
+
+[4] Input: hatana
+    Pred : अता
+    Truth: हटना
+
+[5] Input: bitta
+    Pred : अततत
+    Truth: बिट्टा
+
+Total correct:259 Total samples : 4358
+
+Validation Loss: 1.6083
+Validation Accuracy (exact match [Word Based]): 5.94%
+
+Validation Accuracy (exact match [char Based]): 52.72%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:27<00:00,  3.17it/s]
+
+Sample Predictions:
+[1] Input: glacier
+    Pred : फेकक
+    Truth: ग्लेशियर
+
+[2] Input: kumhar
+    Pred : उूा
+    Truth: कुम्हार
+
+[3] Input: lagu
+    Pred : अलग
+    Truth: लागु
+
+[4] Input: charger
+    Pred : उफरर
+    Truth: चार्जर
+
+[5] Input: varvik
+    Pred : अ्वकक
+    Truth: वारविक
+
+Total correct:282 Total samples : 4358
+
+Validation Loss: 1.5803
+Validation Accuracy (exact match [Word Based]): 6.47%
+
+Validation Accuracy (exact match [char Based]): 53.00%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:26<00:00,  3.27it/s]
+
+Sample Predictions:
+[1] Input: angrej
+    Pred : अंगे
+    Truth: अंग्रेज
+
+[2] Input: usda
+    Pred : उसा
+    Truth: यूएसडीए
+
+[3] Input: sakengi
+    Pred : एसकी
+    Truth: सकेंगी
+
+[4] Input: revenge
+    Pred : एेजे
+    Truth: रिवेंज
+
+[5] Input: felton
+    Pred : एफटट
+    Truth: फेल्टन
+
+Total correct:298 Total samples : 4358
+
+Validation Loss: 1.5826
+Validation Accuracy (exact match [Word Based]): 6.84%
+
+Validation Accuracy (exact match [char Based]): 53.08%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:32<00:00,  2.72it/s]
+
+Sample Predictions:
+[1] Input: bangla
+    Pred : अगलल
+    Truth: बांग्ला
+
+[2] Input: prastavit
+    Pred : पास्वतत
+    Truth: प्रस्तावित
+
+[3] Input: foil
+    Pred : फेल
+    Truth: फॉइल
+
+[4] Input: navtej
+    Pred : अेेे
+    Truth: नवतेज
+
+[5] Input: sthithi
+    Pred : सोटी
+    Truth: स्थिति
+
+Total correct:355 Total samples : 4358
+
+Validation Loss: 1.5121
+Validation Accuracy (exact match [Word Based]): 8.15%
+
+Validation Accuracy (exact match [char Based]): 55.33%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:22<00:00,  3.83it/s]
+
+Sample Predictions:
+[1] Input: beimani
+    Pred : अ्मीी
+    Truth: बेइमानी
+
+[2] Input: baik
+    Pred : आक
+    Truth: बाईक
+
+[3] Input: asharsha
+    Pred : अश्स
+    Truth: अक्षरशः
+
+[4] Input: jen
+    Pred : ए
+    Truth: जेन
+
+[5] Input: draupadi
+    Pred : उ्पदीी
+    Truth: द्रोपदी
+
+Total correct:373 Total samples : 4358
+
+Validation Loss: 1.4890
+Validation Accuracy (exact match [Word Based]): 8.56%
+
+Validation Accuracy (exact match [char Based]): 56.29%

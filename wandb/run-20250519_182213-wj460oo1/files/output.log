@@ -1,0 +1,70 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:39<00:00,  4.36it/s]
+Sample Predictions:
+[1] Input: evelyn
+    Pred : एक्ना
+    Truth: एवलिन
+
+[2] Input: jurmane
+    Pred : जन्रा
+    Truth: जुर्माने
+
+[3] Input: mental
+    Pred : माााा
+    Truth: मैंटल
+
+[4] Input: victoria
+    Pred : विर्र्
+    Truth: विक्टोरिया
+
+[5] Input: venkatesh
+    Pred : विर्र्
+    Truth: व्यंकटेश
+
+Total correct:3 Total samples : 4358
+
+Validation Loss: 2.4518
+Validation Accuracy (exact match [Word Based]): 0.07%
+
+Validation Accuracy (exact match [char Based]): 29.22%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:35<00:00,  4.82it/s]
+
+Sample Predictions:
+[1] Input: jaafarpur
+    Pred : जाकरररर
+    Truth: जाफरपुर
+
+[2] Input: houses
+    Pred : होससस
+    Truth: हाउसेस
+
+[3] Input: adbi
+    Pred : अड्डी
+    Truth: अदबी
+
+[4] Input: bakson
+    Pred : बा््ों
+    Truth: बक्सों
+
+[5] Input: chauntis
+    Pred : चौं््
+    Truth: चौंतीस
+
+Total correct:222 Total samples : 4358
+
+Validation Loss: 1.5718
+Validation Accuracy (exact match [Word Based]): 5.09%
+
+Validation Accuracy (exact match [char Based]): 52.12%
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 433, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 393, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 148, in train_model
+    val_loss, val_char_acc, val_word_acc = evaluate_model(model, data_loader=val_loader, latinidx2char = shared.latin_idx2char,nativeidx2char = shared.native_idx2char, criterion = criterion, device = device, beam_size = beam_size, data = 'val', log = True if log else False, log_connectivity = config['log_connectivity'])
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 330, in evaluate_model
+    fig = plot_attention(attn_sample, inp_tok[0], pred_tok[0])
+                         ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'attn_sample' where it is not associated with a value

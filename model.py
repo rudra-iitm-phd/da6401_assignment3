@@ -172,83 +172,197 @@ class DynamicSeq2Seq(nn.Module):
                         dec_input = y[:,i].view(-1, 1)
                   else:
                         dec_input = output.argmax(-1).unsqueeze(1)
-            return torch.stack(outputs, 1), attention_weights
+            if self.use_attention:
+                  return torch.stack(outputs, 1), attention_weights
+            else:
+                  return torch.stack(outputs, 1)
 
+      # def beam(self, x, k: int = 2, max_length: int = 10):
+      #       batch_size = x.size(0)
+      #       device = x.device
+
+      #       x = self.encoder_embedding(x)
+      #       if self.model_type == 'lstm':
+      #             enc_output, (enc_h, enc_c) = self.encoder(x)
+      #       else:
+      #             enc_output, enc_h = self.encoder(x)
+
+      #       if self.n_decoders == self.n_encoders and self.enc_dim == self.dec_dim:
+      #             if self.model_type == 'lstm':
+      #                   dec_h, dec_c = enc_h, enc_c
+      #             else:
+      #                   dec_h = enc_h
+
+      #       else:
+      #             # project encoder → decoder dims
+      #             enc_h = enc_h.transpose(0, 1).reshape(batch_size, -1)
+      #             dec_h = self.project_encoder_hidden_to_decoder_hidden(enc_h)\
+      #                         .view(batch_size, self.n_decoders, self.dec_dim)\
+      #                         .transpose(0, 1).contiguous()
+
+      #             if self.model_type == 'lstm':
+      #                   enc_c = enc_c.transpose(0, 1).reshape(batch_size, -1)
+      #                   dec_c = self.project_encoder_cell_to_decoder_cell(enc_c)\
+      #                               .view(batch_size, self.n_decoders, self.dec_dim)\
+      #                               .transpose(0, 1).contiguous()
+
+      #       start_tok = 2
+
+      #       if self.use_attention:
+      #                   attention_weights = torch.zeros(x.size(0), x.size(1), x.size(1))
+      #                   if self.enc_dim != self.dec_dim:
+      #                         enc_output = enc_output.reshape(-1, self.enc_dim)
+      #                         enc_output = self.project_encoder_output_decoder_hidden(enc_output)
+      #                         enc_output = enc_output.reshape(x.size(0), x.size(1), -1)
+
+      #       seqs   = torch.full((batch_size, k, 1), start_tok, dtype=torch.long, device=device)  # [B,k,1]
+      #       scores = torch.zeros(batch_size, k, device=device)                                   # [B,k]
+
+      #       enc_output = enc_output.repeat_interleave(k, dim = 1)
+      #       dec_h = dec_h.repeat_interleave(k, dim=1)  # [n_layers, B*k, dim]
+      #       dec_c = dec_c.repeat_interleave(k, dim=1) if self.model_type == 'lstm' else None
+
+      #       vocab = self.dec_embedding_vocab_size
+
+      #       for t in range(max_length):
+      #             last_tok = seqs[:, :, -1].reshape(batch_size * k, 1)
+      #             if self.use_attention:
+      #                   context, attn_weights = self.attention(dec_h[-1], enc_output)
+      #                   attention_weights[:,t,:] = attn_weights.squeeze(1)
+      #                   dec_embed = torch.cat([dec_embed, context], dim = -1)
+      #                   context = context.squeeze(1).repeat(self.n_decoders, 1, 1)
+      #                   dec_h = context + dec_h
+
+      #             if self.model_type == 'lstm':
+      #                   dec_out, (dec_h, dec_c) = self.decoder(
+      #                         self.decoder_embedding(last_tok), (dec_h, dec_c)
+      #                   )
+      #             else:
+      #                   dec_out, dec_h = self.decoder(self.decoder_embedding(last_tok), dec_h)
+                  
+      #             logits = self.fc1(dec_out.squeeze(1))
+      #             logits = self.activation(logits)
+      #             logits = self.linear_dropout(logits) if self.dropout_rate > 0 else logits
+      #             logits = self.fc2(logits)
+      #             logp   = F.log_softmax(logits, dim=-1).view(batch_size, k, vocab)  # [B,k,V]
+
+      #             # top-k per beam (returns [B,k,k] for both)
+      #             tk_logp, tk_tok = logp.topk(k, dim=-1)
+
+      #             # Flatten the (beam,token) grid → (beam*token) and add old scores
+      #             new_scores = (scores.unsqueeze(2) + tk_logp).view(batch_size, -1)  # [B,k*k]
+      #             top_scores, flat_idx = new_scores.topk(k, dim=-1)                  # best k overall
+
+      #             # Convert flat index back to (beam_row, token_col) without gather
+      #             beam_row = flat_idx.div(k, rounding_mode='floor')   # integer division
+      #             tok_col  = flat_idx.remainder(k)
+
+      #             # Get next tokens via advanced indexing (no gather)
+      #             next_tok = tk_tok[torch.arange(batch_size).unsqueeze(1),
+      #                               beam_row, tok_col]                # [B,k]
+
+      #             # Update sequences with pure indexing
+      #             seqs = seqs[torch.arange(batch_size).unsqueeze(1), beam_row]       # choose beams
+      #             seqs = torch.cat([seqs, next_tok.unsqueeze(-1)], dim=-1)           # append step
+
+      #             scores = top_scores                                                # update scores
+
+      #       best = scores.argmax(dim=1)
+      #       best_seq = seqs[torch.arange(batch_size), best]
+      #       if self.use_attention:
+      #             return best_seq[:, 1:max_length+1], attention_weights 
+      #       return best_seq[:, 1:max_length+1]
       def beam(self, x, k: int = 2, max_length: int = 10):
             batch_size = x.size(0)
             device = x.device
 
             x = self.encoder_embedding(x)
             if self.model_type == 'lstm':
-                  _, (enc_h, enc_c) = self.encoder(x)
+                  enc_output, (enc_h, enc_c) = self.encoder(x)
             else:
-                  _, enc_h = self.encoder(x)
+                  enc_output, enc_h = self.encoder(x)
 
             if self.n_decoders == self.n_encoders and self.enc_dim == self.dec_dim:
                   if self.model_type == 'lstm':
                         dec_h, dec_c = enc_h, enc_c
                   else:
                         dec_h = enc_h
-
             else:
-                  # project encoder → decoder dims
                   enc_h = enc_h.transpose(0, 1).reshape(batch_size, -1)
                   dec_h = self.project_encoder_hidden_to_decoder_hidden(enc_h)\
-                              .view(batch_size, self.n_decoders, self.dec_dim)\
-                              .transpose(0, 1).contiguous()
-
+                        .view(batch_size, self.n_decoders, self.dec_dim)\
+                        .transpose(0, 1).contiguous()
                   if self.model_type == 'lstm':
                         enc_c = enc_c.transpose(0, 1).reshape(batch_size, -1)
                         dec_c = self.project_encoder_cell_to_decoder_cell(enc_c)\
-                                    .view(batch_size, self.n_decoders, self.dec_dim)\
-                                    .transpose(0, 1).contiguous()
+                        .view(batch_size, self.n_decoders, self.dec_dim)\
+                        .transpose(0, 1).contiguous()
 
             start_tok = 2
-            seqs   = torch.full((batch_size, k, 1), start_tok, dtype=torch.long, device=device)  # [B,k,1]
-            scores = torch.zeros(batch_size, k, device=device)                                   # [B,k]
 
-            dec_h = dec_h.repeat_interleave(k, dim=1)  # [n_layers, B*k, dim]
+            if self.use_attention:
+                  attention_weights = torch.zeros(batch_size * k, max_length, x.size(1), device=device)
+                  if self.enc_dim != self.dec_dim:
+                        enc_output = enc_output.reshape(-1, self.enc_dim)
+                        enc_output = self.project_encoder_output_decoder_hidden(enc_output)
+                        enc_output = enc_output.reshape(batch_size, x.size(1), -1)
+
+            # Repeat everything k times for beam
+            seqs = torch.full((batch_size, k, 1), start_tok, dtype=torch.long, device=device)
+            scores = torch.zeros(batch_size, k, device=device)
+
+            enc_output = enc_output.unsqueeze(1).repeat(1, k, 1, 1).view(batch_size * k, x.size(1), -1)
+            dec_h = dec_h.repeat_interleave(k, dim=1)
             dec_c = dec_c.repeat_interleave(k, dim=1) if self.model_type == 'lstm' else None
 
             vocab = self.dec_embedding_vocab_size
+
             for t in range(max_length):
                   last_tok = seqs[:, :, -1].reshape(batch_size * k, 1)
+                  dec_input = self.decoder_embedding(last_tok)  # [B*k, 1, emb_dim]
+
+                  if self.use_attention:
+                        context, attn_weights = self.attention(dec_h[-1], enc_output)
+                        if attention_weights is not None:
+                              attention_weights[:, t, :] = attn_weights.squeeze(1)
+                              dec_input = torch.cat([dec_input, context], dim=-1)
+                              context = context.squeeze(1).unsqueeze(0).repeat(self.n_decoders, 1, 1)
+                              dec_h = dec_h + context
+
                   if self.model_type == 'lstm':
-                        dec_out, (dec_h, dec_c) = self.decoder(
-                              self.decoder_embedding(last_tok), (dec_h, dec_c)
-                        )
+                        dec_out, (dec_h, dec_c) = self.decoder(dec_input, (dec_h, dec_c))
                   else:
-                        dec_out, dec_h = self.decoder(self.decoder_embedding(last_tok), dec_h)
-                  
+                        dec_out, dec_h = self.decoder(dec_input, dec_h)
+
                   logits = self.fc1(dec_out.squeeze(1))
                   logits = self.activation(logits)
                   logits = self.linear_dropout(logits) if self.dropout_rate > 0 else logits
                   logits = self.fc2(logits)
-                  logp   = F.log_softmax(logits, dim=-1).view(batch_size, k, vocab)  # [B,k,V]
+                  logp = F.log_softmax(logits, dim=-1).view(batch_size, k, vocab)
 
-                  # top-k per beam (returns [B,k,k] for both)
                   tk_logp, tk_tok = logp.topk(k, dim=-1)
+                  new_scores = (scores.unsqueeze(2) + tk_logp).view(batch_size, -1)
+                  top_scores, flat_idx = new_scores.topk(k, dim=-1)
 
-                  # Flatten the (beam,token) grid → (beam*token) and add old scores
-                  new_scores = (scores.unsqueeze(2) + tk_logp).view(batch_size, -1)  # [B,k*k]
-                  top_scores, flat_idx = new_scores.topk(k, dim=-1)                  # best k overall
+                  beam_row = flat_idx.div(k, rounding_mode='floor')
+                  tok_col = flat_idx.remainder(k)
 
-                  # Convert flat index back to (beam_row, token_col) without gather
-                  beam_row = flat_idx.div(k, rounding_mode='floor')   # integer division
-                  tok_col  = flat_idx.remainder(k)
+                  next_tok = tk_tok[torch.arange(batch_size).unsqueeze(1), beam_row, tok_col]
+                  seqs = seqs[torch.arange(batch_size).unsqueeze(1), beam_row]
+                  seqs = torch.cat([seqs, next_tok.unsqueeze(-1)], dim=-1)
 
-                  # Get next tokens via advanced indexing (no gather)
-                  next_tok = tk_tok[torch.arange(batch_size).unsqueeze(1),
-                                    beam_row, tok_col]                # [B,k]
+                  scores = top_scores
 
-                  # Update sequences with pure indexing
-                  seqs = seqs[torch.arange(batch_size).unsqueeze(1), beam_row]       # choose beams
-                  seqs = torch.cat([seqs, next_tok.unsqueeze(-1)], dim=-1)           # append step
-
-                  scores = top_scores                                                # update scores
+                  # reorder hidden/cell states
+                  beam_idx = beam_row + (torch.arange(batch_size) * k).unsqueeze(1).to(device)
+                  dec_h = dec_h[:, beam_idx.view(-1), :]
+                  if self.model_type == 'lstm':
+                        dec_c = dec_c[:, beam_idx.view(-1), :]
 
             best = scores.argmax(dim=1)
-            best_seq = seqs[torch.arange(batch_size), best]  # [B, max_length+1]
+            best_seq = seqs[torch.arange(batch_size), best]
+            if self.use_attention:
+                  return best_seq[:, 1:max_length+1], attention_weights
             return best_seq[:, 1:max_length+1]
 
       

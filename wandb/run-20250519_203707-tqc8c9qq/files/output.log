@@ -1,0 +1,307 @@
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/rnn.py:83: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.4 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:11<00:00,  4.86it/s]
+Sample Predictions:
+[1] Input: sanskarita
+    Pred : संस्कररित
+    Truth: संस्कारित
+
+[2] Input: sudhish
+    Pred : सुधिश
+    Truth: सुधीश
+
+[3] Input: standby
+    Pred : स्टंंड्
+    Truth: स्टैंडबाय
+
+[4] Input: swarup
+    Pred : स्वरुप
+    Truth: स्वरुप
+
+[5] Input: parimana
+    Pred : परिमाना
+    Truth: परिमाण
+
+Total correct:688 Total samples : 4358
+
+Validation Loss: 1.0882
+Validation Accuracy (exact match [Word Based]): 15.79%
+
+Validation Accuracy (exact match [char Based]): 66.43%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:04<00:00,  5.40it/s]
+
+Sample Predictions:
+[1] Input: praptiyon
+    Pred : प्रप्तययंं
+    Truth: प्राप्तियो
+
+[2] Input: avashyakta
+    Pred : अवश्यकता
+    Truth: अवश्यकता
+
+[3] Input: donovan
+    Pred : दोनोवन
+    Truth: डोनोवैन
+
+[4] Input: din
+    Pred : दिन
+    Truth: दीन
+
+[5] Input: dafanai
+    Pred : दफनाई
+    Truth: दफनाई
+
+Total correct:1044 Total samples : 4358
+
+Validation Loss: 0.9308
+Validation Accuracy (exact match [Word Based]): 23.96%
+
+Validation Accuracy (exact match [char Based]): 71.64%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:17<00:00,  4.44it/s]
+
+Sample Predictions:
+[1] Input: dhaaniyon
+    Pred : धानियोय
+    Truth: ढाणियों
+
+[2] Input: atki
+    Pred : अटीकी
+    Truth: अटकी
+
+[3] Input: alexy
+    Pred : एलेक्सी
+    Truth: एलेक्सी
+
+[4] Input: ukhadna
+    Pred : उखाडना
+    Truth: उखाड़ना
+
+[5] Input: vyapakataa
+    Pred : व्यापकता
+    Truth: व्यापकता
+
+Total correct:1083 Total samples : 4358
+
+Validation Loss: 0.8890
+Validation Accuracy (exact match [Word Based]): 24.85%
+
+Validation Accuracy (exact match [char Based]): 72.85%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:07<00:00,  5.12it/s]
+
+Sample Predictions:
+[1] Input: naksalavaa
+    Pred : नकससलवा
+    Truth: नक्सलवादी
+
+[2] Input: childhood
+    Pred : चिल्ूूड
+    Truth: चाइल्डहुड
+
+[3] Input: chhaviyon
+    Pred : छाियों
+    Truth: छवियों
+
+[4] Input: kollum
+    Pred : कोलियम
+    Truth: कोल्लम
+
+[5] Input: pongal
+    Pred : पोंगल
+    Truth: पोंगल
+
+Total correct:1238 Total samples : 4358
+
+Validation Loss: 0.9029
+Validation Accuracy (exact match [Word Based]): 28.41%
+
+Validation Accuracy (exact match [char Based]): 74.50%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:05<00:00,  5.29it/s]
+
+Sample Predictions:
+[1] Input: chheepate
+    Pred : छिपते
+    Truth: छिपते
+
+[2] Input: katwana
+    Pred : कटवाना
+    Truth: कटवाना
+
+[3] Input: nayakon
+    Pred : नायकों
+    Truth: नायकों
+
+[4] Input: uplabdhata
+    Pred : उपलबद्ता
+    Truth: उपलब्धता
+
+[5] Input: hindvi
+    Pred : हिंदवीी
+    Truth: हिंदवी
+
+Total correct:1328 Total samples : 4358
+
+Validation Loss: 0.8365
+Validation Accuracy (exact match [Word Based]): 30.47%
+
+Validation Accuracy (exact match [char Based]): 75.20%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:06<00:00,  5.18it/s]
+
+Sample Predictions:
+[1] Input: thomas
+    Pred : थोमास
+    Truth: थोमस
+
+[2] Input: warrior
+    Pred : वारियर
+    Truth: वॉरीअर
+
+[3] Input: massage
+    Pred : मासेजज
+    Truth: मसाज
+
+[4] Input: swabhavon
+    Pred : स्वाभवोों
+    Truth: स्वभावों
+
+[5] Input: bhavishyav
+    Pred : भविष्यववर
+    Truth: भविष्यवाणि
+
+Total correct:1335 Total samples : 4358
+
+Validation Loss: 0.8792
+Validation Accuracy (exact match [Word Based]): 30.63%
+
+Validation Accuracy (exact match [char Based]): 75.57%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:10<00:00,  4.93it/s]
+
+Sample Predictions:
+[1] Input: atki
+    Pred : एटी
+    Truth: अटकी
+
+[2] Input: vyagrata
+    Pred : व्याग्रता
+    Truth: व्यग्रता
+
+[3] Input: rihayshi
+    Pred : रिहाशी
+    Truth: रिहायशी
+
+[4] Input: jokhimo
+    Pred : जोखिमो
+    Truth: जोखिमों
+
+[5] Input: planon
+    Pred : प्लानों
+    Truth: प्लेनों
+
+Total correct:1369 Total samples : 4358
+
+Validation Loss: 0.9357
+Validation Accuracy (exact match [Word Based]): 31.41%
+
+Validation Accuracy (exact match [char Based]): 75.25%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:16<00:00,  4.53it/s]
+
+Sample Predictions:
+[1] Input: antonia
+    Pred : एंटोनिया
+    Truth: एंटोनिया
+
+[2] Input: bavander
+    Pred : बावंदर
+    Truth: बवंडर
+
+[3] Input: dip
+    Pred : डीपप
+    Truth: दीप
+
+[4] Input: rangrashiy
+    Pred : रंगररििय
+    Truth: रंगरसिया
+
+[5] Input: ulte
+    Pred : उल्ते
+    Truth: उल्टे
+
+Total correct:1433 Total samples : 4358
+
+Validation Loss: 0.9486
+Validation Accuracy (exact match [Word Based]): 32.88%
+
+Validation Accuracy (exact match [char Based]): 75.61%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:13<00:00,  4.71it/s]
+
+Sample Predictions:
+[1] Input: satya
+    Pred : सत्य
+    Truth: सत्या
+
+[2] Input: algu
+    Pred : अल्गू
+    Truth: अलगू
+
+[3] Input: herald
+    Pred : हेरॉल्ड
+    Truth: हेराल्ड
+
+[4] Input: majumdar
+    Pred : मजुमदार
+    Truth: मजूमदार
+
+[5] Input: basav
+    Pred : बससव
+    Truth: बसाव
+
+Total correct:1432 Total samples : 4358
+
+Validation Loss: 0.9728
+Validation Accuracy (exact match [Word Based]): 32.86%
+
+Validation Accuracy (exact match [char Based]): 76.06%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:06<00:00,  5.17it/s]
+
+Sample Predictions:
+[1] Input: badhaaiyaa
+    Pred : बढ़ाइयां
+    Truth: बधाईयां
+
+[2] Input: choriyon
+    Pred : चोरियों
+    Truth: चोरियों
+
+[3] Input: thakkar
+    Pred : ठक्कर
+    Truth: थककर
+
+[4] Input: wice
+    Pred : वाइस
+    Truth: वाइस
+
+[5] Input: anrasa
+    Pred : अनरास
+    Truth: अनरसा
+
+Total correct:1445 Total samples : 4358
+
+Validation Loss: 1.0228
+Validation Accuracy (exact match [Word Based]): 33.16%
+
+Validation Accuracy (exact match [char Based]): 76.33%
+ 63%|███████████████████████████████████████████████████████████████████████████████████████▏                                                   | 217/346 [00:43<00:26,  4.95it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 446, in <module>
+    sweep_config = sweep_configuration.sweep_config
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 406, in train_core
+    if log:
+
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 139, in train_model
+    loss = criterion(output, native)
+    ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/autograd/__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

@@ -1,0 +1,90 @@
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/rnn.py:83: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.4 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:17<00:00,  9.75it/s]
+Sample Predictions:
+[1] Input: selina
+    Pred : सालाल
+    Truth: सेलीना
+
+[2] Input: utc
+    Pred : स्र
+    Truth: यूटीसी
+
+[3] Input: paasing
+    Pred : साााा
+    Truth: पासंग
+
+[4] Input: balaen
+    Pred : बाान
+    Truth: बालाएं
+
+[5] Input: kadamtaal
+    Pred : सााााा
+    Truth: कदमताल
+
+Total correct:0 Total samples : 4358
+
+Validation Loss: 2.9099
+Validation Accuracy (exact match [Word Based]): 0.00%
+
+Validation Accuracy (exact match [char Based]): 15.49%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:14<00:00, 11.56it/s]
+
+Sample Predictions:
+[1] Input: parana
+    Pred : पराा
+    Truth: परण
+
+[2] Input: bharat
+    Pred : बारर
+    Truth: भरत
+
+[3] Input: nirupma
+    Pred : मुर्ररर
+    Truth: निरुपमा
+
+[4] Input: hec
+    Pred : से
+    Truth: एचईसी
+
+[5] Input: deo
+    Pred : बे
+    Truth: डीईओ
+
+Total correct:10 Total samples : 4358
+
+Validation Loss: 2.4683
+Validation Accuracy (exact match [Word Based]): 0.23%
+
+Validation Accuracy (exact match [char Based]): 29.52%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:15<00:00, 11.22it/s]
+
+Sample Predictions:
+[1] Input: dimagi
+    Pred : दिमानी
+    Truth: दिमागी
+
+[2] Input: vaimansyat
+    Pred : विमानसयत
+    Truth: वैमनस्यता
+
+[3] Input: npf
+    Pred : नपपप
+    Truth: एनपीएफ
+
+[4] Input: thaila
+    Pred : ताला
+    Truth: थैला
+
+[5] Input: sanskarita
+    Pred : संसकक््ता
+    Truth: संस्कारित
+
+Total correct:210 Total samples : 4358
+
+Validation Loss: 1.7454
+Validation Accuracy (exact match [Word Based]): 4.82%
+
+Validation Accuracy (exact match [char Based]): 52.10%
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:168: UserWarning: Starting a Matplotlib GUI outside of the main thread will likely fail.
+  fig, ax = plt.subplots(figsize=(8,6))

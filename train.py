@@ -18,12 +18,18 @@ import matplotlib as mpl
 import io, requests
 from matplotlib import font_manager as fm, pyplot as plt
 import tempfile
+import csv
+import best_configs
+import matplotlib
+matplotlib.use('Agg')
+
 # from PIL import Image
 # from matplotlib.colors import LinearSegmentedColormap
 # import base64
 import warnings
 from connectivity_html import create_connectivity_html
 # Suppress UserWarnings from matplotlib and seaborn
+
 warnings.filterwarnings("ignore", category=UserWarning, module="matplotlib")
 warnings.filterwarnings("ignore", category=UserWarning, module="seaborn")
 warnings.filterwarnings("ignore", category=UserWarning, module="wandb")
@@ -197,6 +203,10 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
       all_preds = []
       all_targets = []
 
+      if data == 'test':
+            input_latin = []
+            pred_native = []
+
       with torch.no_grad():
             for native, latin in data_loader:
 
@@ -205,10 +215,13 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                   latin = latin.to(device)
 
                   target = native
+                  
                   if config['use_attn']:
+                        
                         output, attn_weights = model(latin)  # shape: (batch, max_len, vocab_size)
                   else:
                         output = model(latin)
+                  
                   pred = output.argmax(-1)
 
                   output_dim = output.shape[-1]
@@ -216,6 +229,8 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                   native = native[:, 0:].reshape(-1)
                   loss = criterion(output, native)
                   total_loss += loss.item()
+
+                  inp_tok, pred_tok = [], []
 
                   if beam_size == 1:
 
@@ -226,28 +241,40 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                         mask = pred_mask & native_mask
                         char_matches += (preds[mask] == native[mask]).sum().item()
                         char_total += mask.sum().item()
-                        inp_tok, pred_tok = [], []
                         
-                        inp_token = [latinidx2char.get(idx.item(), '?') for idx in latin[0] ]
-                        inp_tok.append(inp_token)
-                        pred_token = [nativeidx2char.get(idx.item(), '?') for idx in pred[0]]
-                        pred_tok.append(pred_token)
+                        
+                        # inp_token = [latinidx2char.get(idx.item(), '?') for idx in latin[0] ]
+                        # inp_tok.append(inp_token)
+                        # pred_token = [nativeidx2char.get(idx.item(), '?') for idx in pred[0]]
+                        # pred_tok.append(pred_token)
 
-                        attn_sample = attn_weights[0]
-                        
-                              
+                  
+         
 
                   elif beam_size > 1:
                         """ Char level accuracy """
-                        pred = model.beam(latin, k = beam_size)
+                        pred, attn_weights = model.beam(latin, k = beam_size)
                         preds = pred.reshape(-1)
                         native = native.reshape(-1)
-
                         pred_mask = preds.ne(3) & preds.ne(1) & preds.ne(2) & preds.ne(0)
                         native_mask = native.ne(3) & native.ne(1) & native.ne(2) & native.ne(0)
                         mask = pred_mask & native_mask
                         char_matches += (preds[mask] == native[mask]).sum().item()
                         char_total += mask.sum().item()
+
+                  inp_token = [latinidx2char.get(idx.item(), '?') for idx in latin[0] ]
+                  inp_tok.append(inp_token)
+                  pred_token = [nativeidx2char.get(idx.item(), '?') for idx in pred[0]]
+                  pred_tok.append(pred_token)
+
+                  if data == 'test':
+                              for (x, y) in zip(latin, pred):
+                                    x_token = [latinidx2char.get(idx.item(), '?') for idx in x if idx.item() not in [0,1,2,3]]
+                                    y_token = [nativeidx2char.get(idx.item(), '?') for idx in y if idx.item() not in [0,1,2,3]]
+                                    
+                                    input_latin.append(''.join(i for i in x_token))
+                                    pred_native.append(''.join(i for i in y_token))
+
 
                   y_pred = preds[mask].detach().tolist()
                   y_true = native[mask].detach().tolist()
@@ -302,6 +329,8 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
             print(f"Train Accuracy (exact match [Word Based]): {acc:.2f}%\n")
             print(f"Train Accuracy (exact match [char Based]): {char_acc:.2f}%\n")
 
+      attn_sample = attn_weights[0] if config['use_attn'] else None
+
       if log:
                   wandb.log({
                         "confusion_matrix": wandb.plot.confusion_matrix(
@@ -313,15 +342,32 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                         "sample predictions":wandb.Table(columns=["Input", "Prediction", "Target"], data = sample_table)
                         })
                   if char_acc > 50.0 :
-                        fig = plot_attention(attn_sample, inp_tok[0], pred_tok[0])
-                              
-                        plt.close(fig)
 
-                        wandb.log(
-                                    {'attention_heatmap': wandb.Image(fig)}
+                        if config['use_attn'] :
+                              fig = plot_attention(attn_sample, inp_tok[0], pred_tok[0])
                                     
-                              )
-                        if log_connectivity:
+                              plt.close(fig)
+
+                              wandb.log(
+                                          {'attention_heatmap': wandb.Image(fig)}
+                                          
+                                    )
+                        if data == 'test':
+                              if config['use_attn']:
+                                    wandb.log(
+                                          {
+                                                "Test Accuracy with Attention (word)":acc,
+                                                "Test Accuracy with Attention (char)":char_acc
+                                          }
+                                    )
+                              else:
+                                    wandb.log(
+                                          {
+                                                "Test Accuracy (word)":acc,
+                                                "Test Accuracy (char)":char_acc
+                                          }
+                                    )
+                        if log_connectivity and data == 'val' and config['use_attn']:
                               log_connectivity_visualization_to_wandb(
                                                                         model, 
                                                                         latin[0], 
@@ -332,7 +378,8 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                                                                         )
                         
 
-
+      if data == 'test':
+            return total_loss/len(data_loader), char_acc, acc, input_latin, pred_native
       return total_loss/len(data_loader), char_acc, acc
 
 def train_core(log=True, sweep=True):
@@ -364,6 +411,26 @@ def train_core(log=True, sweep=True):
       else:
             trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = False)
 
+      if args.use_test:
+            if config['use_attn']:
+                  config.update(best_configs.attn)
+            else:
+                  config.update(best_configs.vanilla)
+
+            loss, char_acc, word_acc, test_inp, test_pred = evaluate_model(trained_model, test_dl, shared.latin_idx2char, shared.native_idx2char, criterion, device, 'test', 1, log, config['log_connectivity'])
+            if config['use_attn']:
+                  generate_csv(test_inp, test_pred, 'predictions_attention/predictions_attention.csv')
+            else:
+                  generate_csv(test_inp, test_pred, 'predictions_vanilla/predictions_vanilla.csv')
+
+def generate_csv(test_inp, test_pred, output_path = None):
+      output_path = "predictions.csv" if None else output_path
+      with open(output_path, mode='w', encoding='utf-8', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Latin Word', 'Predicted Native Word'])
+            for latin, pred in zip(test_inp, test_pred):
+                  writer.writerow([latin, pred])
+
 
 if __name__ == '__main__':
 
@@ -374,7 +441,10 @@ if __name__ == '__main__':
       config = args.__dict__
       if args.wandb_sweep:
             if args.use_attn :
-                  sweep_config = sweep_configuration.sweep_config_with_attn
+                  if args.use_v2 :
+                        sweep_config = sweep_configuration.sweep_config_with_attn_v2
+                  else:
+                        sweep_config = sweep_configuration.sweep_config_with_attn
             else:
                   sweep_config = sweep_configuration.sweep_config
             if not args.sweep_id:

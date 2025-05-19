@@ -44,7 +44,7 @@ parser.add_argument('-ld', '--linear_dim',
                   help = 'Linear Dim')
 
 parser.add_argument('-do', '--dropout_rate', 
-                  type = float, default = 0.6, 
+                  type = float, default = 0.4, 
                   help = 'Dropout rate')
 
 parser.add_argument('-e', '--epochs', 
@@ -66,7 +66,7 @@ parser.add_argument('-mom', '--momentum',
                   help = 'Momentum to be used by the optimizer')
 
 parser.add_argument('-k', '--beam_size', 
-                  type = int, default = 1, 
+                  type = int, default = 3, 
                   help = 'K for Beam search')
 
 parser.add_argument('-a', '--activation', 
@@ -80,6 +80,9 @@ parser.add_argument('-o', '--optimizer',
 parser.add_argument('-lr', '--learning_rate', 
                   type = float, default = 0.003190691348613236,
                   help = 'Learning rate for optimizer')
+parser.add_argument('--use_v2', action='store_true', help='Use attention config version 2')
+
+parser.add_argument('--use_test', action='store_true', help='Final evaluation on test data')
 
 parser.add_argument('--wandb', action='store_true', help='Enable wandb logging')
 

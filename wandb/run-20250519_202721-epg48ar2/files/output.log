@@ -1,0 +1,244 @@
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/rnn.py:83: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.4 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:45<00:00,  7.55it/s]
+Sample Predictions:
+[1] Input: baramdon
+    Pred : बरमममोो
+    Truth: बरामदों
+
+[2] Input: aayojit
+    Pred : आयोजित
+    Truth: आयोजिक
+
+[3] Input: ramnaam
+    Pred : रममनाम
+    Truth: रामनाम
+
+[4] Input: vair
+    Pred : वैरर
+    Truth: वैर
+
+[5] Input: dalo
+    Pred : डललो
+    Truth: दालों
+
+Total correct:710 Total samples : 4358
+
+Validation Loss: 1.0889
+Validation Accuracy (exact match [Word Based]): 16.29%
+
+Validation Accuracy (exact match [char Based]): 67.04%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:44<00:00,  7.80it/s]
+
+Sample Predictions:
+[1] Input: darjan
+    Pred : दर्जन
+    Truth: दर्जन
+
+[2] Input: chunva
+    Pred : चुनवा
+    Truth: चुनवा
+
+[3] Input: chamoli
+    Pred : चममली
+    Truth: चमोली
+
+[4] Input: opal
+    Pred : ओपल
+    Truth: ओपल
+
+[5] Input: hetu
+    Pred : हेतू
+    Truth: हेतु
+
+Total correct:1083 Total samples : 4358
+
+Validation Loss: 0.8881
+Validation Accuracy (exact match [Word Based]): 24.85%
+
+Validation Accuracy (exact match [char Based]): 72.40%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:45<00:00,  7.66it/s]
+
+Sample Predictions:
+[1] Input: hathway
+    Pred : हथवाय
+    Truth: हाथवे
+
+[2] Input: ullekhit
+    Pred : उल्लेखित
+    Truth: उल्लेखित
+
+[3] Input: bds
+    Pred : बीडीस
+    Truth: बीडीएस
+
+[4] Input: basai
+    Pred : बसाई
+    Truth: बसई
+
+[5] Input: attention
+    Pred : एटेंटनश
+    Truth: अटेंशन
+
+Total correct:1139 Total samples : 4358
+
+Validation Loss: 0.8810
+Validation Accuracy (exact match [Word Based]): 26.14%
+
+Validation Accuracy (exact match [char Based]): 73.32%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:54<00:00,  6.30it/s]
+
+Sample Predictions:
+[1] Input: shaaririk
+    Pred : शारिरिक
+    Truth: शारिरिक
+
+[2] Input: rhanumai
+    Pred : रहनुमाई
+    Truth: रहनुमाई
+
+[3] Input: upbhoktaon
+    Pred : उपभोक्ताओं
+    Truth: उपभोक्ताओं
+
+[4] Input: azadnagar
+    Pred : अज़दाग
+    Truth: आजादनगर
+
+[5] Input: janajivan
+    Pred : जनजीवन
+    Truth: जनजीवन
+
+Total correct:1333 Total samples : 4358
+
+Validation Loss: 0.8459
+Validation Accuracy (exact match [Word Based]): 30.59%
+
+Validation Accuracy (exact match [char Based]): 75.19%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:03<00:00,  5.44it/s]
+
+Sample Predictions:
+[1] Input: aadambaron
+    Pred : आदंबरों
+    Truth: आडंबरों
+
+[2] Input: jatiltaa
+    Pred : जटिलता
+    Truth: जटिलता
+
+[3] Input: banvaaye
+    Pred : बनवाए
+    Truth: बनवाए
+
+[4] Input: choriyan
+    Pred : चोरियां
+    Truth: चोरियां
+
+[5] Input: bavandar
+    Pred : बवंंार
+    Truth: बवंडर
+
+Total correct:1331 Total samples : 4358
+
+Validation Loss: 0.8632
+Validation Accuracy (exact match [Word Based]): 30.54%
+
+Validation Accuracy (exact match [char Based]): 75.07%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:09<00:00,  4.98it/s]
+
+Sample Predictions:
+[1] Input: gomatinaga
+    Pred : गोमेटिनग
+    Truth: गोमतीनगर
+
+[2] Input: sanvedanhe
+    Pred : संवेदनही
+    Truth: संवेदनहीन
+
+[3] Input: sumerpur
+    Pred : सुमरपुर
+    Truth: सुमेरपुर
+
+[4] Input: kootaa
+    Pred : कूटा
+    Truth: कूटा
+
+[5] Input: singhe
+    Pred : सिंहे
+    Truth: सिंघे
+
+Total correct:1375 Total samples : 4358
+
+Validation Loss: 0.8816
+Validation Accuracy (exact match [Word Based]): 31.55%
+
+Validation Accuracy (exact match [char Based]): 75.75%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:12<00:00,  4.79it/s]
+
+Sample Predictions:
+[1] Input: mahanga
+    Pred : महंगा
+    Truth: मंहगा
+
+[2] Input: chhodane
+    Pred : छोड़ने
+    Truth: छोड़ने
+
+[3] Input: shubhaashu
+    Pred : शुभाषु
+    Truth: शुभाशुभ
+
+[4] Input: birsinghpu
+    Pred : बर्सिंहपूर
+    Truth: बिरसिंहपुर
+
+[5] Input: wahniy
+    Pred : वानीय
+    Truth: वहनीय
+
+Total correct:1423 Total samples : 4358
+
+Validation Loss: 0.9033
+Validation Accuracy (exact match [Word Based]): 32.65%
+
+Validation Accuracy (exact match [char Based]): 75.82%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:03<00:00,  5.46it/s]
+
+Sample Predictions:
+[1] Input: prasanskru
+    Pred : प्रसंस्कृत
+    Truth: प्रसंस्कृत
+
+[2] Input: atarra
+    Pred : अतररर
+    Truth: अतर्रा
+
+[3] Input: vyapakata
+    Pred : व्यापकका
+    Truth: व्यापकता
+
+[4] Input: niveshon
+    Pred : निवेशों
+    Truth: निवेशों
+
+[5] Input: navbahar
+    Pred : नवबाहार
+    Truth: नवबहार
+
+Total correct:1385 Total samples : 4358
+
+Validation Loss: 0.9231
+Validation Accuracy (exact match [Word Based]): 31.78%
+
+Validation Accuracy (exact match [char Based]): 75.94%
+ 94%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉        | 326/346 [01:10<00:04,  4.64it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 446, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 406, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 142, in train_model
+    total_loss += loss.item()
+                  ^^^^^^^^^^^
+KeyboardInterrupt

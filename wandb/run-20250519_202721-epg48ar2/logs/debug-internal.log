@@ -1,0 +1,11 @@
+{"time":"2025-05-19T20:27:22.296123+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/wandb/run-20250519_202721-epg48ar2/logs/debug-core.log"}
+{"time":"2025-05-19T20:27:22.429262+05:30","level":"INFO","msg":"created new stream","id":"epg48ar2"}
+{"time":"2025-05-19T20:27:22.429356+05:30","level":"INFO","msg":"sender: started","stream_id":"epg48ar2"}
+{"time":"2025-05-19T20:27:22.429366+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"epg48ar2"}
+{"time":"2025-05-19T20:27:22.429493+05:30","level":"INFO","msg":"stream: started","id":"epg48ar2"}
+{"time":"2025-05-19T20:27:22.429525+05:30","level":"INFO","msg":"handler: started","stream_id":"epg48ar2"}
+{"time":"2025-05-19T20:27:22.849416+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-19T20:36:52.978702+05:30","level":"INFO","msg":"stream: closing","id":"epg48ar2"}
+{"time":"2025-05-19T20:36:52.978942+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-19T20:36:52.98385+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-19T20:36:54.030959+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}

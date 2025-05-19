@@ -1,0 +1,32 @@
+wandb_version: 1
+
+activation:
+  value: relu
+batch_size:
+  value: 512
+beam_size:
+  value: 1
+dec_dim:
+  value: 128
+dec_embedding_dim:
+  value: 256
+dropout_rate:
+  value: 0.2
+enc_dim:
+  value: 256
+enc_embedding_dim:
+  value: 128
+learning_rate:
+  value: 0.0005253513907244319
+linear_dim:
+  value: 128
+momentum:
+  value: 0.8219466902371052
+n_decoders:
+  value: 1
+n_encoders:
+  value: 3
+optimizer:
+  value: adamax
+use_attn:
+  value: true

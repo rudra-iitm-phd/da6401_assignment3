@@ -1,0 +1,177 @@
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/rnn.py:83: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.6 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:31<00:00,  2.76it/s]
+Sample Predictions:
+[1] Input: sewak
+    Pred : सारा
+    Truth: सेवक
+
+[2] Input: magras
+    Pred : बाराा
+    Truth: मैग्नस
+
+[3] Input: khandwa
+    Pred : अ्राा
+    Truth: खंडवा
+
+[4] Input: bhagvad
+    Pred : प्र्ा
+    Truth: भगवद
+
+[5] Input: kamjoriyon
+    Pred : सार््ाा
+    Truth: कमज़ोरियों
+
+Total correct:0 Total samples : 4358
+
+Validation Loss: 2.8092
+Validation Accuracy (exact match [Word Based]): 0.00%
+
+Validation Accuracy (exact match [char Based]): 18.30%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:29<00:00,  2.99it/s]
+
+Sample Predictions:
+[1] Input: vigyaaniyo
+    Pred : काााााां
+    Truth: विज्ञानियो
+
+[2] Input: mursi
+    Pred : मार्र
+    Truth: मुर्सी
+
+[3] Input: janjiren
+    Pred : जालााा
+    Truth: जंजीरें
+
+[4] Input: tantrikiy
+    Pred : तिर्र्रर
+    Truth: तंत्रिकीय
+
+[5] Input: dolomite
+    Pred : दालाााे
+    Truth: डोलोमाइट
+
+Total correct:1 Total samples : 4358
+
+Validation Loss: 2.4741
+Validation Accuracy (exact match [Word Based]): 0.02%
+
+Validation Accuracy (exact match [char Based]): 25.96%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:30<00:00,  2.86it/s]
+
+Sample Predictions:
+[1] Input: gharat
+    Pred : हात
+    Truth: घराट
+
+[2] Input: mangoliyan
+    Pred : मालालानन
+    Truth: मंगोलियन
+
+[3] Input: gujari
+    Pred : गुलाा
+    Truth: गुजारी
+
+[4] Input: hops
+    Pred : हिसीस
+    Truth: हॉप्स
+
+[5] Input: nahaye
+    Pred : नाा
+    Truth: नहाए
+
+Total correct:14 Total samples : 4358
+
+Validation Loss: 2.1388
+Validation Accuracy (exact match [Word Based]): 0.32%
+
+Validation Accuracy (exact match [char Based]): 34.11%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:30<00:00,  2.81it/s]
+
+Sample Predictions:
+[1] Input: shabe
+    Pred : शाब
+    Truth: शबे
+
+[2] Input: pratigyaon
+    Pred : प्रत््िययो
+    Truth: प्रतिज्ञाओ
+
+[3] Input: actors
+    Pred : अस्र्सस
+    Truth: ऐक्टर्स
+
+[4] Input: neend
+    Pred : नें
+    Truth: नींद
+
+[5] Input: lanbai
+    Pred : लाला
+    Truth: लंबाई
+
+Total correct:85 Total samples : 4358
+
+Validation Loss: 1.8400
+Validation Accuracy (exact match [Word Based]): 1.95%
+
+Validation Accuracy (exact match [char Based]): 42.37%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:39<00:00,  2.20it/s]
+
+Sample Predictions:
+[1] Input: ration
+    Pred : रातों
+    Truth: राशन
+
+[2] Input: garbhgrah
+    Pred : गा्वााा
+    Truth: गर्भगृह
+
+[3] Input: gile
+    Pred : गिले
+    Truth: गीले
+
+[4] Input: ganrajya
+    Pred : गंलाााया
+    Truth: गणराज्य
+
+[5] Input: enu
+    Pred : इं
+    Truth: इनु
+
+Total correct:162 Total samples : 4358
+
+Validation Loss: 1.6479
+Validation Accuracy (exact match [Word Based]): 3.72%
+
+Validation Accuracy (exact match [char Based]): 47.84%
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 87/87 [00:46<00:00,  1.86it/s]
+
+Sample Predictions:
+[1] Input: deodar
+    Pred : देडरर
+    Truth: देवदार
+
+[2] Input: tumne
+    Pred : तुमेे
+    Truth: तुमने
+
+[3] Input: dhundhate
+    Pred : धुंाात
+    Truth: ढूंढते
+
+[4] Input: riders
+    Pred : रिज््स
+    Truth: राइडर्स
+
+[5] Input: sakengi
+    Pred : सकसंगग
+    Truth: सकेंगी
+
+Total correct:241 Total samples : 4358
+
+Validation Loss: 1.5258
+Validation Accuracy (exact match [Word Based]): 5.53%
+
+Validation Accuracy (exact match [char Based]): 51.89%
+/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py:168: UserWarning: Starting a Matplotlib GUI outside of the main thread will likely fail.
+  fig, ax = plt.subplots(figsize=(8,6))

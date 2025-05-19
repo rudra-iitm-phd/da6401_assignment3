@@ -1,0 +1,126 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [01:05<00:00,  2.66it/s]
+Sample Predictions:
+[1] Input: kanchon
+    Pred : कालो
+    Truth: कंचों
+
+[2] Input: anuprayogi
+    Pred : अन्््््
+    Truth: अनुप्रयोग
+
+[3] Input: reeta
+    Pred : रेमी
+    Truth: रीटा
+
+[4] Input: thaamne
+    Pred : रालन
+    Truth: थामने
+
+[5] Input: verna
+    Pred : विया
+    Truth: वर्ना
+
+Total correct:14 Total samples : 4358
+
+Validation Loss: 2.2387
+Validation Accuracy (exact match [Word Based]): 0.32%
+
+Validation Accuracy (exact match [char Based]): 32.61%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [01:02<00:00,  2.76it/s]
+
+Sample Predictions:
+[1] Input: parasnath
+    Pred : पररमाा
+    Truth: पारसनाथ
+
+[2] Input: jong
+    Pred : जोंग
+    Truth: जोंग
+
+[3] Input: daras
+    Pred : दरास
+    Truth: दरस
+
+[4] Input: savaliya
+    Pred : सावििय
+    Truth: सवालिया
+
+[5] Input: muli
+    Pred : मुली
+    Truth: मूली
+
+Total correct:311 Total samples : 4358
+
+Validation Loss: 1.4275
+Validation Accuracy (exact match [Word Based]): 7.14%
+
+Validation Accuracy (exact match [char Based]): 56.18%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [01:21<00:00,  2.13it/s]
+
+Sample Predictions:
+[1] Input: dhun
+    Pred : धुन
+    Truth: धून
+
+[2] Input: kaloniyan
+    Pred : कललनिया
+    Truth: कालोनियां
+
+[3] Input: anubhavahi
+    Pred : अनुभावीी
+    Truth: अनुभवहीन
+
+[4] Input: nibhakar
+    Pred : निभाकर
+    Truth: निभाकर
+
+[5] Input: bridesmaid
+    Pred : ब्रेजिेे
+    Truth: ब्राइड्समे
+
+Total correct:612 Total samples : 4358
+
+Validation Loss: 1.1692
+Validation Accuracy (exact match [Word Based]): 14.04%
+
+Validation Accuracy (exact match [char Based]): 64.45%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [01:39<00:00,  1.75it/s]
+
+Sample Predictions:
+[1] Input: paroste
+    Pred : परोसटट
+    Truth: परोसते
+
+[2] Input: giriraj
+    Pred : गिररजज
+    Truth: गिरीराज
+
+[3] Input: zamir
+    Pred : जममिर
+    Truth: ज़मीर
+
+[4] Input: circular
+    Pred : सररोररल
+    Truth: सर्कुलर
+
+[5] Input: hold
+    Pred : होल्ड
+    Truth: होल्ड
+
+Total correct:750 Total samples : 4358
+
+Validation Loss: 1.0673
+Validation Accuracy (exact match [Word Based]): 17.21%
+
+Validation Accuracy (exact match [char Based]): 67.06%
+ 66%|███████████████████████████████████████████████████████████████████████████████████████████▌                                               | 114/173 [01:06<00:34,  1.71it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 446, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 406, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 142, in train_model
+    total_loss += loss.item()
+                  ^^^^^^^^^^^
+KeyboardInterrupt

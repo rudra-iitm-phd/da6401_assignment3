@@ -1,0 +1,8 @@
+{"time":"2025-05-19T20:55:44.681576+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/wandb/run-20250519_205544-qxm59s2q/logs/debug-core.log"}
+{"time":"2025-05-19T20:55:44.940722+05:30","level":"INFO","msg":"created new stream","id":"qxm59s2q"}
+{"time":"2025-05-19T20:55:44.940786+05:30","level":"INFO","msg":"stream: started","id":"qxm59s2q"}
+{"time":"2025-05-19T20:55:44.940811+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"qxm59s2q"}
+{"time":"2025-05-19T20:55:44.940823+05:30","level":"INFO","msg":"handler: started","stream_id":"qxm59s2q"}
+{"time":"2025-05-19T20:55:44.940908+05:30","level":"INFO","msg":"sender: started","stream_id":"qxm59s2q"}
+{"time":"2025-05-19T20:55:45.358485+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-19T20:58:46.350349+05:30","level":"INFO","msg":"api: retrying HTTP error","status":502,"url":"https://api.wandb.ai/files/da24d008-iit-madras/da6401-assignment3/qxm59s2q/file_stream","body":"\n<html><head>\n<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">\n<title>502 Server Error</title>\n</head>\n<body text=#000000 bgcolor=#ffffff>\n<h1>Error: Server Error</h1>\n<h2>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.</h2>\n<h2></h2>\n</body></html>\n"}

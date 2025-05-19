@@ -1,0 +1,17 @@
+{"time":"2025-05-19T21:10:37.468773+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/wandb/run-20250519_211037-isk416ls/logs/debug-core.log"}
+{"time":"2025-05-19T21:10:37.782355+05:30","level":"INFO","msg":"created new stream","id":"isk416ls"}
+{"time":"2025-05-19T21:10:37.782451+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"isk416ls"}
+{"time":"2025-05-19T21:10:37.782495+05:30","level":"INFO","msg":"handler: started","stream_id":"isk416ls"}
+{"time":"2025-05-19T21:10:37.782513+05:30","level":"INFO","msg":"sender: started","stream_id":"isk416ls"}
+{"time":"2025-05-19T21:10:37.782927+05:30","level":"INFO","msg":"stream: started","id":"isk416ls"}
+{"time":"2025-05-19T21:10:38.224838+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-19T21:10:58.728528+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-19T21:10:58.732375+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-19T21:10:59.738494+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading config.yaml","runtime_seconds":0.377906458,"progress":"1.4KB/1.4KB"}],"total_operations":1}}
+{"time":"2025-05-19T21:10:59.763946+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-19T21:10:59.971914+05:30","level":"INFO","msg":"stream: closing","id":"isk416ls"}
+{"time":"2025-05-19T21:10:59.972049+05:30","level":"WARN","msg":"sender: received Exit record more than once, ignoring"}
+{"time":"2025-05-19T21:11:00.0884+05:30","level":"INFO","msg":"handler: closed","stream_id":"isk416ls"}
+{"time":"2025-05-19T21:11:00.088644+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"isk416ls"}
+{"time":"2025-05-19T21:11:00.089039+05:30","level":"INFO","msg":"sender: closed","stream_id":"isk416ls"}
+{"time":"2025-05-19T21:11:00.089246+05:30","level":"INFO","msg":"stream: closed","id":"isk416ls"}
