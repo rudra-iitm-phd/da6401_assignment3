@@ -1,0 +1,151 @@
+<html>
+    <head><base target="_blank"><link rel="stylesheet" type="text/css" href="https://app.wandb.ai/normalize.css" />
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400&display=swap');
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            max-width: 960px;
+            margin: auto;
+            padding: 10px;
+            text-align: center;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .cell {
+            position: relative;
+            margin: 0 5px;
+            padding: 10px;
+            min-width: 40px;
+            min-height: 40px;
+            background: #f4f4f4;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        .cell:hover {
+            background: #ffeb3b;
+            z-index: 2;
+        }
+        .input-cell {
+            font-family: 'Arial', sans-serif;
+        }
+        .output-cell {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+        .prediction-box {
+            position: absolute;
+            display: none;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            z-index: 10;
+            padding: 10px;
+            font-size: 14px;
+            text-align: left;
+        }
+        .cell:hover .prediction-box {
+            display: block;
+        }
+        .prediction-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .bar {
+            height: 6px;
+            border-radius: 3px;
+            background: #4caf50;
+            margin-top: 2px;
+        }
+        .connections {
+            position: relative;
+            height: 30px;
+        }
+        .line {
+            position: absolute;
+            height: 2px;
+            background: green;
+            transform-origin: left center;
+            transition: 0.2s;
+            opacity: 0.6;
+        }
+        .slider-container {
+            margin: 10px;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="container">
+            <div class="title">Transliteration Attention Connectivity</div>
+            <div class="instructions">
+                Hover over any character to see its connections. 
+                The green lines show the attention weights: stronger connections have darker green lines.
+                Hover over output characters to see top prediction alternatives.
+                Use the threshold slider to filter the connections by strength.
+            </div>
+            
+            <div class="controls">
+                <div class="slider-container">
+                    <span class="slider-label">Threshold:</span>
+                    <input type="range" id="threshold-slider" min="0" max="1" step="0.05" value="0.1">
+                    <span id="threshold-value">0.1</span>
+                </div>
+            </div>
+            
+            <div class="model-type">Sequence-to-Sequence with Attention [ LSTM ]</div>
+            <div class="visualization">
+                <div class="row input-row">
+    <div class="cell input-cell" id="in-0">v</div><div class="cell input-cell" id="in-1">i</div><div class="cell input-cell" id="in-2">d</div><div class="cell input-cell" id="in-3">a</div><div class="cell input-cell" id="in-4">y</div><div class="cell input-cell" id="in-5">a</div></div><div class="connections"><div class="line" data-from="0" data-to="0" data-weight="0.0602"></div><div class="line" data-from="1" data-to="0" data-weight="0.9251"></div><div class="line" data-from="2" data-to="0" data-weight="0.0143"></div><div class="line" data-from="3" data-to="0" data-weight="0.0004"></div><div class="line" data-from="4" data-to="0" data-weight="0.0001"></div><div class="line" data-from="5" data-to="0" data-weight="0.0000"></div><div class="line" data-from="0" data-to="1" data-weight="0.0010"></div><div class="line" data-from="1" data-to="1" data-weight="0.6835"></div><div class="line" data-from="2" data-to="1" data-weight="0.3122"></div><div class="line" data-from="3" data-to="1" data-weight="0.0033"></div><div class="line" data-from="4" data-to="1" data-weight="0.0000"></div><div class="line" data-from="5" data-to="1" data-weight="0.0000"></div><div class="line" data-from="0" data-to="2" data-weight="0.0000"></div><div class="line" data-from="1" data-to="2" data-weight="0.0222"></div><div class="line" data-from="2" data-to="2" data-weight="0.6284"></div><div class="line" data-from="3" data-to="2" data-weight="0.3422"></div><div class="line" data-from="4" data-to="2" data-weight="0.0067"></div><div class="line" data-from="5" data-to="2" data-weight="0.0005"></div><div class="line" data-from="0" data-to="3" data-weight="0.0000"></div><div class="line" data-from="1" data-to="3" data-weight="0.0000"></div><div class="line" data-from="2" data-to="3" data-weight="0.0011"></div><div class="line" data-from="3" data-to="3" data-weight="0.5184"></div><div class="line" data-from="4" data-to="3" data-weight="0.4384"></div><div class="line" data-from="5" data-to="3" data-weight="0.0414"></div><div class="line" data-from="0" data-to="4" data-weight="0.0000"></div><div class="line" data-from="1" data-to="4" data-weight="0.0000"></div><div class="line" data-from="2" data-to="4" data-weight="0.0000"></div><div class="line" data-from="3" data-to="4" data-weight="0.0000"></div><div class="line" data-from="4" data-to="4" data-weight="0.3559"></div><div class="line" data-from="5" data-to="4" data-weight="0.6131"></div><div class="line" data-from="0" data-to="5" data-weight="0.0000"></div><div class="line" data-from="1" data-to="5" data-weight="0.0000"></div><div class="line" data-from="2" data-to="5" data-weight="0.0000"></div><div class="line" data-from="3" data-to="5" data-weight="0.0000"></div><div class="line" data-from="4" data-to="5" data-weight="0.0001"></div><div class="line" data-from="5" data-to="5" data-weight="0.2321"></div></div><div class="row output-row"><div class="cell output-cell" id="out-0">व<div class="prediction-box"><strong>Top Predictions</strong><br><div class="prediction-item"><span>व</span><span>1.00</span></div><div class="bar" style="width:99%;"></div><div class="prediction-item"><span>द</span><span>0.00</span></div><div class="bar" style="width:0%;"></div><div class="prediction-item"><span>श</span><span>0.00</span></div><div class="bar" style="width:0%;"></div></div></div><div class="cell output-cell" id="out-1">ि<div class="prediction-box"><strong>Top Predictions</strong><br><div class="prediction-item"><span>ि</span><span>0.93</span></div><div class="bar" style="width:93%;"></div><div class="prediction-item"><span>ी</span><span>0.06</span></div><div class="bar" style="width:5%;"></div><div class="prediction-item"><span>े</span><span>0.00</span></div><div class="bar" style="width:0%;"></div></div></div><div class="cell output-cell" id="out-2">ड<div class="prediction-box"><strong>Top Predictions</strong><br><div class="prediction-item"><span>ड</span><span>0.58</span></div><div class="bar" style="width:57%;"></div><div class="prediction-item"><span>द</span><span>0.31</span></div><div class="bar" style="width:31%;"></div><div class="prediction-item"><span>य</span><span>0.03</span></div><div class="bar" style="width:3%;"></div></div></div><div class="cell output-cell" id="out-3">़<div class="prediction-box"><strong>Top Predictions</strong><br><div class="prediction-item"><span>़</span><span>0.34</span></div><div class="bar" style="width:34%;"></div><div class="prediction-item"><span>ा</span><span>0.33</span></div><div class="bar" style="width:32%;"></div><div class="prediction-item"><span>्</span><span>0.11</span></div><div class="bar" style="width:11%;"></div></div></div><div class="cell output-cell" id="out-4">ा<div class="prediction-box"><strong>Top Predictions</strong><br><div class="prediction-item"><span>ा</span><span>0.64</span></div><div class="bar" style="width:64%;"></div><div class="prediction-item"><span>य</span><span>0.23</span></div><div class="bar" style="width:23%;"></div><div class="prediction-item"><span>़</span><span>0.05</span></div><div class="bar" style="width:4%;"></div></div></div><div class="cell output-cell" id="out-5">ा<div class="prediction-box"><strong>Top Predictions</strong><br><div class="prediction-item"><span>ा</span><span>0.42</span></div><div class="bar" style="width:41%;"></div><div class="prediction-item"><span>य</span><span>0.33</span></div><div class="bar" style="width:33%;"></div><div class="prediction-item"><span><eos></span><span>0.16</span></div><div class="bar" style="width:16%;"></div></div></div>
+        </div>
+    </div>
+    <script>
+        const updateLines = () => {
+            const threshold = parseFloat(document.getElementById('thresh-slider').value);
+            document.getElementById('thresh-value').innerText = threshold.toFixed(2);
+
+            document.querySelectorAll('.line').forEach(line => {
+                const from = document.getElementById('in-' + line.dataset.from);
+                const to = document.getElementById('out-' + line.dataset.to);
+                const rect1 = from.getBoundingClientRect();
+                const rect2 = to.getBoundingClientRect();
+                const weight = parseFloat(line.dataset.weight);
+                if (weight < threshold) {
+                    line.style.display = 'none';
+                    return;
+                }
+                line.style.display = 'block';
+                const x1 = rect1.left + rect1.width / 2;
+                const y1 = rect1.bottom;
+                const x2 = rect2.left + rect2.width / 2;
+                const y2 = rect2.top;
+                const dx = x2 - x1;
+                const dy = y2 - y1;
+                const length = Math.sqrt(dx*dx + dy*dy);
+                const angle = Math.atan2(dy, dx) * 180 / Math.PI;
+                line.style.width = length + 'px';
+                line.style.left = (x1 - from.parentElement.getBoundingClientRect().left) + 'px';
+                line.style.top = (y1 - from.parentElement.getBoundingClientRect().top) + 'px';
+                line.style.transform = 'rotate(' + angle + 'deg)';
+                line.style.opacity = weight;
+            });
+        };
+
+        window.addEventListener('load', updateLines);
+        window.addEventListener('resize', updateLines);
+        document.getElementById('thresh-slider').addEventListener('input', updateLines);
+    </script>
+    </body>
+    </html>

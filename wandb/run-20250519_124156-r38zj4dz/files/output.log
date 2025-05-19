@@ -1,0 +1,579 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:39<00:00,  4.37it/s]
+Sample Predictions:
+[1] Input: helmet
+    Pred : होलकक
+    Truth: हेल्मेट
+
+[2] Input: rationing
+    Pred : र्र्िंंं
+    Truth: राशनिंग
+
+[3] Input: jansuchnaa
+    Pred : जुंंाााा
+    Truth: जनसूचना
+
+[4] Input: batham
+    Pred : बााा
+    Truth: बॉथम
+
+[5] Input: kshinta
+    Pred : किसााा
+    Truth: क्षीणता
+
+Total correct:11 Total samples : 4358
+
+Validation Loss: 2.2475
+Validation Accuracy (exact match [Word Based]): 0.25%
+
+Validation Accuracy (exact match [char Based]): 34.27%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:37<00:00,  4.62it/s]
+
+Sample Predictions:
+[1] Input: gufatgu
+    Pred : गुफटरु
+    Truth: गुफ्तगू
+
+[2] Input: chitt
+    Pred : चिटत
+    Truth: चित्त
+
+[3] Input: parjiviyon
+    Pred : परजिवियोंं
+    Truth: परजीवियों
+
+[4] Input: bhir
+    Pred : भीर
+    Truth: भीर
+
+[5] Input: aadatein
+    Pred : आदतीन
+    Truth: आदतें
+
+Total correct:558 Total samples : 4358
+
+Validation Loss: 1.2034
+Validation Accuracy (exact match [Word Based]): 12.80%
+
+Validation Accuracy (exact match [char Based]): 61.73%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:38<00:00,  4.45it/s]
+
+Sample Predictions:
+[1] Input: rangrasiya
+    Pred : रंग्रसिययय
+    Truth: रंगरसिया
+
+[2] Input: associatio
+    Pred : असोसिकििि
+    Truth: एसोसिएशनों
+
+[3] Input: matric
+    Pred : मैट्रक
+    Truth: मैट्रिक
+
+[4] Input: coram
+    Pred : कोरम
+    Truth: कोरम
+
+[5] Input: stimer
+    Pred : स्टिमर
+    Truth: स्टीमर
+
+Total correct:825 Total samples : 4358
+
+Validation Loss: 1.0574
+Validation Accuracy (exact match [Word Based]): 18.93%
+
+Validation Accuracy (exact match [char Based]): 68.29%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:40<00:00,  4.29it/s]
+
+Sample Predictions:
+[1] Input: thati
+    Pred : थटी
+    Truth: थाती
+
+[2] Input: wonders
+    Pred : वॉंड््स
+    Truth: वंडर्स
+
+[3] Input: parvarti
+    Pred : पर्वर्ती
+    Truth: परवर्ती
+
+[4] Input: dukhi
+    Pred : दुखी
+    Truth: दुखी
+
+[5] Input: bailon
+    Pred : बैलों
+    Truth: बैलों
+
+Total correct:905 Total samples : 4358
+
+Validation Loss: 0.9848
+Validation Accuracy (exact match [Word Based]): 20.77%
+
+Validation Accuracy (exact match [char Based]): 69.25%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:47<00:00,  3.68it/s]
+
+Sample Predictions:
+[1] Input: stroke
+    Pred : स्ट्रोक
+    Truth: स्ट्रोक
+
+[2] Input: pakshpaati
+    Pred : पक्षपपपित
+    Truth: पक्षपाती
+
+[3] Input: halt
+    Pred : हललट
+    Truth: हॉल्ट
+
+[4] Input: msn
+    Pred : एमएएएन
+    Truth: एमएसएन
+
+[5] Input: bhavishyav
+    Pred : भवविष्यव
+    Truth: भविष्यवाणि
+
+Total correct:958 Total samples : 4358
+
+Validation Loss: 0.9692
+Validation Accuracy (exact match [Word Based]): 21.98%
+
+Validation Accuracy (exact match [char Based]): 70.51%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:51<00:00,  3.39it/s]
+
+Sample Predictions:
+[1] Input: bacchon
+    Pred : बच्चं
+    Truth: बच्चों
+
+[2] Input: ashankaon
+    Pred : अशंकाओं
+    Truth: आशंकाओं
+
+[3] Input: bail
+    Pred : बैल
+    Truth: बैल
+
+[4] Input: baste
+    Pred : बस्ते
+    Truth: बस्ते
+
+[5] Input: arthdand
+    Pred : अर्थदाड
+    Truth: अर्थदंड
+
+Total correct:1076 Total samples : 4358
+
+Validation Loss: 0.9060
+Validation Accuracy (exact match [Word Based]): 24.69%
+
+Validation Accuracy (exact match [char Based]): 71.95%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:50<00:00,  3.44it/s]
+
+Sample Predictions:
+[1] Input: pulsar
+    Pred : पुलसर
+    Truth: पल्सर
+
+[2] Input: netvest
+    Pred : नेटवेे्ट
+    Truth: नेटवेस्ट
+
+[3] Input: alphabet
+    Pred : अल्फबेत
+    Truth: एल्फाबेट
+
+[4] Input: kardinalon
+    Pred : कार्डिनलों
+    Truth: कार्डिनलों
+
+[5] Input: dabar
+    Pred : दबर
+    Truth: डाबर
+
+Total correct:1274 Total samples : 4358
+
+Validation Loss: 0.8901
+Validation Accuracy (exact match [Word Based]): 29.23%
+
+Validation Accuracy (exact match [char Based]): 72.97%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:49<00:00,  3.47it/s]
+
+Sample Predictions:
+[1] Input: janjivan
+    Pred : जनजीवान
+    Truth: जनजीवन
+
+[2] Input: rengti
+    Pred : रेंगती
+    Truth: रेंगती
+
+[3] Input: excel
+    Pred : एक्सेल
+    Truth: एक्सल
+
+[4] Input: spelling
+    Pred : स्पेलिंग
+    Truth: स्पेलिंग
+
+[5] Input: daivgya
+    Pred : दैवग्ञा
+    Truth: दैवज्ञ
+
+Total correct:1200 Total samples : 4358
+
+Validation Loss: 0.8671
+Validation Accuracy (exact match [Word Based]): 27.54%
+
+Validation Accuracy (exact match [char Based]): 73.05%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:49<00:00,  3.46it/s]
+
+Sample Predictions:
+[1] Input: swati
+    Pred : स्वती
+    Truth: स्वाती
+
+[2] Input: mutthi
+    Pred : मूट्ठी
+    Truth: मुट्ठी
+
+[3] Input: sumantr
+    Pred : सुमांत्
+    Truth: सुमंत्र
+
+[4] Input: prtinidhit
+    Pred : प्रतिनिधित
+    Truth: प्रतिनिधित
+
+[5] Input: teston
+    Pred : टेस्टों
+    Truth: टेस्टों
+
+Total correct:1226 Total samples : 4358
+
+Validation Loss: 0.8779
+Validation Accuracy (exact match [Word Based]): 28.13%
+
+Validation Accuracy (exact match [char Based]): 73.24%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:52<00:00,  3.30it/s]
+
+Sample Predictions:
+[1] Input: vanchu
+    Pred : वांचू
+    Truth: वांचू
+
+[2] Input: pahunchna
+    Pred : पहुंचना
+    Truth: पहुंचना
+
+[3] Input: drs
+    Pred : डीआरएस
+    Truth: डीआरएस
+
+[4] Input: pahunchaye
+    Pred : पहुंचाए
+    Truth: पहुंचाएं
+
+[5] Input: aadhunikat
+    Pred : आधुनिकता
+    Truth: आधुनिकता
+
+Total correct:1322 Total samples : 4358
+
+Validation Loss: 0.8549
+Validation Accuracy (exact match [Word Based]): 30.34%
+
+Validation Accuracy (exact match [char Based]): 74.37%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:52<00:00,  3.31it/s]
+
+Sample Predictions:
+[1] Input: parwaan
+    Pred : परवान
+    Truth: परवान
+
+[2] Input: chithhiyon
+    Pred : चित्ियों
+    Truth: चिठ्ठियों
+
+[3] Input: mentha
+    Pred : मेंठा
+    Truth: मेंथा
+
+[4] Input: aja
+    Pred : अजा
+    Truth: अजा
+
+[5] Input: sikhana
+    Pred : सिखनन
+    Truth: सिखाना
+
+Total correct:1294 Total samples : 4358
+
+Validation Loss: 0.9000
+Validation Accuracy (exact match [Word Based]): 29.69%
+
+Validation Accuracy (exact match [char Based]): 73.82%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:53<00:00,  3.25it/s]
+
+Sample Predictions:
+[1] Input: biotech
+    Pred : बायोटेक
+    Truth: बायोटेक
+
+[2] Input: hujum
+    Pred : ह्जूम
+    Truth: हुजूम
+
+[3] Input: rasayan
+    Pred : रसानन
+    Truth: रसायन
+
+[4] Input: ubhar
+    Pred : उभर
+    Truth: उभार
+
+[5] Input: paishachi
+    Pred : पैशाची
+    Truth: पैशाची
+
+Total correct:1343 Total samples : 4358
+
+Validation Loss: 0.8746
+Validation Accuracy (exact match [Word Based]): 30.82%
+
+Validation Accuracy (exact match [char Based]): 74.37%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:56<00:00,  3.06it/s]
+
+Sample Predictions:
+[1] Input: bhagirathi
+    Pred : भागीरथी
+    Truth: भागीरथी
+
+[2] Input: asthetics
+    Pred : एस्थेटिक्स
+    Truth: एस्थेटिक्स
+
+[3] Input: alim
+    Pred : अलीम
+    Truth: अलीम
+
+[4] Input: buliyan
+    Pred : बुलियां
+    Truth: बुलियन
+
+[5] Input: baks
+    Pred : बकस
+    Truth: बक्स
+
+Total correct:1343 Total samples : 4358
+
+Validation Loss: 0.9510
+Validation Accuracy (exact match [Word Based]): 30.82%
+
+Validation Accuracy (exact match [char Based]): 74.18%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [01:02<00:00,  2.77it/s]
+
+Sample Predictions:
+[1] Input: bikan
+    Pred : बिकन
+    Truth: बीकन
+
+[2] Input: rakesh
+    Pred : रकेश
+    Truth: राकेश
+
+[3] Input: rupakon
+    Pred : रुपकों
+    Truth: रूपकों
+
+[4] Input: hurdum
+    Pred : हुर्दम
+    Truth: हरदम
+
+[5] Input: aaf
+    Pred : आफ
+    Truth: आफ़
+
+Total correct:1336 Total samples : 4358
+
+Validation Loss: 0.9990
+Validation Accuracy (exact match [Word Based]): 30.66%
+
+Validation Accuracy (exact match [char Based]): 73.99%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [01:05<00:00,  2.63it/s]
+
+Sample Predictions:
+[1] Input: manonayan
+    Pred : मनोनायन
+    Truth: मनोनयन
+
+[2] Input: sweets
+    Pred : स्वीट्स
+    Truth: स्वीट्स
+
+[3] Input: misale
+    Pred : मिसाले
+    Truth: मिसालें
+
+[4] Input: isvi
+    Pred : इसवी
+    Truth: ईस्वी
+
+[5] Input: barklee
+    Pred : बरककली
+    Truth: बर्कली
+
+Total correct:1351 Total samples : 4358
+
+Validation Loss: 1.0037
+Validation Accuracy (exact match [Word Based]): 31.00%
+
+Validation Accuracy (exact match [char Based]): 74.08%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [01:03<00:00,  2.70it/s]
+
+Sample Predictions:
+[1] Input: pipaaji
+    Pred : पिपाजी
+    Truth: पीपाजी
+
+[2] Input: tuner
+    Pred : टूनर
+    Truth: ट्यूनर
+
+[3] Input: farar
+    Pred : फरार
+    Truth: फरार
+
+[4] Input: jota
+    Pred : जोता
+    Truth: जोता
+
+[5] Input: judas
+    Pred : जुदास
+    Truth: जुडास
+
+Total correct:1369 Total samples : 4358
+
+Validation Loss: 1.0480
+Validation Accuracy (exact match [Word Based]): 31.41%
+
+Validation Accuracy (exact match [char Based]): 73.38%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [01:02<00:00,  2.76it/s]
+
+Sample Predictions:
+[1] Input: daivgya
+    Pred : दैवज्ञा
+    Truth: दैवज्ञ
+
+[2] Input: vaigyaniko
+    Pred : वैज्ञनिकों
+    Truth: वैज्ञानिको
+
+[3] Input: bulakar
+    Pred : बुलाकर
+    Truth: बुलाकर
+
+[4] Input: haygreev
+    Pred : हायग्री
+    Truth: हयग्रीव
+
+[5] Input: beacon
+    Pred : बीकोन
+    Truth: बीकन
+
+Total correct:1385 Total samples : 4358
+
+Validation Loss: 1.0752
+Validation Accuracy (exact match [Word Based]): 31.78%
+
+Validation Accuracy (exact match [char Based]): 74.58%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [01:01<00:00,  2.80it/s]
+
+Sample Predictions:
+[1] Input: vikalp
+    Pred : विकल्प
+    Truth: विकल्प
+
+[2] Input: kalpana
+    Pred : का्पना
+    Truth: कल्पना
+
+[3] Input: muchalka
+    Pred : मुचलका
+    Truth: मुचलका
+
+[4] Input: inset
+    Pred : इनसेट
+    Truth: इनसेट
+
+[5] Input: nizampur
+    Pred : निजामपुर
+    Truth: निजामपुर
+
+Total correct:1362 Total samples : 4358
+
+Validation Loss: 1.0504
+Validation Accuracy (exact match [Word Based]): 31.25%
+
+Validation Accuracy (exact match [char Based]): 74.35%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [01:02<00:00,  2.75it/s]
+
+Sample Predictions:
+[1] Input: ikbaliya
+    Pred : इकबालिया
+    Truth: इकबालिया
+
+[2] Input: arjun
+    Pred : अर्जुन
+    Truth: अर्जुन
+
+[3] Input: bankata
+    Pred : बांकत
+    Truth: बनकटा
+
+[4] Input: kaagji
+    Pred : कागजी
+    Truth: कागज़ी
+
+[5] Input: oasis
+    Pred : ओउसिस
+    Truth: ओएसिस
+
+Total correct:1335 Total samples : 4358
+
+Validation Loss: 1.1365
+Validation Accuracy (exact match [Word Based]): 30.63%
+
+Validation Accuracy (exact match [char Based]): 73.33%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [01:01<00:00,  2.80it/s]
+
+Sample Predictions:
+[1] Input: gardener
+    Pred : गॉर्डेरर
+    Truth: गार्डनर
+
+[2] Input: pute
+    Pred : पूटे
+    Truth: पुते
+
+[3] Input: nakum
+    Pred : नककम
+    Truth: नकुम
+
+[4] Input: tarr
+    Pred : टार
+    Truth: तर
+
+[5] Input: vidhigya
+    Pred : विधिज्य
+    Truth: विधिज्ञ
+
+Total correct:1291 Total samples : 4358
+
+Validation Loss: 1.1155
+Validation Accuracy (exact match [Word Based]): 29.62%
+
+Validation Accuracy (exact match [char Based]): 73.87%

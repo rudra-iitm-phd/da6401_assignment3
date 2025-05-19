@@ -1,0 +1,101 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:38<00:00,  4.55it/s]
+Sample Predictions:
+[1] Input: sanskritni
+    Pred : संस््िििि
+    Truth: संस्कृतनिष
+
+[2] Input: janmshati
+    Pred : जनंा्तत
+    Truth: जन्मशती
+
+[3] Input: pratispard
+    Pred : प्रर्््र्र
+    Truth: प्रतिस्पर्
+
+[4] Input: kochon
+    Pred : कोोो
+    Truth: कोचों
+
+[5] Input: powell
+    Pred : प्लललल
+    Truth: पॉवेल
+
+Total correct:15 Total samples : 4358
+
+Validation Loss: 2.1858
+Validation Accuracy (exact match [Word Based]): 0.34%
+
+Validation Accuracy (exact match [char Based]): 32.07%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:37<00:00,  4.56it/s]
+
+Sample Predictions:
+[1] Input: acetate
+    Pred : अकेतत
+    Truth: एसिटेट
+
+[2] Input: taula
+    Pred : तौला
+    Truth: तौला
+
+[3] Input: clasen
+    Pred : क्लसनन
+    Truth: क्लासेन
+
+[4] Input: morwi
+    Pred : मोरीी
+    Truth: मोरवी
+
+[5] Input: dwarpal
+    Pred : द्वापलल
+    Truth: द्वारपाल
+
+Total correct:397 Total samples : 4358
+
+Validation Loss: 1.2288
+Validation Accuracy (exact match [Word Based]): 9.11%
+
+Validation Accuracy (exact match [char Based]): 60.78%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:59<00:00,  2.90it/s]
+
+Sample Predictions:
+[1] Input: katlaa
+    Pred : कतला
+    Truth: कतला
+
+[2] Input: maidrik
+    Pred : मैद्रिक
+    Truth: मौद्रिक
+
+[3] Input: yadi
+    Pred : याी
+    Truth: यदि
+
+[4] Input: arstu
+    Pred : अरस्ुु
+    Truth: अरस्तू
+
+[5] Input: jaagane
+    Pred : जागने
+    Truth: जागने
+
+Total correct:841 Total samples : 4358
+
+Validation Loss: 1.0230
+Validation Accuracy (exact match [Word Based]): 19.30%
+
+Validation Accuracy (exact match [char Based]): 67.17%
+ 90%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎             | 156/173 [01:08<00:07,  2.29it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 796, in <module>
+    native[0],
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 771, in train_core
+    print(f"Train Accuracy (exact match [Word Based]): {acc:.2f}%\n")
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 546, in train_model
+    "connectivity_visualization": wandb.Html(html_content)
+          ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/autograd/__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

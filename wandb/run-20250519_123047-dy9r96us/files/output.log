@@ -1,0 +1,85 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:40<00:00,  4.27it/s]
+Sample Predictions:
+[1] Input: anadaran
+    Pred : आनंाा
+    Truth: अनादरण
+
+[2] Input: fobiya
+    Pred : कोलिा
+    Truth: फोबिया
+
+[3] Input: mukhautey
+    Pred : मुचततत
+    Truth: मुखौटे
+
+[4] Input: chhodane
+    Pred : चुननन
+    Truth: छोड़ने
+
+[5] Input: joodi
+    Pred : जोगी
+    Truth: जूडी
+
+Total correct:34 Total samples : 4358
+
+Validation Loss: 1.9346
+Validation Accuracy (exact match [Word Based]): 0.78%
+
+Validation Accuracy (exact match [char Based]): 40.95%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:36<00:00,  4.75it/s]
+
+Sample Predictions:
+[1] Input: modte
+    Pred : मोड्े
+    Truth: मोड़ते
+
+[2] Input: loi
+    Pred : लाई
+    Truth: लोई
+
+[3] Input: produce
+    Pred : प्रडुल
+    Truth: प्रोड्यूस
+
+[4] Input: udham
+    Pred : उढ़
+    Truth: उधम
+
+[5] Input: controlled
+    Pred : कंट्रेलल
+    Truth: कंट्रोल्ड
+
+Total correct:575 Total samples : 4358
+
+Validation Loss: 1.2894
+Validation Accuracy (exact match [Word Based]): 13.19%
+
+Validation Accuracy (exact match [char Based]): 60.43%
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 717, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 692, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 476, in train_model
+    val_loss, val_char_acc, val_word_acc = evaluate_model(model, data_loader=val_loader, latinidx2char = shared.latin_idx2char,nativeidx2char = shared.native_idx2char, criterion = criterion, device = device, beam_size = beam_size, data = 'val', log = True if log else False)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 654, in evaluate_model
+    log_connectivity_visualization_to_wandb(
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 397, in log_connectivity_visualization_to_wandb
+    html_content = create_connectivity_html(input_tokens, pred_tokens, config["model"], attn_weights[0])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 63, in create_connectivity_html
+    html = """
+           ^^^
+ValueError: unsupported format character ';' (0x3b) at index 734

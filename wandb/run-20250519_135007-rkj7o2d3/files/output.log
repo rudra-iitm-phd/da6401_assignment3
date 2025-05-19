@@ -1,0 +1,184 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:38<00:00,  4.52it/s]
+Sample Predictions:
+[1] Input: bhul
+    Pred : बोल
+    Truth: भूल
+
+[2] Input: aamada
+    Pred : आमााा
+    Truth: आमादा
+
+[3] Input: tiki
+    Pred : टिली
+    Truth: टिकी
+
+[4] Input: virodhabha
+    Pred : सु्धाााा
+    Truth: विरोधाभास
+
+[5] Input: tantrika
+    Pred : स्क्काक
+    Truth: तंत्रिका
+
+Total correct:6 Total samples : 4358
+
+Validation Loss: 2.2892
+Validation Accuracy (exact match [Word Based]): 0.14%
+
+Validation Accuracy (exact match [char Based]): 29.97%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:36<00:00,  4.75it/s]
+
+Sample Predictions:
+[1] Input: vidaya
+    Pred : विड़ाा
+    Truth: विद्या
+
+[2] Input: bhaiyadooj
+    Pred : भैययाोोो
+    Truth: भैयादूज
+
+[3] Input: sanskaro
+    Pred : संस्कररो
+    Truth: संस्कारो
+
+[4] Input: updrav
+    Pred : उप््रवव
+    Truth: उपद्रव
+
+[5] Input: lakhnavi
+    Pred : लक्नाीी
+    Truth: लखनवी
+
+Total correct:447 Total samples : 4358
+
+Validation Loss: 1.2322
+Validation Accuracy (exact match [Word Based]): 10.26%
+
+Validation Accuracy (exact match [char Based]): 62.31%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:46<00:00,  3.74it/s]
+
+Sample Predictions:
+[1] Input: asmantayen
+    Pred : अस्मंतानं
+    Truth: असमानताएं
+
+[2] Input: laxman
+    Pred : लक््ममन
+    Truth: लक्षमण
+
+[3] Input: patila
+    Pred : पतिला
+    Truth: पतीला
+
+[4] Input: paratdaar
+    Pred : परतदाार
+    Truth: परतदार
+
+[5] Input: dohrane
+    Pred : दोराने
+    Truth: दोहराने
+
+Total correct:776 Total samples : 4358
+
+Validation Loss: 1.0273
+Validation Accuracy (exact match [Word Based]): 17.81%
+
+Validation Accuracy (exact match [char Based]): 68.49%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:59<00:00,  2.90it/s]
+
+Sample Predictions:
+[1] Input: limestone
+    Pred : लिमेस्टो
+    Truth: लाइमस्टोन
+
+[2] Input: kalpna
+    Pred : कल्पना
+    Truth: कल्पना
+
+[3] Input: baniae
+    Pred : बानाए
+    Truth: बनिए
+
+[4] Input: pushpiya
+    Pred : पुश्पिया
+    Truth: पुष्पीय
+
+[5] Input: kahein
+    Pred : कहीं
+    Truth: कहें
+
+Total correct:930 Total samples : 4358
+
+Validation Loss: 0.9588
+Validation Accuracy (exact match [Word Based]): 21.34%
+
+Validation Accuracy (exact match [char Based]): 69.61%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [01:03<00:00,  2.71it/s]
+
+Sample Predictions:
+[1] Input: samyuktata
+    Pred : सममुुकतताा
+    Truth: संयुक्तता
+
+[2] Input: parana
+    Pred : परणा
+    Truth: परण
+
+[3] Input: chhit
+    Pred : छीत
+    Truth: छिट
+
+[4] Input: pahunchaat
+    Pred : पहुंचात
+    Truth: पहुंचाती
+
+[5] Input: jivantata
+    Pred : जीवततता
+    Truth: जीवंतता
+
+Total correct:1076 Total samples : 4358
+
+Validation Loss: 0.9092
+Validation Accuracy (exact match [Word Based]): 24.69%
+
+Validation Accuracy (exact match [char Based]): 71.14%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:58<00:00,  2.97it/s]
+
+Sample Predictions:
+[1] Input: bhulane
+    Pred : भुलाने
+    Truth: भूलने
+
+[2] Input: walaikum
+    Pred : वाैैकुम
+    Truth: वालेकुम
+
+[3] Input: jitane
+    Pred : जितने
+    Truth: जितने
+
+[4] Input: chankati
+    Pred : चंकती
+    Truth: चौंकती
+
+[5] Input: ankahi
+    Pred : अंकाही
+    Truth: अनकही
+
+Total correct:1252 Total samples : 4358
+
+Validation Loss: 0.8924
+Validation Accuracy (exact match [Word Based]): 28.73%
+
+Validation Accuracy (exact match [char Based]): 72.77%
+ 21%|█████████████████████████████▏                                                                                                              | 36/173 [00:15<00:58,  2.35it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 596, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 571, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 349, in train_model
+    total_loss += loss.item()
+                  ^^^^^^^^^^^
+KeyboardInterrupt

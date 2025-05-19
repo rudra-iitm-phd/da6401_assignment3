@@ -1,0 +1,82 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:40<00:00,  4.22it/s]
+Sample Predictions:
+[1] Input: bager
+    Pred : बजजर
+    Truth: बग़ैर
+
+[2] Input: dilvaaye
+    Pred : दिलवाा
+    Truth: दिलवाए
+
+[3] Input: dansers
+    Pred : दंवस्प
+    Truth: डांसर्स
+
+[4] Input: jamwal
+    Pred : जामाल
+    Truth: जामवाल
+
+[5] Input: aaina
+    Pred : आााा
+    Truth: आइना
+
+Total correct:23 Total samples : 4358
+
+Validation Loss: 2.0064
+Validation Accuracy (exact match [Word Based]): 0.53%
+
+Validation Accuracy (exact match [char Based]): 39.63%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:36<00:00,  4.73it/s]
+
+Sample Predictions:
+[1] Input: upkaran
+    Pred : उपकाा
+    Truth: उपकरण
+
+[2] Input: deghaat
+    Pred : देघत
+    Truth: देघाट
+
+[3] Input: namdan
+    Pred : नममदन
+    Truth: नामदान
+
+[4] Input: ajadnagar
+    Pred : अजददागा
+    Truth: आजादनगर
+
+[5] Input: mool
+    Pred : मूल
+    Truth: मूलं
+
+Total correct:659 Total samples : 4358
+
+Validation Loss: 1.1770
+Validation Accuracy (exact match [Word Based]): 15.12%
+
+Validation Accuracy (exact match [char Based]): 64.46%
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 108 (l) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 112 (p) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 101 (e) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 111 (o) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/data_types/image.py:302: UserWarning: Glyph 115 (s) missing from font(s) Noto Sans Devanagari.
+  util.ensure_matplotlib_figure(data).savefig(buf, format="png")
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 619, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 594, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 378, in train_model
+    val_loss, val_char_acc, val_word_acc = evaluate_model(model, data_loader=val_loader, latinidx2char = shared.latin_idx2char,nativeidx2char = shared.native_idx2char, criterion = criterion, device = device, beam_size = beam_size, data = 'val', log = True if log else False)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 556, in evaluate_model
+    log_connectivity_visualization_to_wandb(
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 304, in log_connectivity_visualization_to_wandb
+    "attention_matrix": wandb.plots.HeatMap(
+                        ^^^^^^^^^^^
+AttributeError: module 'wandb' has no attribute 'plots'. Did you mean: 'plot'?

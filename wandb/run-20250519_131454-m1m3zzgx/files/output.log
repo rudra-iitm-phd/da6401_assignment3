@@ -1,0 +1,97 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:38<00:00,  4.55it/s]
+Sample Predictions:
+[1] Input: asangat
+    Pred : असससा
+    Truth: असंगत
+
+[2] Input: angithi
+    Pred : अंिििी
+    Truth: अंगीठी
+
+[3] Input: mauritious
+    Pred : मरर्िििि
+    Truth: माॅरिशस
+
+[4] Input: sarasta
+    Pred : सस्ााा
+    Truth: सरसता
+
+[5] Input: bolero
+    Pred : बोलडर
+    Truth: बोलेरो
+
+Total correct:13 Total samples : 4358
+
+Validation Loss: 2.1776
+Validation Accuracy (exact match [Word Based]): 0.30%
+
+Validation Accuracy (exact match [char Based]): 33.52%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:36<00:00,  4.75it/s]
+
+Sample Predictions:
+[1] Input: punaravalo
+    Pred : पुनरावाों
+    Truth: पुनरावलोकन
+
+[2] Input: dupatta
+    Pred : दुपततता
+    Truth: दुपट्टा
+
+[3] Input: ratribhoj
+    Pred : रततरिभो
+    Truth: रात्रिभोज
+
+[4] Input: avyavharik
+    Pred : अव्यवाररिक
+    Truth: अव्यावहारि
+
+[5] Input: vrutta
+    Pred : वृत्तता
+    Truth: वृत्त
+
+Total correct:544 Total samples : 4358
+
+Validation Loss: 1.2217
+Validation Accuracy (exact match [Word Based]): 12.48%
+
+Validation Accuracy (exact match [char Based]): 63.50%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:40<00:00,  4.26it/s]
+
+Sample Predictions:
+[1] Input: ugana
+    Pred : उगनाा
+    Truth: उगाना
+
+[2] Input: trilok
+    Pred : ट्रिलक
+    Truth: त्रिलोक
+
+[3] Input: saptarishi
+    Pred : सप्तररिशी
+    Truth: सप्तर्षि
+
+[4] Input: subbarao
+    Pred : सुबबााओ
+    Truth: सुब्बाराव
+
+[5] Input: tkdl
+    Pred : ट्कड
+    Truth: टीकेडीएल
+
+Total correct:810 Total samples : 4358
+
+Validation Loss: 1.0478
+Validation Accuracy (exact match [Word Based]): 18.59%
+
+Validation Accuracy (exact match [char Based]): 68.29%
+ 51%|████████████████████████████████████████████████████████████████████████                                                                    | 89/173 [00:26<00:24,  3.41it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 856, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 831, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 609, in train_model
+    total_loss += loss.item()
+                  ^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,75 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:49<00:00,  3.48it/s]
+Sample Predictions:
+[1] Input: poha
+    Pred : पु
+    Truth: पोहा
+
+[2] Input: tobego
+    Pred : कोरों
+    Truth: टोबेगो
+
+[3] Input: krititva
+    Pred : क्रततततत
+    Truth: कृतित्व
+
+[4] Input: upasthit
+    Pred : पुपतततत
+    Truth: उपस्थित
+
+[5] Input: sarasta
+    Pred : सस्स्
+    Truth: सरसता
+
+Total correct:33 Total samples : 4358
+
+Validation Loss: 2.0957
+Validation Accuracy (exact match [Word Based]): 0.76%
+
+Validation Accuracy (exact match [char Based]): 34.41%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 173/173 [00:51<00:00,  3.38it/s]
+
+Sample Predictions:
+[1] Input: chhachh
+    Pred : छचछछ
+    Truth: छाछ
+
+[2] Input: skip
+    Pred : स्किप
+    Truth: स्किप
+
+[3] Input: tikona
+    Pred : टिकोना
+    Truth: तिकोना
+
+[4] Input: neet
+    Pred : नीट
+    Truth: नीत
+
+[5] Input: yogfal
+    Pred : ओोग्लल
+    Truth: योगफल
+
+Total correct:427 Total samples : 4358
+
+Validation Loss: 1.2807
+Validation Accuracy (exact match [Word Based]): 9.80%
+
+Validation Accuracy (exact match [char Based]): 60.47%
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 856, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 831, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 615, in train_model
+    val_loss, val_char_acc, val_word_acc = evaluate_model(model, data_loader=val_loader, latinidx2char = shared.latin_idx2char,nativeidx2char = shared.native_idx2char, criterion = criterion, device = device, beam_size = beam_size, data = 'val', log = True if log else False)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 793, in evaluate_model
+    log_connectivity_visualization_to_wandb(
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 536, in log_connectivity_visualization_to_wandb
+    html_content = create_connectivity_html(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 302, in create_connectivity_html
+    """.format(model_name.upper())
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: '\n                font-family'
