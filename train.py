@@ -253,7 +253,10 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
 
                   elif beam_size > 1:
                         """ Char level accuracy """
-                        pred, attn_weights = model.beam(latin, k = beam_size)
+                        if config['use_attn']:
+                              pred, attn_weights = model.beam(latin, k = beam_size)
+                        else:
+                             pred  = model.beam(latin, k = beam_size) 
                         preds = pred.reshape(-1)
                         native = native.reshape(-1)
                         pred_mask = preds.ne(3) & preds.ne(1) & preds.ne(2) & preds.ne(0)

@@ -1,0 +1,16 @@
+{"time":"2025-05-20T01:04:00.219258+05:30","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/wandb/run-20250520_010359-q1fpstod/logs/debug-core.log"}
+{"time":"2025-05-20T01:04:00.501146+05:30","level":"INFO","msg":"created new stream","id":"q1fpstod"}
+{"time":"2025-05-20T01:04:00.501209+05:30","level":"INFO","msg":"stream: started","id":"q1fpstod"}
+{"time":"2025-05-20T01:04:00.501226+05:30","level":"INFO","msg":"writer: Do: started","stream_id":"q1fpstod"}
+{"time":"2025-05-20T01:04:00.501268+05:30","level":"INFO","msg":"sender: started","stream_id":"q1fpstod"}
+{"time":"2025-05-20T01:04:00.501319+05:30","level":"INFO","msg":"handler: started","stream_id":"q1fpstod"}
+{"time":"2025-05-20T01:04:00.905351+05:30","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-20T01:04:47.293603+05:30","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-20T01:04:47.298793+05:30","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-20T01:04:48.313217+05:30","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.693888959,"progress":"457B/457B"},{"desc":"uploading config.yaml","runtime_seconds":0.370854416,"progress":"1.3KB/1.3KB"}],"total_operations":2}}
+{"time":"2025-05-20T01:04:48.943928+05:30","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-20T01:04:50.313893+05:30","level":"INFO","msg":"stream: closing","id":"q1fpstod"}
+{"time":"2025-05-20T01:04:50.313947+05:30","level":"INFO","msg":"handler: closed","stream_id":"q1fpstod"}
+{"time":"2025-05-20T01:04:50.314759+05:30","level":"INFO","msg":"sender: closed","stream_id":"q1fpstod"}
+{"time":"2025-05-20T01:04:50.314512+05:30","level":"INFO","msg":"writer: Close: closed","stream_id":"q1fpstod"}
+{"time":"2025-05-20T01:04:50.315328+05:30","level":"INFO","msg":"stream: closed","id":"q1fpstod"}

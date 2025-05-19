@@ -1,0 +1,32 @@
+wandb_version: 1
+
+activation:
+  value: gelu
+batch_size:
+  value: 128
+beam_size:
+  value: 3
+dec_dim:
+  value: 512
+dec_embedding_dim:
+  value: 512
+dropout_rate:
+  value: 0
+enc_dim:
+  value: 256
+enc_embedding_dim:
+  value: 512
+learning_rate:
+  value: 0.00014939862952969467
+linear_dim:
+  value: 512
+model:
+  value: gru
+momentum:
+  value: 0.9475316461498962
+n_decoders:
+  value: 3
+n_encoders:
+  value: 3
+optimizer:
+  value: adam

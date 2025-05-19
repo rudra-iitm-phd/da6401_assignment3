@@ -1,0 +1,50 @@
+2025-05-20 01:07:30,899 INFO    Thread-2 (_run_job):49288 [wandb_setup.py:_flush():67] Current SDK version is 0.19.7
+2025-05-20 01:07:30,900 INFO    Thread-2 (_run_job):49288 [wandb_setup.py:_flush():67] Configure stats pid to 49288
+2025-05-20 01:07:30,900 INFO    Thread-2 (_run_job):49288 [wandb_setup.py:_flush():67] Loading settings from /Users/rudra_sarkar/.config/wandb/settings
+2025-05-20 01:07:30,900 INFO    Thread-2 (_run_job):49288 [wandb_setup.py:_flush():67] Loading settings from /Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/wandb/settings
+2025-05-20 01:07:30,900 INFO    Thread-2 (_run_job):49288 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-05-20 01:07:30,900 INFO    Thread-2 (_run_job):49288 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/wandb/run-20250520_010730-x16nz78i/logs/debug.log
+2025-05-20 01:07:30,900 INFO    Thread-2 (_run_job):49288 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/wandb/run-20250520_010730-x16nz78i/logs/debug-internal.log
+2025-05-20 01:07:30,900 INFO    Thread-2 (_run_job):49288 [wandb_init.py:init():761] calling init triggers
+2025-05-20 01:07:30,901 INFO    Thread-2 (_run_job):49288 [wandb_init.py:init():766] wandb.init called with sweep_config: {'activation': 'gelu', 'batch_size': 128, 'beam_size': 3, 'dec_dim': 512, 'dec_embedding_dim': 512, 'dropout_rate': 0, 'enc_dim': 256, 'enc_embedding_dim': 512, 'learning_rate': 0.00014939862952969467, 'linear_dim': 512, 'model': 'gru', 'momentum': 0.9475316461498962, 'n_decoders': 3, 'n_encoders': 3, 'optimizer': 'adam'}
+config: {'batch_size': 128, 'native': 'hi', 'model': 'lstm', 'enc_embedding_dim': 64, 'enc_dim': 512, 'n_encoders': 1, 'dec_embedding_dim': 64, 'dec_dim': 512, 'n_decoders': 1, 'linear_dim': 2048, 'dropout_rate': 0.4, 'epochs': 20, 'use_attn': False, 'log_connectivity': False, 'momentum': 0.9359397750924344, 'beam_size': 3, 'activation': 'relu', 'optimizer': 'adamw', 'learning_rate': 0.003190691348613236, 'use_v2': False, 'use_test': False, 'wandb': False, 'wandb_entity': 'da24d008-iit-madras', 'wandb_project': 'da6401-assignment3', 'wandb_sweep': True, 'sweep_id': None, '_wandb': {}}
+2025-05-20 01:07:30,901 INFO    Thread-2 (_run_job):49288 [wandb_init.py:init():784] starting backend
+2025-05-20 01:07:30,901 INFO    Thread-2 (_run_job):49288 [wandb_init.py:init():788] sending inform_init request
+2025-05-20 01:07:31,005 INFO    Thread-2 (_run_job):49288 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2025-05-20 01:07:31,005 INFO    Thread-2 (_run_job):49288 [wandb_init.py:init():803] backend started and connected
+2025-05-20 01:07:31,007 INFO    Thread-2 (_run_job):49288 [wandb_run.py:_config_callback():1261] config_cb None None {'activation': 'gelu', 'batch_size': 128, 'beam_size': 3, 'dec_dim': 512, 'dec_embedding_dim': 512, 'dropout_rate': 0, 'enc_dim': 256, 'enc_embedding_dim': 512, 'learning_rate': 0.00014939862952969467, 'linear_dim': 512, 'model': 'gru', 'momentum': 0.9475316461498962, 'n_decoders': 3, 'n_encoders': 3, 'optimizer': 'adam'}
+2025-05-20 01:07:31,010 INFO    Thread-2 (_run_job):49288 [wandb_init.py:init():896] updated telemetry
+2025-05-20 01:07:31,041 INFO    Thread-2 (_run_job):49288 [wandb_init.py:init():920] communicating run to backend with 90.0 second timeout
+2025-05-20 01:07:31,519 INFO    Thread-2 (_run_job):49288 [wandb_init.py:init():995] starting run threads in backend
+2025-05-20 01:07:31,706 INFO    Thread-2 (_run_job):49288 [wandb_run.py:_console_start():2377] atexit reg
+2025-05-20 01:07:31,707 INFO    Thread-2 (_run_job):49288 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-05-20 01:07:31,708 INFO    Thread-2 (_run_job):49288 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-05-20 01:07:31,708 INFO    Thread-2 (_run_job):49288 [wandb_run.py:_redirect():2317] Redirects installed.
+2025-05-20 01:07:31,710 INFO    Thread-2 (_run_job):49288 [wandb_init.py:init():1037] run started, returning control to user process
+2025-05-20 01:08:46,061 INFO    Thread-2 (_run_job):49288 [wandb_run.py:_config_callback():1261] config_cb ('_wandb', 'visualize', 'confusion_matrix') {'panel_type': 'Vega2', 'panel_config': {'panelDefId': 'wandb/confusion_matrix/v1', 'fieldSettings': {'Actual': 'Actual', 'Predicted': 'Predicted', 'nPredictions': 'nPredictions'}, 'stringSettings': {'title': 'Confusion Matrix Curve'}, 'transform': {'name': 'tableWithLeafColNames'}, 'userQuery': {'queryFields': [{'name': 'runSets', 'args': [{'name': 'runSets', 'value': '${runSets}'}], 'fields': [{'name': 'id', 'fields': []}, {'name': 'name', 'fields': []}, {'name': '_defaultColorIndex', 'fields': []}, {'name': 'summaryTable', 'args': [{'name': 'tableKey', 'value': 'confusion_matrix_table'}], 'fields': []}]}]}}} None
+2025-05-20 01:08:54,870 INFO    MainThread:49288 [wandb_run.py:_finish():2112] finishing run da24d008-iit-madras/da6401-assignment3/x16nz78i
+2025-05-20 01:08:54,870 INFO    MainThread:49288 [wandb_run.py:_atexit_cleanup():2342] got exitcode: 0
+2025-05-20 01:08:54,871 INFO    MainThread:49288 [wandb_run.py:_restore():2324] restore
+2025-05-20 01:08:54,871 INFO    MainThread:49288 [wandb_run.py:_restore():2330] restore done
+2025-05-20 01:08:55,402 WARNING MsgRouterThr:49288 [router.py:message_loop():77] message_loop has been closed
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/interface/router_sock.py", line 28, in _read_message
+    resp = self._sock_client.read_server_response(timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/lib/sock_client.py", line 285, in read_server_response
+    data = self._read_packet_bytes(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/lib/sock_client.py", line 270, in _read_packet_bytes
+    raise SockClientClosedError
+wandb.sdk.lib.sock_client.SockClientClosedError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/interface/router.py", line 70, in message_loop
+    msg = self._read_message()
+          ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/sdk/interface/router_sock.py", line 30, in _read_message
+    raise MessageRouterClosedError from e
+wandb.sdk.interface.router.MessageRouterClosedError
+2025-05-20 01:08:55,404 INFO    MsgRouterThr:49288 [mailbox.py:close():115] Closing mailbox, abandoning 2 handles.
