@@ -80,6 +80,7 @@ parser.add_argument('-o', '--optimizer',
 parser.add_argument('-lr', '--learning_rate', 
                   type = float, default = 0.003190691348613236,
                   help = 'Learning rate for optimizer')
+                  
 parser.add_argument('--use_v2', action='store_true', help='Use attention config version 2')
 
 parser.add_argument('--use_test', action='store_true', help='Final evaluation on test data')

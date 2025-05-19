@@ -27,6 +27,8 @@ sweep_config = {
                   
                   "momentum": {"distribution": "uniform", "min": 0.8, "max": 0.99},
 
+                  "model":{"values":["lstm", "gru", "rnn"]}
+
                   # "weight_decay": {"distribution": "uniform", "min": 0, "max": 1e-2},
             }
         }
@@ -60,7 +62,9 @@ sweep_config_with_attn = {
                   
                   "momentum": {"distribution": "uniform", "min": 0.8, "max": 0.99},
 
-                  "use_attn":{"values":[True]}
+                  "use_attn":{"values":[True]},
+
+                  "model":{"values":["lstm", "gru", "rnn"]}
 
             }
         }
@@ -94,7 +98,9 @@ sweep_config_with_attn_v2 = {
                   
                   "momentum": {"distribution": "uniform", "min": 0.8, "max": 0.99},
 
-                  "use_attn":{"values":[True]}
+                  "use_attn":{"values":[True]},
+
+                  "model":{"values":["lstm", "gru", "rnn"]}
 
             }
         }

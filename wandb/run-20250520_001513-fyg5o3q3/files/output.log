@@ -1,0 +1,247 @@
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/rnn.py:83: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.4 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [03:04<00:00,  1.87it/s]
+Sample Predictions:
+[1] Input: sanskarit
+    Pred : संस्ककिि
+    Truth: संस्कारित
+
+[2] Input: taula
+    Pred : तौला
+    Truth: तौला
+
+[3] Input: morakkan
+    Pred : मोक्ककण
+    Truth: मोरक्कन
+
+[4] Input: nagesh
+    Pred : नादे
+    Truth: नागेश
+
+[5] Input: janopayogi
+    Pred : जनोोाोी
+    Truth: जनोपयोगी
+
+Total correct:439 Total samples : 4358
+
+Validation Loss: 1.2601
+Validation Accuracy (exact match [Word Based]): 10.07%
+
+Validation Accuracy (exact match [char Based]): 59.52%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [02:14<00:00,  2.56it/s]
+
+Sample Predictions:
+[1] Input: dahla
+    Pred : दहला
+    Truth: दहला
+
+[2] Input: controlled
+    Pred : कॉट्रलललल
+    Truth: कंट्रोल्ड
+
+[3] Input: aau
+    Pred : आऊ
+    Truth: आऊ
+
+[4] Input: bailey
+    Pred : बैले
+    Truth: बैली
+
+[5] Input: gardener
+    Pred : गर्डेनर
+    Truth: गार्डनर
+
+Total correct:916 Total samples : 4358
+
+Validation Loss: 1.0148
+Validation Accuracy (exact match [Word Based]): 21.02%
+
+Validation Accuracy (exact match [char Based]): 68.73%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:51<00:00,  3.10it/s]
+
+Sample Predictions:
+[1] Input: mamata
+    Pred : ममतता
+    Truth: ममता
+
+[2] Input: taqdir
+    Pred : तकड़िर
+    Truth: तकदीर
+
+[3] Input: paricharik
+    Pred : परिचारिक
+    Truth: परिचारिका
+
+[4] Input: sharab
+    Pred : शररब
+    Truth: शराब
+
+[5] Input: jhaapad
+    Pred : झापड़
+    Truth: झापड़
+
+Total correct:1093 Total samples : 4358
+
+Validation Loss: 0.9389
+Validation Accuracy (exact match [Word Based]): 25.08%
+
+Validation Accuracy (exact match [char Based]): 71.11%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [02:00<00:00,  2.88it/s]
+
+Sample Predictions:
+[1] Input: premji
+    Pred : प्रीजी
+    Truth: प्रेमजी
+
+[2] Input: likhane
+    Pred : लिखने
+    Truth: लिखने
+
+[3] Input: tarko
+    Pred : तारको
+    Truth: तर्को
+
+[4] Input: adhikansha
+    Pred : अधिकाशशा
+    Truth: अधिकांशत
+
+[5] Input: poojyaneey
+    Pred : पूज्यनीी
+    Truth: पूज्यनीय
+
+Total correct:1102 Total samples : 4358
+
+Validation Loss: 0.9135
+Validation Accuracy (exact match [Word Based]): 25.29%
+
+Validation Accuracy (exact match [char Based]): 71.47%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:56<00:00,  2.98it/s]
+
+Sample Predictions:
+[1] Input: hansda
+    Pred : हंंसाा
+    Truth: हंसदा
+
+[2] Input: mulmantr
+    Pred : मूलमंंरर
+    Truth: मूलमंत्र
+
+[3] Input: qwanr
+    Pred : क्वांर
+    Truth: क्वांर
+
+[4] Input: maangon
+    Pred : मांगों
+    Truth: मांगों
+
+[5] Input: deep
+    Pred : दीप
+    Truth: दीप
+
+Total correct:1205 Total samples : 4358
+
+Validation Loss: 0.9264
+Validation Accuracy (exact match [Word Based]): 27.65%
+
+Validation Accuracy (exact match [char Based]): 72.04%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:48<00:00,  3.20it/s]
+
+Sample Predictions:
+[1] Input: nokia
+    Pred : नोकिया
+    Truth: नोकिया
+
+[2] Input: hakka
+    Pred : हक्का
+    Truth: हक्का
+
+[3] Input: shavak
+    Pred : शावक
+    Truth: शावक
+
+[4] Input: kakshayen
+    Pred : कक्षाएं
+    Truth: कक्षाएं
+
+[5] Input: cruz
+    Pred : क्रूज
+    Truth: क्रूज़
+
+Total correct:1303 Total samples : 4358
+
+Validation Loss: 0.9229
+Validation Accuracy (exact match [Word Based]): 29.90%
+
+Validation Accuracy (exact match [char Based]): 73.29%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:36<00:00,  3.57it/s]
+
+Sample Predictions:
+[1] Input: hathway
+    Pred : हैथवय
+    Truth: हाथवे
+
+[2] Input: bhau
+    Pred : भौ
+    Truth: भाऊ
+
+[3] Input: mukhyetaar
+    Pred : मुख्यतार
+    Truth: मुख्तार
+
+[4] Input: bodhgya
+    Pred : बोधग्या
+    Truth: बोधगया
+
+[5] Input: zen
+    Pred : जेन
+    Truth: जेन
+
+Total correct:1219 Total samples : 4358
+
+Validation Loss: 0.9917
+Validation Accuracy (exact match [Word Based]): 27.97%
+
+Validation Accuracy (exact match [char Based]): 72.89%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:34<00:00,  3.66it/s]
+
+Sample Predictions:
+[1] Input: krishi
+    Pred : कृषि
+    Truth: कृषि
+
+[2] Input: bnabat
+    Pred : बनाबत
+    Truth: बनाबट
+
+[3] Input: taanka
+    Pred : तांका
+    Truth: टांका
+
+[4] Input: dhumra
+    Pred : धूम्र
+    Truth: धूम्र
+
+[5] Input: ruko
+    Pred : रुको
+    Truth: रुको
+
+Total correct:1299 Total samples : 4358
+
+Validation Loss: 1.0003
+Validation Accuracy (exact match [Word Based]): 29.81%
+
+Validation Accuracy (exact match [char Based]): 73.23%
+ 81%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                          | 281/346 [01:21<00:18,  3.44it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 458, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 410, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 144, in train_model
+    torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1)  # gradient clipping
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/utils/clip_grad.py", line 61, in clip_grad_norm_
+    total_norm = torch.linalg.vector_norm(torch.stack([norm.to(first_device) for norm in norms]), norm_type)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,392 @@
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/rnn.py:83: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.4 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:13<00:00,  4.73it/s]
+Sample Predictions:
+[1] Input: raakhein
+    Pred : रखेें
+    Truth: राखें
+
+[2] Input: savalon
+    Pred : सवलों
+    Truth: सवालों
+
+[3] Input: dhanda
+    Pred : धंंा
+    Truth: धंधा
+
+[4] Input: utrayi
+    Pred : उत्यी
+    Truth: उतराई
+
+[5] Input: tithi
+    Pred : तिठी
+    Truth: तिथी
+
+Total correct:417 Total samples : 4358
+
+Validation Loss: 1.2768
+Validation Accuracy (exact match [Word Based]): 9.57%
+
+Validation Accuracy (exact match [char Based]): 61.51%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:40<00:00,  3.44it/s]
+
+Sample Predictions:
+[1] Input: tejab
+    Pred : तेजब
+    Truth: तेजाब
+
+[2] Input: nizampur
+    Pred : निजामुरर
+    Truth: निजामपुर
+
+[3] Input: kadiyana
+    Pred : कड़ियान
+    Truth: कादियान
+
+[4] Input: ramse
+    Pred : रामस
+    Truth: रामसे
+
+[5] Input: nikaalte
+    Pred : निकालते
+    Truth: निकालते
+
+Total correct:959 Total samples : 4358
+
+Validation Loss: 0.9749
+Validation Accuracy (exact match [Word Based]): 22.01%
+
+Validation Accuracy (exact match [char Based]): 70.36%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:33<00:00,  3.69it/s]
+
+Sample Predictions:
+[1] Input: rakesh
+    Pred : रककश
+    Truth: राकेश
+
+[2] Input: munafey
+    Pred : मुनफे
+    Truth: मुनाफे
+
+[3] Input: misalein
+    Pred : मिसलें
+    Truth: मिसालें
+
+[4] Input: achyutanan
+    Pred : अच्युतननन
+    Truth: अच्युतानंद
+
+[5] Input: sandarbhit
+    Pred : संदर्भित
+    Truth: संदर्भित
+
+Total correct:1153 Total samples : 4358
+
+Validation Loss: 0.9084
+Validation Accuracy (exact match [Word Based]): 26.46%
+
+Validation Accuracy (exact match [char Based]): 72.50%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:10<00:00,  4.88it/s]
+
+Sample Predictions:
+[1] Input: indy
+    Pred : इंडीी
+    Truth: इंडी
+
+[2] Input: parsaad
+    Pred : परसाद
+    Truth: परसाद
+
+[3] Input: katyayni
+    Pred : कत्यययय
+    Truth: कात्यायनी
+
+[4] Input: gsat
+    Pred : ग्जा
+    Truth: जीसैट
+
+[5] Input: rakhi
+    Pred : रखी
+    Truth: राखी
+
+Total correct:1198 Total samples : 4358
+
+Validation Loss: 0.8801
+Validation Accuracy (exact match [Word Based]): 27.49%
+
+Validation Accuracy (exact match [char Based]): 73.82%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:13<00:00,  4.70it/s]
+
+Sample Predictions:
+[1] Input: kaalaka
+    Pred : कालकक
+    Truth: कालका
+
+[2] Input: mehmud
+    Pred : महहमद
+    Truth: मेहमूद
+
+[3] Input: kutaa
+    Pred : कुटा
+    Truth: कूटा
+
+[4] Input: month
+    Pred : मोंठ
+    Truth: मंथ
+
+[5] Input: vyakhakar
+    Pred : व्याखाक
+    Truth: व्याख्याका
+
+Total correct:1286 Total samples : 4358
+
+Validation Loss: 0.8794
+Validation Accuracy (exact match [Word Based]): 29.51%
+
+Validation Accuracy (exact match [char Based]): 74.82%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:11<00:00,  4.81it/s]
+
+Sample Predictions:
+[1] Input: dahsanskar
+    Pred : दाससंककरण
+    Truth: दाहसंस्कार
+
+[2] Input: cadre
+    Pred : केडर
+    Truth: केडर
+
+[3] Input: naamrup
+    Pred : नामरूप
+    Truth: नामरूप
+
+[4] Input: cuba
+    Pred : कुबा
+    Truth: क्यूबा
+
+[5] Input: jhelate
+    Pred : झेलते
+    Truth: झेलते
+
+Total correct:1335 Total samples : 4358
+
+Validation Loss: 0.8785
+Validation Accuracy (exact match [Word Based]): 30.63%
+
+Validation Accuracy (exact match [char Based]): 74.94%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:09<00:00,  4.98it/s]
+
+Sample Predictions:
+[1] Input: gau
+    Pred : गौ
+    Truth: गऊ
+
+[2] Input: rajbaug
+    Pred : राजबाग
+    Truth: राजबाग
+
+[3] Input: maitra
+    Pred : मैत्र
+    Truth: मैत्रा
+
+[4] Input: parichaari
+    Pred : परिचारी
+    Truth: परिचारिका
+
+[5] Input: navbahaar
+    Pred : नवबाहार
+    Truth: नवबहार
+
+Total correct:1410 Total samples : 4358
+
+Validation Loss: 0.8826
+Validation Accuracy (exact match [Word Based]): 32.35%
+
+Validation Accuracy (exact match [char Based]): 75.28%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:10<00:00,  4.94it/s]
+
+Sample Predictions:
+[1] Input: rest
+    Pred : रेस्ट
+    Truth: रेट्स
+
+[2] Input: prakshalan
+    Pred : प्रक्षाल
+    Truth: प्रक्षालन
+
+[3] Input: maarte
+    Pred : मारते
+    Truth: मारते
+
+[4] Input: judi
+    Pred : जूड़ी
+    Truth: जूडी
+
+[5] Input: shoulder
+    Pred : शाल्डर
+    Truth: शोल्डर
+
+Total correct:1393 Total samples : 4358
+
+Validation Loss: 0.9239
+Validation Accuracy (exact match [Word Based]): 31.96%
+
+Validation Accuracy (exact match [char Based]): 75.80%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:09<00:00,  4.98it/s]
+
+Sample Predictions:
+[1] Input: mts
+    Pred : एमटीएस
+    Truth: एमटीएस
+
+[2] Input: rituraj
+    Pred : रततराज
+    Truth: ऋतुराज
+
+[3] Input: flintoff
+    Pred : फ्लेंटफ
+    Truth: फ्लिंटॉफ
+
+[4] Input: avyavharik
+    Pred : अव्यवहिरिक
+    Truth: अव्यावहारि
+
+[5] Input: newa
+    Pred : नेवा
+    Truth: नेवा
+
+Total correct:1395 Total samples : 4358
+
+Validation Loss: 0.9225
+Validation Accuracy (exact match [Word Based]): 32.01%
+
+Validation Accuracy (exact match [char Based]): 76.17%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:09<00:00,  4.94it/s]
+
+Sample Predictions:
+[1] Input: nanki
+    Pred : नंकी
+    Truth: नानकी
+
+[2] Input: jado
+    Pred : जड़ो
+    Truth: जड़ों
+
+[3] Input: westor
+    Pred : वेस्टर
+    Truth: वेस्टर
+
+[4] Input: naxalvaadi
+    Pred : नक्सलवादी
+    Truth: नक्सलवादिय
+
+[5] Input: morvi
+    Pred : मोर्वी
+    Truth: मोरवी
+
+Total correct:1422 Total samples : 4358
+
+Validation Loss: 0.9573
+Validation Accuracy (exact match [Word Based]): 32.63%
+
+Validation Accuracy (exact match [char Based]): 76.19%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:10<00:00,  4.94it/s]
+
+Sample Predictions:
+[1] Input: prtikriyas
+    Pred : प्रतिक्रिय
+    Truth: प्रतिक्रिय
+
+[2] Input: ghati
+    Pred : घटी
+    Truth: घाटी
+
+[3] Input: masi
+    Pred : मसी
+    Truth: मासी
+
+[4] Input: machhua
+    Pred : मछुआ
+    Truth: मछुआ
+
+[5] Input: childhood
+    Pred : चिलड़ूड
+    Truth: चाइल्डहुड
+
+Total correct:1458 Total samples : 4358
+
+Validation Loss: 1.0131
+Validation Accuracy (exact match [Word Based]): 33.46%
+
+Validation Accuracy (exact match [char Based]): 76.33%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:12<00:00,  4.74it/s]
+
+Sample Predictions:
+[1] Input: bhugtna
+    Pred : भुगतना
+    Truth: भुगतना
+
+[2] Input: janjeeron
+    Pred : जनजीरोों
+    Truth: जंजीरों
+
+[3] Input: zaher
+    Pred : ज़हर
+    Truth: जहर
+
+[4] Input: jhapakana
+    Pred : झपकना
+    Truth: झपकाना
+
+[5] Input: jagne
+    Pred : जगने
+    Truth: जागने
+
+Total correct:1426 Total samples : 4358
+
+Validation Loss: 1.0370
+Validation Accuracy (exact match [Word Based]): 32.72%
+
+Validation Accuracy (exact match [char Based]): 76.35%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:20<00:00,  4.30it/s]
+
+Sample Predictions:
+[1] Input: parasnath
+    Pred : पररसनाथ
+    Truth: पारसनाथ
+
+[2] Input: prachintam
+    Pred : प्रािीतमं
+    Truth: प्राचीनतम
+
+[3] Input: pahnana
+    Pred : पहनाना
+    Truth: पहनाना
+
+[4] Input: laagu
+    Pred : लागू
+    Truth: लागु
+
+[5] Input: chitt
+    Pred : चित्ट
+    Truth: चित्त
+
+Total correct:1436 Total samples : 4358
+
+Validation Loss: 1.0464
+Validation Accuracy (exact match [Word Based]): 32.95%
+
+Validation Accuracy (exact match [char Based]): 76.37%
+ 17%|███████████████████████▊                                                                                                                    | 59/346 [00:11<00:56,  5.06it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 458, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 410, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 143, in train_model
+    loss.backward()
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/autograd/__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

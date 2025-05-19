@@ -1,0 +1,300 @@
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/rnn.py:83: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.4 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:01<00:00,  5.59it/s]
+Sample Predictions:
+[1] Input: trucko
+    Pred : ट्रेकोक
+    Truth: ट्रकों
+
+[2] Input: rasanaa
+    Pred : रसनना
+    Truth: रसना
+
+[3] Input: simariya
+    Pred : सिमारिया
+    Truth: सिमरिया
+
+[4] Input: cong
+    Pred : कॉंग
+    Truth: कॉन्ग
+
+[5] Input: puncture
+    Pred : पंन्ट्रर
+    Truth: पंक्चर
+
+Total correct:542 Total samples : 4358
+
+Validation Loss: 1.2174
+Validation Accuracy (exact match [Word Based]): 12.44%
+
+Validation Accuracy (exact match [char Based]): 61.83%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:43<00:00,  3.35it/s]
+
+Sample Predictions:
+[1] Input: adhikat
+    Pred : अधिकत
+    Truth: अधिकत
+
+[2] Input: wrapper
+    Pred : प्रापर
+    Truth: रैपर
+
+[3] Input: ghumate
+    Pred : घुमतत
+    Truth: घूमते
+
+[4] Input: avashyamev
+    Pred : आवश्यमवव
+    Truth: अवश्यमेव
+
+[5] Input: trucko
+    Pred : ्रकको
+    Truth: ट्रकों
+
+Total correct:1019 Total samples : 4358
+
+Validation Loss: 0.9534
+Validation Accuracy (exact match [Word Based]): 23.38%
+
+Validation Accuracy (exact match [char Based]): 70.88%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:47<00:00,  3.21it/s]
+
+Sample Predictions:
+[1] Input: pairodi
+    Pred : पैरोडी
+    Truth: पैरोडी
+
+[2] Input: taiyab
+    Pred : तैयाब
+    Truth: तैयब
+
+[3] Input: kautik
+    Pred : कौतिक
+    Truth: कौतिक
+
+[4] Input: hops
+    Pred : हॉप्स
+    Truth: हॉप्स
+
+[5] Input: prakshepit
+    Pred : प्रक्षेपत
+    Truth: प्रक्षेपित
+
+Total correct:1122 Total samples : 4358
+
+Validation Loss: 0.8699
+Validation Accuracy (exact match [Word Based]): 25.75%
+
+Validation Accuracy (exact match [char Based]): 72.85%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:58<00:00,  2.93it/s]
+
+Sample Predictions:
+[1] Input: hash
+    Pred : हाश
+    Truth: हैश
+
+[2] Input: timtimaate
+    Pred : तिम्तिमाटे
+    Truth: टिमटिमाते
+
+[3] Input: uncensored
+    Pred : यंंेंसर
+    Truth: अनसेंसर्ड
+
+[4] Input: bike
+    Pred : बाइक
+    Truth: बाईक
+
+[5] Input: saikdo
+    Pred : सैकड़ो
+    Truth: सैकडो
+
+Total correct:1318 Total samples : 4358
+
+Validation Loss: 0.8947
+Validation Accuracy (exact match [Word Based]): 30.24%
+
+Validation Accuracy (exact match [char Based]): 74.54%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [02:24<00:00,  2.40it/s]
+
+Sample Predictions:
+[1] Input: hayagreev
+    Pred : हययगग्वी
+    Truth: हयग्रीव
+
+[2] Input: shinakht
+    Pred : शिनाख्त
+    Truth: शिनाख्त
+
+[3] Input: mdma
+    Pred : मदमम
+    Truth: एमडीएमए
+
+[4] Input: wrapper
+    Pred : रापरपर
+    Truth: रैपर
+
+[5] Input: elexis
+    Pred : एलेक्सिस
+    Truth: एलेक्सिस
+
+Total correct:1323 Total samples : 4358
+
+Validation Loss: 0.8954
+Validation Accuracy (exact match [Word Based]): 30.36%
+
+Validation Accuracy (exact match [char Based]): 74.88%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [02:32<00:00,  2.26it/s]
+
+Sample Predictions:
+[1] Input: badha
+    Pred : बाधा
+    Truth: बढ़ा
+
+[2] Input: up
+    Pred : ऊप
+    Truth: यूपी
+
+[3] Input: sitarmaiya
+    Pred : सितारमैया
+    Truth: सीतारमैया
+
+[4] Input: ncg
+    Pred : एनएीजीीी
+    Truth: एससीजी
+
+[5] Input: satnam
+    Pred : सत्नम
+    Truth: सतनाम
+
+Total correct:1394 Total samples : 4358
+
+Validation Loss: 0.9083
+Validation Accuracy (exact match [Word Based]): 31.99%
+
+Validation Accuracy (exact match [char Based]): 74.97%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [02:25<00:00,  2.38it/s]
+
+Sample Predictions:
+[1] Input: lop
+    Pred : लॉप
+    Truth: लोप
+
+[2] Input: ngo
+    Pred : नगगो
+    Truth: एनजीओ
+
+[3] Input: jakad
+    Pred : जाकड़
+    Truth: जकड़
+
+[4] Input: pada
+    Pred : पाड़ा
+    Truth: पड़ा
+
+[5] Input: thailon
+    Pred : थैललं
+    Truth: थैलों
+
+Total correct:1376 Total samples : 4358
+
+Validation Loss: 0.9503
+Validation Accuracy (exact match [Word Based]): 31.57%
+
+Validation Accuracy (exact match [char Based]): 74.96%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [02:20<00:00,  2.47it/s]
+
+Sample Predictions:
+[1] Input: massage
+    Pred : मैसेज
+    Truth: मसाज
+
+[2] Input: gurda
+    Pred : गुरदाा
+    Truth: गुर्दा
+
+[3] Input: gilas
+    Pred : गिलास
+    Truth: गिलास
+
+[4] Input: naashte
+    Pred : नाश्ते
+    Truth: नाश्ते
+
+[5] Input: sapt
+    Pred : सप्त
+    Truth: सप्त
+
+Total correct:1423 Total samples : 4358
+
+Validation Loss: 0.9560
+Validation Accuracy (exact match [Word Based]): 32.65%
+
+Validation Accuracy (exact match [char Based]): 75.98%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [02:36<00:00,  2.21it/s]
+
+Sample Predictions:
+[1] Input: belt
+    Pred : बेल्ट
+    Truth: बेल्ट
+
+[2] Input: jayadeep
+    Pred : जययदीप
+    Truth: जयदीप
+
+[3] Input: asparshyat
+    Pred : अस्पृश्यता
+    Truth: अस्पृश्यता
+
+[4] Input: tarr
+    Pred : तरर
+    Truth: तर
+
+[5] Input: jiyanpur
+    Pred : जीयनपुर
+    Truth: जीयनपुर
+
+Total correct:1455 Total samples : 4358
+
+Validation Loss: 0.9988
+Validation Accuracy (exact match [Word Based]): 33.39%
+
+Validation Accuracy (exact match [char Based]): 75.49%
+ 15%|█████████████████████                                                                                                                       | 52/346 [00:20<01:58,  2.49it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 458, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 410, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 131, in train_model
+    output, attn_weights = model(latin)
+                          ^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/model.py", line 155, in forward
+    context, attn_weights = self.attention(dec_hidden[-1], enc_output)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/model.py", line 20, in forward
+    Ws = self.W_enc(enc_output) # o/p --> batch x seq_len x hidden
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
