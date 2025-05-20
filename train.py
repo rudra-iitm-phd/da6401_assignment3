@@ -292,11 +292,18 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                         np.fill_diagonal(off_diag, 0)
                         confused_indices = np.argsort(off_diag.sum(axis=1))[-N:]
 
-                        # Subset data
-                        
+                        # Build mapping from old class idx to new contiguous idx
+                        orig_to_new = {orig_idx: new_idx for new_idx, orig_idx in enumerate(confused_indices)}
                         subset_class_names = [nativeidx2char[i] for i in confused_indices]
-                        subset_y_true = [y for y in y_true if y in confused_indices]
-                        subset_y_pred = [y for y in y_pred if y in confused_indices]
+
+                        # Filter and remap both y_true and y_pred together
+                        subset_y_true = []
+                        subset_y_pred = []
+                        for t, p in zip(all_targets, all_preds):
+                              if t in confused_indices and p in confused_indices:
+                                    subset_y_true.append(orig_to_new[t])
+                                    subset_y_pred.append(orig_to_new[p])
+                  
 
                         
 

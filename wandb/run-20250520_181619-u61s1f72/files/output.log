@@ -1,0 +1,101 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:55<00:00,  6.26it/s]
+Total correct:125 Total samples : 4358
+
+Validation Loss: 1.5531
+Validation Accuracy (exact match [Word Based]): 2.87%
+
+Validation Accuracy (exact match [char Based]): 51.32%
+
+Sample Predictions:
+[1] Input: pahnaakar
+    Pred : फानाया
+    Truth: पहनाकर
+
+[2] Input: rovan
+    Pred : रानाय
+    Truth: रोवन
+
+[3] Input: kanthhar
+    Pred : कानाा
+    Truth: कंठहार
+
+[4] Input: pharase
+    Pred : फानाय
+    Truth: फरसे
+
+[5] Input: faisla
+    Pred : फायाया
+    Truth: फ़ैसला
+
+[6] Input: asamanjasy
+    Pred : एायााा
+    Truth: असामंजस्य
+
+[7] Input: siyah
+    Pred : सिपाय
+    Truth: सियाह
+
+[8] Input: kamaauu
+    Pred : कानाा
+    Truth: कमाऊ
+
+[9] Input: susanskrut
+    Pred : सावाया
+    Truth: सुसंस्कृ
+
+[10] Input: saturday
+    Pred : सापाया
+    Truth: सेटरडे
+
+[11] Input: vasearche
+    Pred : वाकाा
+    Truth: वर्साचे
+
+[12] Input: piyegaa
+    Pred : पियाया
+    Truth: पिएगा
+
+[13] Input: batalvi
+    Pred : बायाया
+    Truth: बटालवी
+
+[14] Input: asurkshit
+    Pred : एायाया
+    Truth: असुरक्षित
+
+[15] Input: thief
+    Pred : ताया
+    Truth: थीफ
+
+[16] Input: girjaghar
+    Pred : गापाका
+    Truth: गिरजाघर
+
+[17] Input: jiwan
+    Pred : जायाय
+    Truth: जीवन
+
+[18] Input: awashist
+    Pred : फावाया
+    Truth: अवशिष्ट
+
+[19] Input: theharne
+    Pred : तानाा
+    Truth: ठहरने
+
+[20] Input: nilgai
+    Pred : निपाका
+    Truth: नीलगाय
+
+[21] Input: mardani
+    Pred : मायाया
+    Truth: मरदानी
+
+[22] Input: dikhaaee
+    Pred : लायाया
+    Truth: दिखाईं
+
+Total correct:293 Total samples : 4502
+Test Accuracy (exact match [Word Based]): 6.51%
+
+Test Accuracy (exact match [char Based]): 55.34%

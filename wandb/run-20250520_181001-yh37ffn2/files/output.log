@@ -1,0 +1,113 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:15<00:00,  4.60it/s]
+Total correct:170 Total samples : 4358
+
+Validation Loss: 1.5491
+Validation Accuracy (exact match [Word Based]): 3.90%
+
+Validation Accuracy (exact match [char Based]): 54.38%
+
+Sample Predictions:
+[1] Input: reduction
+    Pred : रेय्
+    Truth: रिडक्शन
+
+[2] Input: bhoopsingh
+    Pred : बिया
+    Truth: भूपसिंह
+
+[3] Input: denewaali
+    Pred : देना
+    Truth: देनेवाली
+
+[4] Input: yudhrat
+    Pred : यिया
+    Truth: युद्धरत
+
+[5] Input: jaanam
+    Pred : जाया
+    Truth: जानम
+
+[6] Input: ganpati
+    Pred : गाना
+    Truth: गणपति
+
+[7] Input: slaaidon
+    Pred : डेना
+    Truth: स्लाइडों
+
+[8] Input: heroes
+    Pred : हिया
+    Truth: हीरोज
+
+[9] Input: dvadash
+    Pred : देया
+    Truth: द्वादश
+
+[10] Input: bhooli
+    Pred : बिया
+    Truth: भूली
+
+[11] Input: ank
+    Pred : गार
+    Truth: अंक
+
+[12] Input: teekon
+    Pred : टीना
+    Truth: टीकों
+
+[13] Input: saraha
+    Pred : स्ना
+    Truth: सराहा
+
+[14] Input: bilhaur
+    Pred : बिया
+    Truth: बिल्हौर
+
+[15] Input: doge
+    Pred : डीय
+    Truth: दोगे
+
+[16] Input: loge
+    Pred : लिय
+    Truth: लोगे
+
+[17] Input: beemon
+    Pred : बिया
+    Truth: बीमों
+
+[18] Input: jadit
+    Pred : ाया
+    Truth: जड़ित
+
+[19] Input: nights
+    Pred : निय्
+    Truth: नाइटरस
+
+[20] Input: ravle
+    Pred : राव
+    Truth: रावले
+
+[21] Input: chart
+    Pred : गारा
+    Truth: चार्ट
+
+[22] Input: vidyaen
+    Pred : विया
+    Truth: विद्याएं
+
+Total correct:272 Total samples : 4502
+Test Accuracy (exact match [Word Based]): 6.04%
+
+Test Accuracy (exact match [char Based]): 54.95%
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 494, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 456, in train_core
+    loss, char_acc, word_acc, test_inp, test_pred = evaluate_model(trained_model, test_dl, shared.latin_idx2char, shared.native_idx2char, criterion, device, 'test', 1, log, config['log_connectivity'])
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 370, in evaluate_model
+    "confusion_matrix_subset": wandb.plot.confusion_matrix(
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/wandb/plot/confusion_matrix.py", line 142, in confusion_matrix
+    raise ValueError(
+ValueError: The number of unique predicted classes exceeds the number of class names.
