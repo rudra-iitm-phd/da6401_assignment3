@@ -43,6 +43,7 @@
 │   ├── predictions_vanilla/  # Stores predictions from the vanilla model
 │   ├── wandb/                # W&B run logs and metadata
 │   └── __pycache__/          # Python bytecode cache (auto-generated)
+|   └──predictions_attention/  # Stores predictions from the attention model
 │
 ├── 📄 README.md              # Project overview and documentation
 └── 📄 .DS_Store              # (Optional) macOS system metadata file
