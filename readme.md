@@ -1,10 +1,12 @@
-
 # 🌍🔤 Transliteration with Seq2Seq + Attention ⚡
 
 > 🚀 A robust and configurable character-level transliteration model built using PyTorch, featuring RNN/LSTM/GRU backbones, optional attention, beam search, and connectivity visualization. Developed as part of **DA6401: Advanced Machine Learning** at IIT Madras.
 
 ---
 
+📘 **[📊 Click here to view the detailed W&B Report →](https://wandb.ai/da24d008-iit-madras/da6401-assignment3/reports/DA6401-Assignment-3--VmlldzoxMjg0NjYyNA?accessToken=90e7xuf7uiyi5d5v1hbbsjopkb7p5j5aw54ez8l64b9khg9qkupcms2nzpoyj42j)**
+
+---
 ## 🧠 Key Features
 
 - 🔁 **Encoder-Decoder Architecture** (RNN / LSTM / GRU)
@@ -14,8 +16,6 @@
 - 📈 **Interactive Attention Visualization** with HTML & JS
 - 🌐 **Supports Multiple Indian Languages** (Dakshina dataset)
 - 🎯 **Modular Design** – easy to plug and play components
-
----
 
 ## 🗂️ Project Structure
 
@@ -46,13 +46,14 @@
 │
 ├── 📄 README.md              # Project overview and documentation
 └── 📄 .DS_Store              # (Optional) macOS system metadata file
+```
 
 ## 🏃‍♂️ Quickstart
 
 ### 1. 🧹 Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+python -m pip install python>=3.7 torch>=1.7 numpy pandas matplotlib seaborn tqdm wandb requests
 ```
 
 ### 2. 📦 Train a Model
@@ -63,15 +64,6 @@ python train.py -n hi -m lstm -ua True --wandb
 
 > Use `--help` to see all CLI options.
 
-### 3. 🧪 Run W&B Sweep
-
-```bash
-wandb sweep sweep_configuration.py
-wandb agent <your-sweep-id>
-```
-
----
-
 ## 🖼️ Attention Connectivity Visualization
 
 > 🧠 Gain insights into model behavior with interactive HTML-based attention maps.
@@ -79,8 +71,6 @@ wandb agent <your-sweep-id>
 ✅ Shows attention links between characters  
 ✅ Highlights top-3 predicted tokens with probabilities  
 ✅ Supports Devanagari font rendering  
-
----
 
 ## 🧠 Model Architecture
 
@@ -93,8 +83,6 @@ Embedding → Encoder (RNN/LSTM/GRU) ──► Hidden States
                                           ↓
 Decoder (with or without attention) → Output (Native Script)
 ```
-
----
 
 ## 📊 Example Hyperparameters (Best Configs)
 
@@ -110,14 +98,42 @@ Decoder (with or without attention) → Output (Native Script)
 }
 ```
 
----
-
 ## 📚 Dataset
 
 🗂️ [Dakshina Dataset v1.0](https://github.com/google-research-datasets/dakshina)  
 📁 Expected path: `../dakshina_dataset_v1.0/<lang>/lexicons/<lang>.translit.sampled.{train,dev,test}.tsv`
 
----
+## 📋 Examples
+
+Run with the default vanilla seq2seq settings and log it to wandb:
+```bash
+python train.py --wandb
+```
+
+Run with the attention integrated with seq2seq settings and log it to wandb:
+```bash
+python train.py --wandb -ua True
+```
+
+Run and evaluate on test set and log it to wandb with the best configuration:
+```bash
+python train.py --wandb --use_test
+```
+
+Run and evaluate on test set with attention and log it to wandb along with logging heatmaps and the connectivity diagram:
+```bash
+python train.py --use_test --wandb -ua True -lc True 
+```
+
+Initialize a wandb sweep for the vanilla setting:
+```bash
+python train.py --wandb_sweep
+```
+
+Initialize a wandb sweep for the attention setting:
+```bash
+python train.py --wandb_sweep -ua True
+```
 
 ## 🔧 CLI Arguments & Configuration Options
 
@@ -152,21 +168,15 @@ Here are all the command-line options you can use with `train.py`, based on `arg
 | `--wandb_sweep` |               | 🔄 Enable W&B sweep mode | `bool` | `False` |
 | `--sweep_id`|                    | 🆔 W&B sweep ID to resume | `str` | `None` |
 
----
-
 ## 🧑‍💻 Author
 
-👤 Developed by Rudra Sarkar, DA24D008, PhD , Data science and Artificial Intelligence Dept, IIT Madras  
+👤 Developed by Rudra Sarkar, DA24D008, PhD, Data Science and Artificial Intelligence Dept, IIT Madras  
 📬 Feel free to reach out for academic collaborations or extensions!
-
----
 
 ## 🛡️ License
 
 This project is licensed for academic and educational use.  
 If adapting, please **cite or attribute** appropriately.
-
----
 
 ## ⭐ Acknowledgements
 

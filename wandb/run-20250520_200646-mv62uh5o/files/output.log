@@ -1,0 +1,255 @@
+/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/nn/modules/rnn.py:83: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.4 and num_layers=1
+  warnings.warn("dropout option adds dropout after all but last "
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:36<00:00,  9.48it/s]
+Total correct:528 Total samples : 4358
+
+Validation Loss: 1.2063
+Validation Accuracy (exact match [Word Based]): 12.12%
+
+Validation Accuracy (exact match [char Based]): 64.67%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:35<00:00,  9.65it/s]
+
+Total correct:900 Total samples : 4358
+
+Validation Loss: 1.0212
+Validation Accuracy (exact match [Word Based]): 20.65%
+
+Validation Accuracy (exact match [char Based]): 69.31%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:41<00:00,  8.41it/s]
+
+Total correct:938 Total samples : 4358
+
+Validation Loss: 0.9875
+Validation Accuracy (exact match [Word Based]): 21.52%
+
+Validation Accuracy (exact match [char Based]): 70.01%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:35<00:00,  9.70it/s]
+
+Total correct:1153 Total samples : 4358
+
+Validation Loss: 0.8979
+Validation Accuracy (exact match [Word Based]): 26.46%
+
+Validation Accuracy (exact match [char Based]): 73.08%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:35<00:00,  9.87it/s]
+
+Total correct:1147 Total samples : 4358
+
+Validation Loss: 0.9039
+Validation Accuracy (exact match [Word Based]): 26.32%
+
+Validation Accuracy (exact match [char Based]): 73.29%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:36<00:00,  9.44it/s]
+
+Total correct:1244 Total samples : 4358
+
+Validation Loss: 0.8824
+Validation Accuracy (exact match [Word Based]): 28.55%
+
+Validation Accuracy (exact match [char Based]): 74.02%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:45<00:00,  7.60it/s]
+
+Total correct:1244 Total samples : 4358
+
+Validation Loss: 0.8933
+Validation Accuracy (exact match [Word Based]): 28.55%
+
+Validation Accuracy (exact match [char Based]): 73.70%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:51<00:00,  6.67it/s]
+
+Total correct:1226 Total samples : 4358
+
+Validation Loss: 0.9322
+Validation Accuracy (exact match [Word Based]): 28.13%
+
+Validation Accuracy (exact match [char Based]): 74.06%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:41<00:00,  8.39it/s]
+
+Total correct:1326 Total samples : 4358
+
+Validation Loss: 0.9561
+Validation Accuracy (exact match [Word Based]): 30.43%
+
+Validation Accuracy (exact match [char Based]): 74.47%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:44<00:00,  7.79it/s]
+
+Total correct:1351 Total samples : 4358
+
+Validation Loss: 0.9196
+Validation Accuracy (exact match [Word Based]): 31.00%
+
+Validation Accuracy (exact match [char Based]): 75.05%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:39<00:00,  8.67it/s]
+
+Total correct:1350 Total samples : 4358
+
+Validation Loss: 0.9538
+Validation Accuracy (exact match [Word Based]): 30.98%
+
+Validation Accuracy (exact match [char Based]): 75.22%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:40<00:00,  8.59it/s]
+
+Total correct:1342 Total samples : 4358
+
+Validation Loss: 0.9820
+Validation Accuracy (exact match [Word Based]): 30.79%
+
+Validation Accuracy (exact match [char Based]): 74.71%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:50<00:00,  6.90it/s]
+
+Total correct:1402 Total samples : 4358
+
+Validation Loss: 1.0006
+Validation Accuracy (exact match [Word Based]): 32.17%
+
+Validation Accuracy (exact match [char Based]): 75.44%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:51<00:00,  6.67it/s]
+
+Total correct:1374 Total samples : 4358
+
+Validation Loss: 1.0366
+Validation Accuracy (exact match [Word Based]): 31.53%
+
+Validation Accuracy (exact match [char Based]): 75.26%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:42<00:00,  8.14it/s]
+
+Total correct:1407 Total samples : 4358
+
+Validation Loss: 1.0184
+Validation Accuracy (exact match [Word Based]): 32.29%
+
+Validation Accuracy (exact match [char Based]): 75.79%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:05<00:00,  5.30it/s]
+
+Total correct:1389 Total samples : 4358
+
+Validation Loss: 1.1705
+Validation Accuracy (exact match [Word Based]): 31.87%
+
+Validation Accuracy (exact match [char Based]): 75.26%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:42<00:00,  8.19it/s]
+
+Total correct:1417 Total samples : 4358
+
+Validation Loss: 1.1176
+Validation Accuracy (exact match [Word Based]): 32.51%
+
+Validation Accuracy (exact match [char Based]): 75.31%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [00:54<00:00,  6.31it/s]
+
+Total correct:1357 Total samples : 4358
+
+Validation Loss: 1.1522
+Validation Accuracy (exact match [Word Based]): 31.14%
+
+Validation Accuracy (exact match [char Based]): 74.78%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:00<00:00,  5.74it/s]
+
+Total correct:1443 Total samples : 4358
+
+Validation Loss: 1.1460
+Validation Accuracy (exact match [Word Based]): 33.11%
+
+Validation Accuracy (exact match [char Based]): 75.82%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:05<00:00,  5.28it/s]
+
+Total correct:1364 Total samples : 4358
+
+Validation Loss: 1.2461
+Validation Accuracy (exact match [Word Based]): 31.30%
+
+Validation Accuracy (exact match [char Based]): 75.39%
+
+Sample Predictions:
+[1] Input: sanketik
+    Pred : सांकेतिक
+    Truth: सांकेतिक
+
+[2] Input: aliance
+    Pred : एलायंस
+    Truth: अलायंस
+
+[3] Input: registerd
+    Pred : रिजस्टर्ड
+    Truth: रजिस्टर्ड
+
+[4] Input: naseem
+    Pred : नसीम
+    Truth: नसीम
+
+[5] Input: map
+    Pred : मैप
+    Truth: माप
+
+[6] Input: billa
+    Pred : बिल्ला
+    Truth: बिल्ला
+
+[7] Input: mohini
+    Pred : मोहिनी
+    Truth: मोहिनी
+
+[8] Input: darawani
+    Pred : दरवानी
+    Truth: डरवनी
+
+[9] Input: shrikhand
+    Pred : श्रीखंद
+    Truth: श्रीखंड
+
+[10] Input: swachalit
+    Pred : स्वचालित
+    Truth: स्वाचालित
+
+[11] Input: sanchalnon
+    Pred : संचानों
+    Truth: संचालनों
+
+[12] Input: jadein
+    Pred : जादें
+    Truth: जड़ें
+
+[13] Input: bagh
+    Pred : बाघ
+    Truth: बाग
+
+[14] Input: usmen
+    Pred : उस्में
+    Truth: उसमें
+
+[15] Input: laingadan
+    Pred : लैंगड़न
+    Truth: लैंगडन
+
+[16] Input: upakhyaano
+    Pred : उपख्यानों
+    Truth: उपाख्यानों
+
+[17] Input: rehaana
+    Pred : रेहाना
+    Truth: रेहाना
+
+[18] Input: jimme
+    Pred : जिम्मे
+    Truth: जिम्मे
+
+[19] Input: shrunkhlao
+    Pred : शृंखलाओं
+    Truth: श्रंखलाओं
+
+[20] Input: bosaan
+    Pred : बोसान
+    Truth: बोसान
+
+[21] Input: shield
+    Pred : शील्ड
+    Truth: सील्ड
+
+[22] Input: dhaagaa
+    Pred : ढागा
+    Truth: धागा
+
+Total correct:1438 Total samples : 4502
+Test Accuracy (exact match [Word Based]): 31.94%
+
+Test Accuracy (exact match [char Based]): 74.66%

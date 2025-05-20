@@ -1,0 +1,50 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:02<00:00,  5.57it/s]
+Total correct:133 Total samples : 4358
+
+Validation Loss: 1.5498
+Validation Accuracy (exact match [Word Based]): 3.05%
+
+Validation Accuracy (exact match [char Based]): 51.51%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:09<00:00,  4.97it/s]
+
+Total correct:314 Total samples : 4358
+
+Validation Loss: 1.2294
+Validation Accuracy (exact match [Word Based]): 7.21%
+
+Validation Accuracy (exact match [char Based]): 60.70%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:12<00:00,  4.76it/s]
+
+Total correct:364 Total samples : 4358
+
+Validation Loss: 1.1149
+Validation Accuracy (exact match [Word Based]): 8.35%
+
+Validation Accuracy (exact match [char Based]): 62.46%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:18<00:00,  4.40it/s]
+
+Total correct:414 Total samples : 4358
+
+Validation Loss: 1.0867
+Validation Accuracy (exact match [Word Based]): 9.50%
+
+Validation Accuracy (exact match [char Based]): 62.96%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [02:07<00:00,  2.71it/s]
+
+Total correct:412 Total samples : 4358
+
+Validation Loss: 1.1092
+Validation Accuracy (exact match [Word Based]): 9.45%
+
+Validation Accuracy (exact match [char Based]): 64.09%
+ 88%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▉                | 306/346 [01:29<00:11,  3.44it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 501, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 458, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 146, in train_model
+    total_loss += loss.item()
+                  ^^^^^^^^^^^
+KeyboardInterrupt
