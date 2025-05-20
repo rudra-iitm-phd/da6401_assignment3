@@ -327,7 +327,8 @@ class DynamicSeq2Seq(nn.Module):
                               attention_weights[:, t, :] = attn_weights.squeeze(1)
                               dec_input = torch.cat([dec_input, context], dim=-1)
                               context = context.squeeze(1).unsqueeze(0).repeat(self.n_decoders, 1, 1)
-                              dec_h = dec_h + context
+                              # dec_h = dec_h + context
+                              dec_h = context
 
                   if self.model_type == 'lstm':
                         dec_out, (dec_h, dec_c) = self.decoder(dec_input, (dec_h, dec_c))

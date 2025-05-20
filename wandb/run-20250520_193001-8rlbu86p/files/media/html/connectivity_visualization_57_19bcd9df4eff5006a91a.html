@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+    <html>
+    <head><base target="_blank"><link rel="stylesheet" type="text/css" href="https://app.wandb.ai/normalize.css" />
+        <meta charset="UTF-8">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+            
+            body {
+                font-family: 'Arial', sans-serif;
+            }
+            
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 1024px;
+                margin: 0 auto;
+            }
+            
+            .visualization {
+                display: flex;
+                flex-direction: column;
+                margin: 20px;
+                position: relative;
+                width: 100%;
+            }
+            
+            .row {
+                display: flex;
+                justify-content: space-around;
+                margin: 10px 0;
+                position: relative;
+                width: 100%;
+            }
+            
+            .input-row, .output-row {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+            }
+            
+            .cell {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #ddd;
+                background-color: #f8f8f8;
+                margin: 0 5px;
+                position: relative;
+                font-size: 18px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            
+            .input-cell {
+                font-family: 'Arial', sans-serif;
+            }
+            
+            .output-cell {
+                font-family: 'Noto Sans Devanagari', sans-serif;
+                font-size: 20px;
+            }
+            
+            .connection-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                z-index: 0;
+            }
+            
+            .connection {
+                position: absolute;
+                background-color: rgba(0, 128, 0, 0.5);
+                height: 2px;
+                transform-origin: 0 0;
+                pointer-events: none;
+                transition: opacity 0.2s, height 0.2s;
+            }
+            
+            .model-type {
+                font-weight: bold;
+                font-size: 20px;
+                margin: 10px;
+                background-color: #eee;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            
+            .highlighted {
+                background-color: #ffeb3b;
+                box-shadow: 0 0 5px rgba(0,0,0,0.3);
+                z-index: 10;
+            }
+            
+            .title {
+                font-weight: bold;
+                font-size: 24px;
+                margin: 20px;
+            }
+            
+            .instructions {
+                margin: 10px;
+                font-style: italic;
+                color: #666;
+                text-align: center;
+                max-width: 600px;
+            }
+            
+            .controls {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 15px 0;
+            }
+            
+            .slider-container {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+            }
+            
+            .slider-label {
+                margin-right: 10px;
+                font-weight: bold;
+            }
+            
+            #threshold-slider {
+                width: 150px;
+            }
+            
+            #threshold-value {
+                margin-left: 10px;
+                min-width: 40px;
+                text-align: center;
+            }
+            
+            /* Tooltip for top-3 predictions */
+            .prediction-tooltip {
+                display: none;
+                position: absolute;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+                z-index: 100;
+                width: 180px;
+                top: 45px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-family: 'Noto Sans Devanagari', sans-serif;
+            }
+            
+            .prediction-tooltip::before {
+                content: '';
+                position: absolute;
+                top: -8px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-width: 0 8px 8px 8px;
+                border-style: solid;
+                border-color: transparent transparent #ddd transparent;
+            }
+            
+            .prediction-tooltip h4 {
+                margin: 0 0 8px 0;
+                text-align: center;
+                font-size: 14px;
+                color: #444;
+            }
+            
+            .prediction-item {
+                display: flex;
+                justify-content: space-between;
+                margin: 4px 0;
+                padding: 3px;
+                border-radius: 3px;
+            }
+            
+            .prediction-item:hover {
+                background-color: #f5f5f5;
+            }
+            
+            .prediction-char {
+                font-size: 18px;
+                font-weight: bold;
+            }
+            
+            .prediction-prob {
+                font-size: 14px;
+                color: #666;
+            }
+            
+            .prediction-prob-bar {
+                height: 6px;
+                background-color: #4caf50;
+                margin-top: 2px;
+                border-radius: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">Transliteration Attention Connectivity</div>
+            <div class="instructions">
+                Hover over any character to see its connections. 
+                The green lines show the attention weights: stronger connections have darker green lines.
+                Hover over output characters to see top prediction alternatives.
+                Use the threshold slider to filter the connections by strength.
+            </div>
+            
+            <div class="controls">
+                <div class="slider-container">
+                    <span class="slider-label">Threshold:</span>
+                    <input type="range" id="threshold-slider" min="0" max="1" step="0.05" value="0.1">
+                    <span id="threshold-value">0.1</span>
+                </div>
+            </div>
+            
+            <div class="model-type">Sequence-to-Sequence with Attention [ LSTM ]</div>
+            <div class="visualization">
+                <div class="row input-row">
+    <div class="cell input-cell" data-index="0" onmouseover="highlightInputConnections(0)" onmouseout="resetHighlights()">h</div><div class="cell input-cell" data-index="1" onmouseover="highlightInputConnections(1)" onmouseout="resetHighlights()">a</div><div class="cell input-cell" data-index="2" onmouseover="highlightInputConnections(2)" onmouseout="resetHighlights()">m</div><div class="cell input-cell" data-index="3" onmouseover="highlightInputConnections(3)" onmouseout="resetHighlights()">l</div><div class="cell input-cell" data-index="4" onmouseover="highlightInputConnections(4)" onmouseout="resetHighlights()">a</div><div class="cell input-cell" data-index="5" onmouseover="highlightInputConnections(5)" onmouseout="resetHighlights()">v</div><div class="cell input-cell" data-index="6" onmouseover="highlightInputConnections(6)" onmouseout="resetHighlights()">a</div><div class="cell input-cell" data-index="7" onmouseover="highlightInputConnections(7)" onmouseout="resetHighlights()">r</div>
+                </div>
+                <div class="connection-container">
+    <div class="connection" data-from-input="0" data-to-output="0" data-weight="0.7878" style="opacity: 0;"></div><div class="connection" data-from-input="1" data-to-output="1" data-weight="0.1765" style="opacity: 0;"></div><div class="connection" data-from-input="2" data-to-output="1" data-weight="0.6870" style="opacity: 0;"></div><div class="connection" data-from-input="2" data-to-output="2" data-weight="0.1150" style="opacity: 0;"></div><div class="connection" data-from-input="3" data-to-output="2" data-weight="0.7078" style="opacity: 0;"></div><div class="connection" data-from-input="4" data-to-output="3" data-weight="0.3632" style="opacity: 0;"></div><div class="connection" data-from-input="5" data-to-output="3" data-weight="0.4654" style="opacity: 0;"></div><div class="connection" data-from-input="5" data-to-output="4" data-weight="0.3244" style="opacity: 0;"></div><div class="connection" data-from-input="6" data-to-output="4" data-weight="0.2426" style="opacity: 0;"></div><div class="connection" data-from-input="7" data-to-output="4" data-weight="0.3871" style="opacity: 0;"></div><div class="connection" data-from-input="7" data-to-output="5" data-weight="0.4625" style="opacity: 0;"></div>
+                </div>
+                <div class="row output-row">
+    
+        <div class="cell output-cell" data-index="0" 
+             onmouseover="highlightOutputConnections(0); showTooltip(0);" 
+             onmouseout="resetHighlights(); hideTooltip(0);">
+            ह
+            
+        <div class="prediction-tooltip" id="tooltip-0">
+            <h4>Top Predictions</h4>
+        
+            <div class="prediction-item" style="background-color: #e6f7e6;">
+                <div class="prediction-char">ह</div>
+                <div class="prediction-prob">
+                    <div>1.00</div>
+                    <div class="prediction-prob-bar" style="width: 99%;"></div>
+                </div>
+            </div>
+            
+            <div class="prediction-item" style="">
+                <div class="prediction-char">ध</div>
+                <div class="prediction-prob">
+                    <div>0.00</div>
+                    <div class="prediction-prob-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+            
+            <div class="prediction-item" style="">
+                <div class="prediction-char">ए</div>
+                <div class="prediction-prob">
+                    <div>0.00</div>
+                    <div class="prediction-prob-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="cell output-cell" data-index="1" 
+             onmouseover="highlightOutputConnections(1); showTooltip(1);" 
+             onmouseout="resetHighlights(); hideTooltip(1);">
+            म
+            
+        <div class="prediction-tooltip" id="tooltip-1">
+            <h4>Top Predictions</h4>
+        
+            <div class="prediction-item" style="background-color: #e6f7e6;">
+                <div class="prediction-char">म</div>
+                <div class="prediction-prob">
+                    <div>0.99</div>
+                    <div class="prediction-prob-bar" style="width: 98%;"></div>
+                </div>
+            </div>
+            
+            <div class="prediction-item" style="">
+                <div class="prediction-char">ा</div>
+                <div class="prediction-prob">
+                    <div>0.00</div>
+                    <div class="prediction-prob-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+            
+            <div class="prediction-item" style="">
+                <div class="prediction-char">ं</div>
+                <div class="prediction-prob">
+                    <div>0.00</div>
+                    <div class="prediction-prob-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="cell output-cell" data-index="2" 
+             onmouseover="highlightOutputConnections(2); showTooltip(2);" 
+             onmouseout="resetHighlights(); hideTooltip(2);">
+            ल
+            
+        <div class="prediction-tooltip" id="tooltip-2">
+            <h4>Top Predictions</h4>
+        
+            <div class="prediction-item" style="background-color: #e6f7e6;">
+                <div class="prediction-char">ल</div>
+                <div class="prediction-prob">
+                    <div>0.99</div>
+                    <div class="prediction-prob-bar" style="width: 99%;"></div>
+                </div>
+            </div>
+            
+            <div class="prediction-item" style="">
+                <div class="prediction-char">्</div>
+                <div class="prediction-prob">
+                    <div>0.00</div>
+                    <div class="prediction-prob-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+            
+            <div class="prediction-item" style="">
+                <div class="prediction-char">ा</div>
+                <div class="prediction-prob">
+                    <div>0.00</div>
+                    <div class="prediction-prob-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="cell output-cell" data-index="3" 
+             onmouseover="highlightOutputConnections(3); showTooltip(3);" 
+             onmouseout="resetHighlights(); hideTooltip(3);">
+            ा
+            
+        <div class="prediction-tooltip" id="tooltip-3">
+            <h4>Top Predictions</h4>
+        
+            <div class="prediction-item" style="background-color: #e6f7e6;">
+                <div class="prediction-char">ा</div>
+                <div class="prediction-prob">
+                    <div>0.49</div>
+                    <div class="prediction-prob-bar" style="width: 49%;"></div>
+                </div>
+            </div>
+            
+            <div class="prediction-item" style="">
+                <div class="prediction-char">व</div>
+                <div class="prediction-prob">
+                    <div>0.49</div>
+                    <div class="prediction-prob-bar" style="width: 49%;"></div>
+                </div>
+            </div>
+            
+            <div class="prediction-item" style="">
+                <div class="prediction-char">्</div>
+                <div class="prediction-prob">
+                    <div>0.01</div>
+                    <div class="prediction-prob-bar" style="width: 0%;"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="cell output-cell" data-index="4" 
+             onmouseover="highlightOutputConnections(4); showTooltip(4);" 
+             onmouseout="resetHighlights(); hideTooltip(4);">
+            ा
+            
+        <div class="prediction-tooltip" id="tooltip-4">
+            <h4>Top Predictions</h4>
+        
+            <div class="prediction-item" style="background-color: #e6f7e6;">
+                <div class="prediction-char">ा</div>
+                <div class="prediction-prob">
+                    <div>0.34</div>
+                    <div class="prediction-prob-bar" style="width: 34%;"></div>
+                </div>
+            </div>
+            
+            <div class="prediction-item" style="">
+                <div class="prediction-char">व</div>
+                <div class="prediction-prob">
+                    <div>0.34</div>
+                    <div class="prediction-prob-bar" style="width: 34%;"></div>
+                </div>
+            </div>
+            
+            <div class="prediction-item" style="">
+                <div class="prediction-char">र</div>
+                <div class="prediction-prob">
+                    <div>0.27</div>
+                    <div class="prediction-prob-bar" style="width: 26%;"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="cell output-cell" data-index="5" 
+             onmouseover="highlightOutputConnections(5); showTooltip(5);" 
+             onmouseout="resetHighlights(); hideTooltip(5);">
+            र
+            
+        <div class="prediction-tooltip" id="tooltip-5">
+            <h4>Top Predictions</h4>
+        
+            <div class="prediction-item" style="background-color: #e6f7e6;">
+                <div class="prediction-char">र</div>
+                <div class="prediction-prob">
+                    <div>0.74</div>
+                    <div class="prediction-prob-bar" style="width: 73%;"></div>
+                </div>
+            </div>
+            
+            <div class="prediction-item" style="">
+                <div class="prediction-char">ा</div>
+                <div class="prediction-prob">
+                    <div>0.19</div>
+                    <div class="prediction-prob-bar" style="width: 18%;"></div>
+                </div>
+            </div>
+            
+            <div class="prediction-item" style="">
+                <div class="prediction-char"><eos></div>
+                <div class="prediction-prob">
+                    <div>0.04</div>
+                    <div class="prediction-prob-bar" style="width: 4%;"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                positionConnections();
+                window.addEventListener('resize', positionConnections);
+                
+                const thresholdSlider = document.getElementById('threshold-slider');
+                const thresholdValue = document.getElementById('threshold-value');
+                
+                thresholdSlider.addEventListener('input', function() {
+                    const value = parseFloat(this.value);
+                    thresholdValue.textContent = value.toFixed(2);
+                    updateConnectionVisibility(value);
+                });
+            });
+
+            function updateConnectionVisibility(threshold) {
+                const connections = document.querySelectorAll('.connection');
+                connections.forEach(conn => {
+                    const weight = parseFloat(conn.getAttribute('data-weight'));
+                    conn.style.display = weight >= threshold ? 'block' : 'none';
+                });
+            }
+
+            function positionConnections() {
+                const connections = document.querySelectorAll('.connection');
+                const inputCells = document.querySelectorAll('.input-cell');
+                const outputCells = document.querySelectorAll('.output-cell');
+                const containerRect = document.querySelector('.connection-container').getBoundingClientRect();
+                
+                connections.forEach(conn => {
+                    const fromIndex = parseInt(conn.getAttribute('data-from-input'));
+                    const toIndex = parseInt(conn.getAttribute('data-to-output'));
+                    const weight = parseFloat(conn.getAttribute('data-weight'));
+                    
+                    if (fromIndex < inputCells.length && toIndex < outputCells.length) {
+                        const fromCell = inputCells[fromIndex];
+                        const toCell = outputCells[toIndex];
+                        
+                        const fromRect = fromCell.getBoundingClientRect();
+                        const toRect = toCell.getBoundingClientRect();
+                        
+                        const fromX = fromRect.left + fromRect.width/2 - containerRect.left;
+                        const fromY = fromRect.top + fromRect.height - containerRect.top;
+                        const toX = toRect.left + toRect.width/2 - containerRect.left;
+                        const toY = toRect.top - containerRect.top;
+                        
+                        const length = Math.sqrt(Math.pow(toX - fromX, 2) + Math.pow(toY - fromY, 2));
+                        const angle = Math.atan2(toY - fromY, toX - fromX);
+                        
+                        conn.style.width = `${length}px`;
+                        conn.style.left = `${fromX}px`;
+                        conn.style.top = `${fromY}px`;
+                        conn.style.transform = `rotate(${angle}rad)`;
+                        
+                        // Set opacity based on weight
+                        conn.style.opacity = weight;
+                        conn.style.backgroundColor = `rgba(0, 128, 0, ${weight})`;
+                    }
+                });
+                
+                // Apply initial threshold
+                const thresholdSlider = document.getElementById('threshold-slider');
+                if (thresholdSlider) {
+                    updateConnectionVisibility(parseFloat(thresholdSlider.value));
+                }
+            }
+
+            function highlightInputConnections(index) {
+                const connections = document.querySelectorAll(`.connection[data-from-input="${index}"]`);
+                const cell = document.querySelector(`.input-cell[data-index="${index}"]`);
+                
+                cell.classList.add('highlighted');
+                
+                connections.forEach(conn => {
+                    const toIndex = conn.getAttribute('data-to-output');
+                    document.querySelector(`.output-cell[data-index="${toIndex}"]`).classList.add('highlighted');
+                    conn.style.height = '3px';
+                    conn.style.zIndex = '5';
+                });
+            }
+
+            function highlightOutputConnections(index) {
+                const connections = document.querySelectorAll(`.connection[data-to-output="${index}"]`);
+                const cell = document.querySelector(`.output-cell[data-index="${index}"]`);
+                
+                cell.classList.add('highlighted');
+                
+                connections.forEach(conn => {
+                    const fromIndex = conn.getAttribute('data-from-input');
+                    document.querySelector(`.input-cell[data-index="${fromIndex}"]`).classList.add('highlighted');
+                    conn.style.height = '3px';
+                    conn.style.zIndex = '5';
+                });
+            }
+
+            function resetHighlights() {
+                document.querySelectorAll('.highlighted').forEach(el => {
+                    el.classList.remove('highlighted');
+                });
+                document.querySelectorAll('.connection').forEach(conn => {
+                    conn.style.height = '2px';
+                    conn.style.zIndex = '0';
+                });
+            }
+            
+            function showTooltip(index) {
+                const tooltip = document.getElementById(`tooltip-${index}`);
+                if (tooltip) {
+                    tooltip.style.display = 'block';
+                }
+            }
+            
+            function hideTooltip(index) {
+                const tooltip = document.getElementById(`tooltip-${index}`);
+                if (tooltip) {
+                    tooltip.style.display = 'none';
+                }
+            }
+        </script>
+    </body>
+    </html>

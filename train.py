@@ -241,15 +241,7 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                         mask = pred_mask & native_mask
                         char_matches += (preds[mask] == native[mask]).sum().item()
                         char_total += mask.sum().item()
-                        
-                        
-                        # inp_token = [latinidx2char.get(idx.item(), '?') for idx in latin[0] ]
-                        # inp_tok.append(inp_token)
-                        # pred_token = [nativeidx2char.get(idx.item(), '?') for idx in pred[0]]
-                        # pred_tok.append(pred_token)
 
-                  
-         
 
                   elif beam_size > 1:
                         """ Char level accuracy """
@@ -265,10 +257,33 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                         char_matches += (preds[mask] == native[mask]).sum().item()
                         char_total += mask.sum().item()
 
-                  inp_token = [latinidx2char.get(idx.item(), '?') for idx in latin[0] ]
-                  inp_tok.append(inp_token)
-                  pred_token = [nativeidx2char.get(idx.item(), '?') for idx in pred[0]]
-                  pred_tok.append(pred_token)
+                  attn_sample = attn_weights[0] if config['use_attn'] else None
+
+                  if data == 'test':
+                        inp_token = [latinidx2char.get(idx.item(), '?') for idx in latin[0] ]
+                        inp_tok.append(inp_token)
+                        pred_token = [nativeidx2char.get(idx.item(), '?') for idx in pred[0]]
+                        pred_tok.append(pred_token)
+
+                        if config['use_attn'] and data == 'test' :
+                              fig = plot_attention(attn_sample, inp_tok[0], pred_tok[0])
+                                    
+                              plt.close(fig)
+
+                              wandb.log(
+                                          {'attention_heatmap': wandb.Image(fig)}
+                                          
+                                    )
+
+                              if log_connectivity and config['use_attn']:
+                                    log_connectivity_visualization_to_wandb(
+                                                                              model, 
+                                                                              latin[0], 
+                                                                              native[0], 
+                                                                              latinidx2char, 
+                                                                              nativeidx2char, 
+                                                                              device
+                                                                              )
 
                   if data == 'test':
                         for (x, y) in zip(latin, pred):
@@ -352,7 +367,7 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
             print(f"Train Accuracy (exact match [Word Based]): {acc:.2f}%\n")
             print(f"Train Accuracy (exact match [char Based]): {char_acc:.2f}%\n")
 
-      attn_sample = attn_weights[0] if config['use_attn'] else None
+     
 
       if log:
                   if data == 'test':
@@ -375,7 +390,7 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                         })
                   if char_acc > 50.0 :
 
-                        if config['use_attn'] :
+                        if config['use_attn'] and data == 'test' :
                               fig = plot_attention(attn_sample, inp_tok[0], pred_tok[0])
                                     
                               plt.close(fig)
@@ -399,15 +414,7 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                                                 "Test Accuracy (char)":char_acc
                                           }
                                     )
-                        if log_connectivity and data == 'val' and config['use_attn']:
-                              log_connectivity_visualization_to_wandb(
-                                                                        model, 
-                                                                        latin[0], 
-                                                                        native[0], 
-                                                                        latinidx2char, 
-                                                                        nativeidx2char, 
-                                                                        device
-                                                                        )
+                        
                         
 
       if data == 'test':
