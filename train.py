@@ -285,7 +285,20 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                         all_preds += y_pred
                         all_targets += y_true
 
-                  cm = compute_confusion_matrix(all_preds, all_targets, num_classes=len(nativeidx2char))
+                        cm = compute_confusion_matrix(all_preds, all_targets, num_classes=len(nativeidx2char))
+
+                        N = 10
+                        off_diag = cm.copy()
+                        np.fill_diagonal(off_diag, 0)
+                        confused_indices = np.argsort(off_diag.sum(axis=1))[-N:]
+
+                        # Subset data
+                        
+                        subset_class_names = [nativeidx2char[i] for i in confused_indices]
+                        subset_y_true = [y for y in y_true if y in confused_indices]
+                        subset_y_pred = [y for y in y_pred if y in confused_indices]
+
+                        
 
                   """ Word level accuracy """
                   pred[pred == 3] = 0 # masking out the padding and eos tags
@@ -298,8 +311,8 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
             sample_table = []
             if data in ['test']:
                   
-                  if len(samples) < 5:
-                        for i in range(min(5 - len(samples), latin.size(0))):
+                  if len(samples) < 30:
+                        for i in range(min(30 - len(samples), latin.size(0))):
                               input_seq = latin[i].tolist()
                               pred_seq = pred[i].tolist()
                               target_seq = target[i].tolist()
@@ -345,6 +358,14 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                               ), 
                               "sample predictions":wandb.Table(columns=["Input", "Prediction", "Target"], data = sample_table)
                               })
+
+                        wandb.log({
+                        "confusion_matrix_subset": wandb.plot.confusion_matrix(
+                              y_true=subset_y_true,
+                              preds=subset_y_pred,
+                              class_names=subset_class_names
+                        )
+                        })
                   if char_acc > 50.0 :
 
                         if config['use_attn'] :
