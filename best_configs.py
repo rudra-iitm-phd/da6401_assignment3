@@ -20,21 +20,22 @@ attn = {
 }
 
 vanilla  = {
-      "activation":"gelu",
-      "batch_size":256,
-      "beam_size":3,
+      "activation":"tanh",
+      "batch_size":128,
+      "beam_size":2,
       "dec_dim":512,
-      "dec_embedding_dim":512,
-      "dropout_rate":0.4,
+      "dec_embedding_dim":64,
+      "dropout_rate":0.2,
       "enc_dim":512,
-      "enc_embedding_dim":256,
+      "enc_embedding_dim":512,
       "epochs":20,
-      "learning_rate":0.0007070499381526606,
-      "linear_dim":1024,
+      "learning_rate":0.0008679588865292194,
+      "linear_dim":128,
+      "log_connectivity":False,
       "model":"lstm",
-      "momentum":0.9203285394653522,
-      "n_decoders":3,
-      "n_encoders":3,
+      "momentum":0.9390345827949242,
+      "n_decoders":4,
+      "n_encoders":4,
       "native":"hi",
-      "optimizer":"adamw"
+      "optimizer":"adam"
 }

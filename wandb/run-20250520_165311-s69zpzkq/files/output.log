@@ -1,0 +1,37 @@
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:07<00:00,  5.12it/s]
+Total correct:112 Total samples : 4358
+
+Validation Loss: 1.5803
+Validation Accuracy (exact match [Word Based]): 2.57%
+
+Validation Accuracy (exact match [char Based]): 51.91%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [01:28<00:00,  3.93it/s]
+
+Total correct:347 Total samples : 4358
+
+Validation Loss: 1.2197
+Validation Accuracy (exact match [Word Based]): 7.96%
+
+Validation Accuracy (exact match [char Based]): 60.83%
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 346/346 [02:07<00:00,  2.71it/s]
+
+Total correct:436 Total samples : 4358
+
+Validation Loss: 1.1404
+Validation Accuracy (exact match [Word Based]): 10.00%
+
+Validation Accuracy (exact match [char Based]): 63.57%
+  3%|████                                                                                                                                        | 10/346 [00:01<01:04,  5.24it/s]
+Traceback (most recent call last):
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 465, in <module>
+    train_core(log=True, sweep=False)
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 422, in train_core
+    trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rudra_sarkar/Documents/PhD IIT Madras/Intro to Deep Learning M Khapra DA6401/da6401_assignment_3/train.py", line 143, in train_model
+    loss.backward()
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "/opt/anaconda3/envs/nlp_env/lib/python3.12/site-packages/torch/autograd/__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

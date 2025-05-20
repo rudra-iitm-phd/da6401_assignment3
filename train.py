@@ -271,19 +271,19 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                   pred_tok.append(pred_token)
 
                   if data == 'test':
-                              for (x, y) in zip(latin, pred):
-                                    x_token = [latinidx2char.get(idx.item(), '?') for idx in x if idx.item() not in [0,1,2,3]]
-                                    y_token = [nativeidx2char.get(idx.item(), '?') for idx in y if idx.item() not in [0,1,2,3]]
-                                    
-                                    input_latin.append(''.join(i for i in x_token))
-                                    pred_native.append(''.join(i for i in y_token))
+                        for (x, y) in zip(latin, pred):
+                              x_token = [latinidx2char.get(idx.item(), '?') for idx in x if idx.item() not in [0,1,2,3]]
+                              y_token = [nativeidx2char.get(idx.item(), '?') for idx in y if idx.item() not in [0,1,2,3]]
+                              
+                              input_latin.append(''.join(i for i in x_token))
+                              pred_native.append(''.join(i for i in y_token))
 
 
-                  y_pred = preds[mask].detach().tolist()
-                  y_true = native[mask].detach().tolist()
+                        y_pred = preds[mask].detach().tolist()
+                        y_true = native[mask].detach().tolist()
 
-                  all_preds += y_pred
-                  all_targets += y_true
+                        all_preds += y_pred
+                        all_targets += y_true
 
                   cm = compute_confusion_matrix(all_preds, all_targets, num_classes=len(nativeidx2char))
 
@@ -296,7 +296,7 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
                   total += pred.size(0)
 
             sample_table = []
-            if data in ['test' , 'val']:
+            if data in ['test']:
                   
                   if len(samples) < 5:
                         for i in range(min(5 - len(samples), latin.size(0))):
@@ -335,15 +335,16 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
       attn_sample = attn_weights[0] if config['use_attn'] else None
 
       if log:
-                  wandb.log({
-                        "confusion_matrix": wandb.plot.confusion_matrix(
-                              probs=None,
-                              y_true=all_targets,
-                              preds=all_preds,
-                              class_names=[nativeidx2char[i] for i in range(len(nativeidx2char))]
-                        ), 
-                        "sample predictions":wandb.Table(columns=["Input", "Prediction", "Target"], data = sample_table)
-                        })
+                  if data == 'test':
+                        wandb.log({
+                              "confusion_matrix": wandb.plot.confusion_matrix(
+                                    probs=None,
+                                    y_true=all_targets,
+                                    preds=all_preds,
+                                    class_names=[nativeidx2char[i] for i in range(len(nativeidx2char))]
+                              ), 
+                              "sample predictions":wandb.Table(columns=["Input", "Prediction", "Target"], data = sample_table)
+                              })
                   if char_acc > 50.0 :
 
                         if config['use_attn'] :
@@ -386,6 +387,13 @@ def evaluate_model(model, data_loader, latinidx2char, nativeidx2char, criterion,
       return total_loss/len(data_loader), char_acc, acc
 
 def train_core(log=True, sweep=True):
+
+      if args.use_test:
+            if config['use_attn']:
+                  config.update(best_configs.attn)
+            else:
+                  config.update(best_configs.vanilla)
+      
       if log:
             # Initialize W&B run
             run =  wandb.init(entity = config['wandb_entity'], project = config['wandb_project'], config = config)
@@ -396,6 +404,8 @@ def train_core(log=True, sweep=True):
 
             # Give a name to this W&B run based on config
             run.name = create_name(wandb.config)
+
+      
 
       configuration = Configure(config)
 
@@ -415,11 +425,6 @@ def train_core(log=True, sweep=True):
             trained_model = train_model(model, config['epochs'], train_dl, val_dl, criterion, optimizer, device, beam_size = config['beam_size'], log = False)
 
       if args.use_test:
-            if config['use_attn']:
-                  config.update(best_configs.attn)
-            else:
-                  config.update(best_configs.vanilla)
-
             loss, char_acc, word_acc, test_inp, test_pred = evaluate_model(trained_model, test_dl, shared.latin_idx2char, shared.native_idx2char, criterion, device, 'test', 1, log, config['log_connectivity'])
             if config['use_attn']:
                   generate_csv(test_inp, test_pred, 'predictions_attention/predictions_attention.csv')
